@@ -1,0 +1,120 @@
+{
+  "name": "roots/bedrock",
+  "type": "project",
+  "license": "MIT",
+  "description": "WordPress boilerplate with modern development tools, easier configuration, and an improved folder structure",
+  "homepage": "https://roots.io/bedrock/",
+  "authors": [
+    {
+      "name": "Scott Walkinshaw",
+      "email": "scott.walkinshaw@gmail.com",
+      "homepage": "https://github.com/swalkinshaw"
+    },
+    {
+      "name": "Ben Word",
+      "email": "ben@benword.com",
+      "homepage": "https://github.com/retlehs"
+    }
+  ],
+  "keywords": [
+    "bedrock", "roots", "wordpress", "stack", "composer", "vagrant", "wp"
+  ],
+  "support": {
+    "issues": "https://github.com/roots/bedrock/issues",
+    "forum": "https://discourse.roots.io/category/bedrock"
+  },
+  "config": {
+    "preferred-install": "dist"
+  },
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://wpackagist.org"
+    },
+    {
+      "type": "package",
+      "package": {
+          "name": "analogmemory/wp-sync-db",
+          "type": "wordpress-muplugin",
+          "version": "1.6",
+          "dist": {
+              "type": "zip",
+              "url": "https://github.com/AnalogMemory/wp-sync-db/archive/master.zip"
+          }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+          "name": "wp-sync-db/wp-sync-db-media-files",
+          "type": "wordpress-plugin",
+          "version": "master",
+          "dist": {
+              "type": "zip",
+              "url": "https://github.com/wp-sync-db/wp-sync-db-media-files/archive/master.zip"
+          }
+      }
+    },
+    {
+      "type": "package",
+      "package": {
+        "name": "advanced-custom-fields/advanced-custom-fields-pro",
+        "version": "5.7.9",
+        "type": "wordpress-plugin",
+        "dist": {
+          "type": "zip",
+          "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download"
+        },
+        "require": {
+          "philippbaschke/acf-pro-installer": "^1.0",
+          "composer/installers": "^1.0"
+        }
+      }
+    }
+  ],
+  "require": {
+    "php": ">=5.6",
+    "composer/installers": "^1.4",
+    "vlucas/phpdotenv": "^2.0.1",
+    "oscarotero/env": "^1.1.0",
+    "roots/wordpress": "5.0.1",
+    "roots/wp-config": "1.0.0",
+    "roots/wp-password-bcrypt": "1.0.0",
+    "analogmemory/wp-sync-db": "1.6",
+    "wp-sync-db/wp-sync-db-media-files": "dev-master",
+    "wpackagist-plugin/remove-query-strings-from-static-resources": "*",
+    "wpackagist-plugin/autodescription": "*",
+    "wpackagist-plugin/contact-form-7": "*",
+    "wpackagist-plugin/event-organiser": "*",
+    "wpackagist-plugin/easy-footnotes": "*",
+    "wpackagist-plugin/mammoth-docx-converter": "*",
+    "wpackagist-plugin/crop-thumbnails": "*",
+    "advanced-custom-fields/advanced-custom-fields-pro": "*",
+    "wpackagist-plugin/wp-optimize": "*",
+    "roots/wp-stage-switcher": "2.0.0",
+    "wpackagist-plugin/disable-comments": "*",
+    "wpackagist-plugin/imsanity": "*",
+    "johnbillion/extended-cpts": "^4.2.3",
+    "wpackagist-plugin/classic-editor": "*"
+  },
+  "require-dev": {
+    "squizlabs/php_codesniffer": "^3.0.2",
+    "roave/security-advisories": "dev-master"
+  },
+  "extra": {
+    "installer-paths": {
+      "web/app/mu-plugins/{$name}/": ["type:wordpress-muplugin"],
+      "web/app/plugins/{$name}/": ["type:wordpress-plugin"],
+      "web/app/themes/{$name}/": ["type:wordpress-theme"]
+    },
+    "wordpress-install-dir": "web/wp"
+  },
+  "scripts": {
+    "post-root-package-install": [
+      "php -r \"copy('.env.example', '.env');\""
+    ],
+    "test": [
+      "phpcs"
+    ]
+  }
+}
