@@ -35,7 +35,7 @@
       "type": "package",
       "package": {
           "name": "analogmemory/wp-sync-db",
-          "type": "wordpress-muplugin",
+          "type": "wordpress-plugin",
           "version": "1.6",
           "dist": {
               "type": "zip",
@@ -70,6 +70,18 @@
           "composer/installers": "^1.0"
         }
       }
+    },
+    {
+      "type": "package",
+      "package": {
+          "name": "mcguffin/acf-field-openstreetmap",
+          "type": "wordpress-muplugin",
+          "version": "0.1.8",
+          "dist": {
+              "type": "zip",
+              "url": "https://github.com/mcguffin/acf-field-openstreetmap/archive/master.zip"
+          }
+      }
     }
   ],
   "require": {
@@ -77,7 +89,7 @@
     "composer/installers": "^1.4",
     "vlucas/phpdotenv": "^2.0.1",
     "oscarotero/env": "^1.1.0",
-    "roots/wordpress": "5.0.1",
+    "roots/wordpress": "5.0.2",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
     "analogmemory/wp-sync-db": "1.6",
@@ -85,8 +97,6 @@
     "wpackagist-plugin/remove-query-strings-from-static-resources": "*",
     "wpackagist-plugin/autodescription": "*",
     "wpackagist-plugin/contact-form-7": "*",
-    "wpackagist-plugin/event-organiser": "*",
-    "wpackagist-plugin/easy-footnotes": "*",
     "wpackagist-plugin/mammoth-docx-converter": "*",
     "wpackagist-plugin/crop-thumbnails": "*",
     "advanced-custom-fields/advanced-custom-fields-pro": "*",
@@ -95,7 +105,9 @@
     "wpackagist-plugin/disable-comments": "*",
     "wpackagist-plugin/imsanity": "*",
     "johnbillion/extended-cpts": "^4.2.3",
-    "wpackagist-plugin/classic-editor": "*"
+    "wpackagist-plugin/classic-editor": "*",
+    "mcguffin/acf-field-openstreetmap": "*",
+    "stoutlogic/acf-builder": "^1.8"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2",

@@ -130,3 +130,28 @@ add_action('after_setup_theme', function () {
         return "<?= " . __NAMESPACE__ . "\\asset_path({$asset}); ?>";
     });
 });
+
+/**
+ * stage switcher https://github.com/roots/wp-stage-switcher
+ */
+$envs = [
+  'development' => 'https://margenesdelarte.test',
+  'staging'     => 'https://stage.margenesdelarte.com',
+  'production'  => 'https://margenesdelarte.com'
+];
+define('ENVIRONMENTS', serialize($envs));
+
+/**
+ * ACF options page https://www.advancedcustomfields.com/resources/options-page/
+ */
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page(
+    [
+      'page_title' 	=> 'Edición',
+      'updated_message'	=> 'Edición actualizada',
+      'update_button'		=> 'Guardar',
+    ]
+  );
+
+}

@@ -9,7 +9,7 @@
     ]
   },
   "publicPath": "/app/themes/mrg",
-  "devUrl": "https://margenesdelarte.test",
+  "devUrl": "http://margenesdelarte.test",
   "proxyUrl": "http://localhost:3000",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
