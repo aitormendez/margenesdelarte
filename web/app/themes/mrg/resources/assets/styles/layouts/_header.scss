@@ -1,2 +1,10 @@
-// TODO: .banner .nav li {}
-// TODO: .banner .nav a {}
+.banner {
+  div {
+    width: 150px;
+    height: 150px;
+
+    &.ruido {
+      background-image: url("../images/videogif/ruido.gif");
+    }
+  }
+}

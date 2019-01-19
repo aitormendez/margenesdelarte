@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2535b3b47ef47a3b146a488b73081199",
+    "content-hash": "ad2971d912b7de2825dd8480901f2aae",
     "packages": [
         {
             "name": "brain/hierarchy",
@@ -585,6 +585,52 @@
             "time": "2018-09-02T11:28:46+00:00"
         },
         {
+            "name": "log1x/blade-svg-sage",
+            "version": "v2.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Log1x/blade-svg-sage.git",
+                "reference": "4dd76ad5c85769d564375dd9cb0161f611b9092c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Log1x/blade-svg-sage/zipball/4dd76ad5c85769d564375dd9cb0161f611b9092c",
+                "reference": "4dd76ad5c85769d564375dd9cb0161f611b9092c",
+                "shasum": ""
+            },
+            "require": {
+                "nothingworks/blade-svg": "^0.3.0",
+                "php": ">=7.0"
+            },
+            "type": "package",
+            "autoload": {
+                "files": [
+                    "src/BladeSvgSage.php",
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Brandon Nifong",
+                    "email": "brandon@tendency.me"
+                }
+            ],
+            "description": "Composer package to add support for Blade SVG by Adam Wathan to Roots Sage.",
+            "homepage": "https://github.com/log1x/blade-svg-sage",
+            "keywords": [
+                "blade",
+                "roots",
+                "sage",
+                "svg",
+                "wordpress"
+            ],
+            "time": "2018-11-28T10:56:18+00:00"
+        },
+        {
             "name": "nesbot/carbon",
             "version": "1.33.0",
             "source": {
@@ -638,6 +684,56 @@
                 "time"
             ],
             "time": "2018-08-07T08:39:47+00:00"
+        },
+        {
+            "name": "nothingworks/blade-svg",
+            "version": "v0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/adamwathan/blade-svg.git",
+                "reference": "8747c4ff2c52f1a78a4b2aaae765cc961d9c9430"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/adamwathan/blade-svg/zipball/8747c4ff2c52f1a78a4b2aaae765cc961d9c9430",
+                "reference": "8747c4ff2c52f1a78a4b2aaae765cc961d9c9430",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/filesystem": "^5.3",
+                "illuminate/support": "^5.3"
+            },
+            "require-dev": {
+                "mockery/mockery": "^0.9.5",
+                "phpunit/phpunit": "^5.5"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "BladeSvg\\BladeSvgServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "BladeSvg\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Adam Wathan",
+                    "email": "adam.wathan@gmail.com"
+                }
+            ],
+            "time": "2018-07-09T14:08:00+00:00"
         },
         {
             "name": "psr/container",

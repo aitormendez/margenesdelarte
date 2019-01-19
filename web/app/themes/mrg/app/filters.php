@@ -80,3 +80,14 @@ add_filter('comments_template', function ($comments_template) {
 
     return $comments_template;
 }, 100);
+
+/**
+ * Load Google Maps API key for ACF
+ * https://discourse.roots.io/t/acf-google-maps-mime-type-text-html-is-not-executable-error/12376/4
+ */
+
+add_filter('acf/fields/google_map/api', function ($api) {
+ $api['key'] = env('GOOGLE_MAPS_API');
+
+ return $api;
+});

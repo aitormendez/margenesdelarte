@@ -26,6 +26,8 @@
     "extends": "stylelint-config-standard",
     "rules": {
       "no-empty-source": null,
+      "declaration-colon-newline-after": null,
+      "indentation": null,
       "at-rule-no-unknown": [
         true,
         {
@@ -104,6 +106,9 @@
     "yargs": "~11.0.0"
   },
   "dependencies": {
-    "jquery": "^3.3.1"
+    "@fortawesome/fontawesome-svg-core": "^1.2.12",
+    "@fortawesome/free-brands-svg-icons": "^5.6.3",
+    "jquery": "^3.3.1",
+    "plyr": "^3.4.8"
   }
 }

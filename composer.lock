@@ -4,14 +4,14 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f6d87a0a9e703acde83b32022a2025e2",
+    "content-hash": "581f4832e5f43ab486ffbc80a4d1bcbf",
     "packages": [
         {
             "name": "advanced-custom-fields/advanced-custom-fields-pro",
-            "version": "5.7.9",
+            "version": "5.7.10",
             "dist": {
                 "type": "zip",
-                "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&t=5.7.9",
+                "url": "https://connect.advancedcustomfields.com/index.php?p=pro&a=download&t=5.7.10",
                 "reference": null,
                 "shasum": null
             },
@@ -525,16 +525,16 @@
         },
         {
             "name": "roots/wordpress",
-            "version": "5.0.2",
+            "version": "5.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "5.0.2"
+                "reference": "5.0.3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.0.2",
-                "reference": "5.0.2",
+                "url": "https://api.github.com/repos/WordPress/WordPress/zipball/5.0.3",
+                "reference": "5.0.3",
                 "shasum": null
             },
             "require": {
@@ -559,7 +559,7 @@
                 "cms",
                 "wordpress"
             ],
-            "time": "2018-12-19T23:37:27+00:00"
+            "time": "2019-01-09T18:28:14+00:00"
         },
         {
             "name": "roots/wordpress-core-installer",
@@ -1025,15 +1025,15 @@
         },
         {
             "name": "wpackagist-plugin/wp-optimize",
-            "version": "2.2.10",
+            "version": "2.2.11",
             "source": {
                 "type": "svn",
                 "url": "https://plugins.svn.wordpress.org/wp-optimize/",
-                "reference": "tags/2.2.10"
+                "reference": "tags/2.2.11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/wp-optimize.2.2.10.zip",
+                "url": "https://downloads.wordpress.org/plugin/wp-optimize.2.2.11.zip",
                 "reference": null,
                 "shasum": null
             },

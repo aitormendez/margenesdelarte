@@ -30,4 +30,13 @@ class App extends Controller
         }
         return get_the_title();
     }
+
+    public function edicion()
+    {
+      $year = get_field('year', 'option');
+      $term = get_term_by( 'name', $year, 'edition');
+      // $description = term_description( $term_id, 'edicion' );
+
+      return $term;
+    }
 }
