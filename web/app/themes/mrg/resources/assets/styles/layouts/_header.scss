@@ -1,4 +1,5 @@
 .banner {
+  position: relative;
   display: flex;
   justify-content: center;
   padding: 75px $pad;
@@ -9,17 +10,24 @@
   text-transform: uppercase;
   letter-spacing: 0.05em;
 
+  a {
+    color: #000;
+
+    &:hover {
+      color: $color-rojo;
+    }
+  }
+
   .container {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     max-width: 170px;
 
-    a {
-      color: #000;
-
-      &:hover {
-        color: $gray-lighter;
-      }
+    .nombres {
+      display: flex;
+      flex-direction: column;
+      order: 2;
     }
 
     .brand {
@@ -134,5 +142,82 @@
     height: 28px;
     background-image: url("../images/svg/flecha-aba-peq.svg");
     background-repeat: no-repeat;
+  }
+
+  @include tablet-portrait {
+    padding: $pad;
+    height: auto;
+    justify-content: flex-start;
+
+    .container {
+      max-width: inherit;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+
+      .logo {
+        position: relative;
+        top: 5px;
+        width: 66px;
+        height: 66px;
+      }
+
+      .nombres {
+        position: relative;
+        display: block;
+        flex-grow: 1;
+        margin-left: 30px;
+
+        p {
+          max-width: 170px;
+        }
+
+        .edicion {
+          position: absolute;
+          top: 19px;
+          left: 95px;
+          margin-top: 0;
+          margin-bottom: 0;
+          font-size: 0.8rem;
+          font-weight: bold;
+          line-height: 1.5em;
+        }
+      }
+
+      .nav-container {
+        display: flex;
+        order: 3;
+        align-self: flex-end;
+        position: static;
+        width: auto;
+        height: auto;
+        padding-top: 0;
+        border: none;
+        background-color: transparent;
+
+        .menu-general-container {
+          margin-right: $pad-3;
+        }
+
+        ul {
+          margin-top: 0;
+          font-size: 0.8rem;
+        }
+      }
+    }
+
+    #flecha-1,
+    #hamb,
+    #cerrar {
+      display: none;
+    }
+  }
+
+  @include tablet-landscape {
+    .container {
+      .nombres {
+        margin-left: 150px;
+      }
+    }
   }
 }

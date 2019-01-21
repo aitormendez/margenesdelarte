@@ -6,6 +6,11 @@ body {
   font-family: $ff-base;
   font-size: 18px;
   min-height: 2000px;
+
+  &.fix {
+    height: 100vh;
+    overflow: hidden;
+  }
 }
 
 a {

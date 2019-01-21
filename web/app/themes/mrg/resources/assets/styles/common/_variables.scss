@@ -32,3 +32,40 @@ $pad-2: calc(#{$pad} * 2);
 $pad-3: calc(#{$pad} * 3);
 $pad-4: calc(#{$pad} * 4);
 $trans: 0.5s;
+
+// responsive breakpoints
+@mixin phone-only {
+  @media (max-width: 425px) {
+    @content;
+  }
+}
+
+@mixin phone-landscape {
+  @media (min-width: 425px) {
+    @content;
+  }
+}
+
+@mixin tablet-portrait {
+  @media (min-width: 700px) {
+    @content;
+  }
+}
+
+@mixin tablet-landscape {
+  @media (min-width: 1000px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin big-desktop {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}

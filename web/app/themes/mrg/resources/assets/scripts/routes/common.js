@@ -6,13 +6,16 @@ export default {
     let navContainer = $('.nav-container');
     let hamb = $('#hamb');
     let cerrar = $('#cerrar');
+    let body = $('body');
 
     hamb.click(function() {
       navContainer.toggleClass('cerrado abierto');
+      body.toggleClass('fix');
     });
 
     cerrar.click(function() {
       navContainer.toggleClass('cerrado abierto');
+      body.toggleClass('fix');
     });
   },
   finalize() {
