@@ -3,7 +3,32 @@ $brand-primary: #525ddc;
 
 /** Box Model  */
 $spacer: 2rem;
-$ff-serif: Merriweather;
+
+/** Fonts  */
+$ff-serif: merriweather;
 $ff-display: Normalita;
 $ff-sans: Dino;
 $ff-base: $ff-serif;
+
+/** Color  */
+$color-principal: #002c41;
+$color-allo: #f9ae00;
+$color-azul: #0179bd;
+$color-azul-claro: lighten($color-azul, 50%);
+$color-rojo: #e30000;
+$color-verde: #058011;
+$gray-base: #000;
+$gray-darker: lighten($gray-base, 13.5%);
+$gray-dark: lighten($gray-base, 20%);
+$gray: lighten($gray-base, 33.5%);
+$gray-light: lighten($gray-base, 46.7%);
+$gray-light-semi: lighten($gray-base, 70%);
+$gray-lighter: lighten($gray-base, 93.5%);
+
+/** Layout  */
+$pad: 15px;
+$pad-1: $pad;
+$pad-2: calc(#{$pad} * 2);
+$pad-3: calc(#{$pad} * 3);
+$pad-4: calc(#{$pad} * 4);
+$trans: 0.5s;
