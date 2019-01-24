@@ -9,8 +9,8 @@ export default {
     /* eslint-disable no-undef */
 
     $('.menu-present').mouseenter(function(){
-      ruido.css('opacity', 0.3);
-      video.css('background-image', `url(${mrg.homeUrl}/app/themes/mrg/dist/images/videogif/present.gif)`)
+      ruido.css('opacity', 0.2);
+      video.css('background-image', `url(${mrg.presentGif})`)
     });
 
     $('.menu-item').mouseleave(function(){
