@@ -77,6 +77,11 @@
 
         &.ruido {
           background-image: url("../images/videogif/ruido.gif");
+          background-size: cover;
+        }
+
+        &.video {
+          background-size: cover;
         }
       }
     }
