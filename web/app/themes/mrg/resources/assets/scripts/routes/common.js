@@ -131,8 +131,10 @@ export default {
       this.startRunner = function(runnerName) {
         if (runnerName == 'bannerDownBig') {
           $('.banner').addClass('big');
+          $('#flecha-1').removeClass('hidden');
         } else if (runnerName == 'bannerDown') {
           $('.banner').removeClass('big');
+          $('#flecha-1').addClass('hidden');
         }
         console.log(runnerName + 'START');
       }

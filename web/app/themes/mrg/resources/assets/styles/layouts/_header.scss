@@ -229,6 +229,10 @@
         display: block;
         width: 24px;
         left: calc(50% - 12px);
+
+        &.hidden {
+          display: none;
+        }
       }
     }
 
