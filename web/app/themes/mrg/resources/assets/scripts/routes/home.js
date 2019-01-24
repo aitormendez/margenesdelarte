@@ -7,8 +7,6 @@ export default {
     let video =$('.video');
 
     /* eslint-disable no-undef */
-    console.log(mrg.homeUrl);
-
 
     $('.menu-present').mouseenter(function(){
       ruido.css('opacity', 0.3);
