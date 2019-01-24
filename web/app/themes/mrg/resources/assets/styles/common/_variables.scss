@@ -69,3 +69,13 @@ $trans: 0.5s;
     @content;
   }
 }
+
+@keyframes brownian {
+  0% {
+    visibility: visible;
+  }
+
+  100% {
+    visibility: visible;
+  }
+}

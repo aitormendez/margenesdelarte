@@ -284,6 +284,14 @@
           margin-right: 0;
           max-width: 100%;
           font-size: 1.4rem;
+
+          .menu-item {
+            position: relative;
+
+            &:hover {
+              animation: brownian 0.02s infinite;
+            }
+          }
         }
 
         .menu-general-container {
