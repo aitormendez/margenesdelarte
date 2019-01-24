@@ -6,9 +6,13 @@ export default {
     let ruido =$('.ruido');
     let video =$('.video');
 
+    /* eslint-disable no-undef */
+    console.log(mrg.homeUrl);
+
+
     $('.menu-present').mouseenter(function(){
       ruido.css('opacity', 0.3);
-      video.css('background-image', 'url("/app/themes/mrg/dist/images/videogif/present.gif")')
+      video.css('background-image', `url(${mrg.homeUrl}/app/themes/mrg/dist/images/videogif/present.gif)`)
     });
 
     $('.menu-item').mouseleave(function(){
@@ -20,3 +24,4 @@ export default {
     // JavaScript to be fired on the home page, after the init JS
   },
 };
+/* eslint-enable */
