@@ -41,7 +41,7 @@ export default {
     let viewportHeight = $(window).height(),
     viewportWidth = $(window).width(),
     yPos,
-    bannerHeight = $('.banner').height(),
+    bannerHeight = '256',
     currY = 0;
 
 
