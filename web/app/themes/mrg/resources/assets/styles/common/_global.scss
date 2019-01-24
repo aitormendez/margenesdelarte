@@ -8,6 +8,7 @@ body {
   min-height: 2000px;
 
   &.fix {
+    // ocultar scroll del body cuando abre solapa
     height: 100vh;
     overflow: hidden;
   }

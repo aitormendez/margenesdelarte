@@ -1,8 +1,23 @@
+/* eslint-disable no-unused-vars */
+import {
+  TweenMax,
+  Bounce,
+  Power0,
+  Power2,
+  Power4,
+  Elastic,
+} from "gsap/all";
+import 'gsap/src/minified/plugins/ScrollToPlugin.min';
+import TimelineMax from 'gsap/src/minified/TimelineMax.min';
+
+/* eslint-enable */
+
 export default {
   init() {
     // JavaScript to be fired on all pages
 
     // hamburguesa
+    // -----------------
     let navContainer = $('.nav-container');
     let hamb = $('#hamb');
     let cerrar = $('#cerrar');
@@ -17,6 +32,182 @@ export default {
       navContainer.toggleClass('cerrado abierto');
       body.toggleClass('fix');
     });
+
+    // Scroll banner functionality
+    // ------------------------------
+
+    let flecha1 = $('#flecha-1');
+    let viewportHeight = $(window).height(),
+    viewportWidth = $(window).width(),
+    yPos,
+    bannerHeight = $('.banner').height(),
+    currY = 0;
+
+    // detectar home page
+    let home;
+    if (body.hasClass( "home" )) {
+      home = true;
+      yPos = viewportHeight;
+    } else {
+      home = false;
+      yPos = bannerHeight;
+    }
+
+    // flecha
+    if (viewportWidth > 700) {
+      flecha1.click(function() {
+        elProceso.bannerUp();
+      });
+    } else {
+      flecha1.click(function() {
+        
+      });
+    }
+
+
+    // timelines
+    // https://css-tricks.com/writing-smarter-animation-code/
+
+    function Runner() {
+
+      this.bannerUp = function(){
+        let tl = new TimelineMax({
+            onStart: elProceso.startRunner,
+            onStartParams:['bannerUp'],
+            onComplete: elProceso.stopRunner,
+            onCompleteParams:['none'],
+          });
+        tl
+          .to('.banner', .5, {
+            y: -yPos,
+            ease: Power0.easeOut,
+          }, 0);
+          return tl;
+      }
+
+      this.bannerDown = function(){
+        let tl = new TimelineMax({
+            onStart: elProceso.startRunner,
+            onStartParams:['bannerDown'],
+            onComplete: elProceso.stopRunner,
+            onCompleteParams:['bannerDown'],
+          })
+        tl
+          .to('.banner', .5, {
+            y: 0,
+            height: 'auto',
+            ease: Power4.easeOut,
+          }, 0);
+          return tl;
+      }
+
+      this.bannerDownBig = function(){
+        let tl = new TimelineMax({
+            onStart: elProceso.startRunner,
+            onStartParams:['bannerDownBig'],
+            onComplete: elProceso.stopRunner,
+            onCompleteParams:['bannerDownBig'],
+          });
+        tl
+          .to('.banner', .5, {
+            y: 0,
+            height: yPos,
+            ease: Power4.easeOut,
+          }, 0);
+          return tl;
+      }
+
+      this.runnerName = '';
+
+      this.setRunnerName = function(runnerName) {
+        this.runnerName = runnerName;
+      }
+
+      this.stopRunner = function(runnerName) {
+        console.log(runnerName + 'STOP');
+      }
+
+      this.startRunner = function(runnerName) {
+        console.log(runnerName + 'START');
+      }
+
+    }
+
+    let elProceso = new Runner();
+
+
+    // let elProceso = new Proceso();
+    //
+    // Proceso.prototype.set = function(name, marchando){
+    //   this.marchando =  marchando;
+    //   this.name =  name;
+    //   console.log(this.marchando);
+    // };
+
+
+
+
+
+
+
+
+
+    if (viewportWidth >= 700) {
+
+      // detectar dirección scroll
+      let
+        el = $(window),
+        lastY = el.scrollTop(),
+        lastDireccion,
+        cambiar,
+        accion;
+
+
+      el.on('scroll', function() {
+        let
+          currY = el.scrollTop(),
+          currDireccion = (currY > lastY) ? 'down' : 'up';
+          cambiar = (currDireccion === lastDireccion) ? false : true;
+          accion = currDireccion + cambiar;
+
+          if (home == true && currY == 0) {
+            // bajar banner portada
+            let bajarBig = new TimelineMax();
+            bajarBig.add(elProceso.bannerDownBig());
+            bajarBig.play();
+          } else {
+            switch(accion) {
+              case 'uptrue':
+                // bajar banner
+                {
+                  let bajar = new TimelineMax();
+                  bajar.add(elProceso.bannerDown());
+                  bajar.play();
+                }
+                break;
+              case 'downtrue':
+                // subir banner
+                {
+                  let subir = new TimelineMax();
+                  subir.add(elProceso.bannerUp());
+                  subir.play();
+                }
+                break;
+            }
+          }
+        lastDireccion = currDireccion;
+        lastY = currY;
+      });
+
+
+
+    } // if (viewportWidth >= 600)
+
+
+
+
+
+
   },
   finalize() {
     // JavaScript to be fired on all pages, after page specific JS is fired

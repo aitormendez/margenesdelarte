@@ -32,6 +32,7 @@ module.exports = {
     ]
   },
   "rules": {
+    "no-unused-vars": 'off',
     "no-console": 0,
     "comma-dangle": [
       "error",
