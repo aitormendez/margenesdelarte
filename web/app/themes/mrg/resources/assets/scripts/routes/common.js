@@ -37,32 +37,33 @@ export default {
     // ------------------------------
 
     let flecha1 = $('#flecha-1');
+    let flecha2 = $('#flecha-2');
     let viewportHeight = $(window).height(),
     viewportWidth = $(window).width(),
     yPos,
     bannerHeight = $('.banner').height(),
     currY = 0;
 
+
+
     // detectar home page
     let home;
     if (body.hasClass( "home" )) {
       home = true;
       yPos = viewportHeight;
+      $('.banner').addClass('big');
     } else {
       home = false;
       yPos = bannerHeight;
     }
 
     // flecha
-    if (viewportWidth > 700) {
-      flecha1.click(function() {
-        elProceso.bannerUp();
-      });
-    } else {
-      flecha1.click(function() {
-        
-      });
-    }
+    flecha1.click(function() {
+      elProceso.bannerUp();
+    });
+    flecha2.click(function() {
+      elProceso.bannerDownBig();
+    });
 
 
     // timelines
@@ -128,28 +129,17 @@ export default {
       }
 
       this.startRunner = function(runnerName) {
+        if (runnerName == 'bannerDownBig') {
+          $('.banner').addClass('big');
+        } else if (runnerName == 'bannerDown') {
+          $('.banner').removeClass('big');
+        }
         console.log(runnerName + 'START');
       }
 
     }
 
     let elProceso = new Runner();
-
-
-    // let elProceso = new Proceso();
-    //
-    // Proceso.prototype.set = function(name, marchando){
-    //   this.marchando =  marchando;
-    //   this.name =  name;
-    //   console.log(this.marchando);
-    // };
-
-
-
-
-
-
-
 
 
     if (viewportWidth >= 700) {

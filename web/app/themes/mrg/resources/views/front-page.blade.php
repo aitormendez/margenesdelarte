@@ -11,8 +11,8 @@
 
   @while (have_posts()) @php the_post() @endphp
     <div class="hero">
-      <a id="flecha-2" class="flecha-aba">@svg('flecha-aba-peq', ['id' => 'flecha-2'])</a>
-      <a id="flecha-3" class="flecha-aba"></a>
+      <a id="flecha-2" class="flecha-aba">@svg('caret-down')</a>
+      <a id="flecha-3" class="flecha-aba">@svg('flecha-aba-peq')</a>
 
     </div>
     @include('partials.content-'.get_post_type())

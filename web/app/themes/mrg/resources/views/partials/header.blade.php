@@ -1,14 +1,16 @@
 <header class="banner">
   <div class="container">
-    <a class="nombres" href="{{ home_url('/') }}">
-      <p class="brand">{{ get_bloginfo('name', 'display') }}</p>
-      <p class="nombre"></p>
-      <p class="edicion">{{ $edicion->name }}</p>
-      <p class="descripcion">{{ $edicion->description }}</p>
-    </a>
-    <div class="logo">
-      <div class="video"></div>
-      <div class="ruido"></div>
+    <div class="col-izq">
+      <a class="nombres" href="{{ home_url('/') }}">
+        <p class="brand">{{ get_bloginfo('name', 'display') }}</p>
+        <p class="nombre"></p>
+        <p class="edicion">{{ $edicion->name }}</p>
+        <p class="descripcion">{{ $edicion->description }}</p>
+      </a>
+      <div class="logo">
+        <div class="video"></div>
+        <div class="ruido"></div>
+      </div>
     </div>
     <nav class="nav-container cerrado">
       <div id="cerrar"></div>

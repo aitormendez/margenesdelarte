@@ -14,14 +14,35 @@
         background-color: $gray;
 
         .flecha-aba {
-          position: absolute;
-          margin-left: auto;
-          margin-right: auto;
           display: block;
+          position: absolute;
+          left: calc(50% - 12px);
+        }
+
+        #flecha-2 {
+          width: 24px;
+          height: 13px;
+
+          svg {
+            position: absolute;
+            top: 0;
+
+            polygon {
+              fill: #fff !important;
+            }
+          }
+        }
+
+        #flecha-3 {
+          bottom: $pad;
           width: 24px;
           height: 28px;
-          // background-image: url("../images/svg/flecha-aba-peq.svg");
-          // background-repeat: no-repeat;
+
+          svg {
+            polygon {
+              fill: #fff !important;
+            }
+          }
         }
       }
     }

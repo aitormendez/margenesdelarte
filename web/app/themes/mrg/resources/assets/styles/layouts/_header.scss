@@ -9,6 +9,7 @@
   font-family: $ff-display;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  z-index: 500;
 
   a {
     color: #000;
@@ -159,33 +160,37 @@
       align-items: flex-start;
       justify-content: space-between;
 
-      .logo {
-        position: relative;
-        top: 5px;
-        left: 5px;
-        width: 66px;
-        height: 66px;
-      }
+      .col-izq {
+        display: flex;
 
-      .nombres {
-        position: relative;
-        display: block;
-        flex-grow: 1;
-        margin-left: 30px;
-
-        p {
-          max-width: 170px;
+        .logo {
+          position: relative;
+          top: 5px;
+          left: 5px;
+          width: 66px;
+          height: 66px;
         }
 
-        .edicion {
-          position: absolute;
-          top: 19px;
-          left: 95px;
-          margin-top: 0;
-          margin-bottom: 0;
-          font-size: 0.8rem;
-          font-weight: bold;
-          line-height: 1.5em;
+        .nombres {
+          position: relative;
+          display: block;
+          flex-grow: 1;
+          margin-left: 50px;
+
+          p {
+            max-width: 170px;
+          }
+
+          .edicion {
+            position: absolute;
+            top: 19px;
+            left: 95px;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-size: 0.8rem;
+            font-weight: bold;
+            line-height: 1.5em;
+          }
         }
       }
 
@@ -226,12 +231,92 @@
         left: calc(50% - 12px);
       }
     }
+
+    &.big {
+      // banner grande tablet
+      padding: $pad-4;
+
+      .col-izq {
+        flex-direction: column;
+
+        .nombres {
+          order: 1;
+          margin-left: 0;
+
+          p {
+            max-width: 300px;
+            font-size: 1.4rem;
+            line-height: 1.3em;
+
+            &.edicion {
+              position: relative;
+              top: 0;
+              left: -7px;
+              font-size: 4rem;
+              line-height: 1.1em;
+            }
+          }
+        }
+
+        .logo {
+          order: 2;
+          width: 150px;
+          height: 150px;
+          left: 0;
+          top: 0;
+        }
+      }
+
+      .nav-container {
+        flex-direction: column;
+
+        ul {
+          margin-left: 0;
+          margin-right: 0;
+          max-width: 100%;
+          font-size: 1.4rem;
+        }
+
+        .menu-general-container {
+          margin-bottom: $pad-2;
+          padding-bottom: $pad-2;
+          margin-right: 0;
+          border-bottom: 5px solid #000;
+        }
+      }
+    }
   }
 
   @include tablet-landscape {
     .container {
-      .nombres {
-        margin-left: 150px;
+      .col-izq {
+        .nombres {
+          margin-left: 150px;
+        }
+      }
+    }
+
+    &.big {
+      // banner grande desktop
+      .col-izq {
+        .nombres {
+          margin-left: 0;
+
+          p {
+            max-width: 400px !important;
+            font-size: 1.8rem;
+
+            &.edicion {
+              font-size: 5rem;
+            }
+          }
+        }
+      }
+
+      .nav-container {
+        ul {
+          font-size: 1.8rem;
+        }
       }
     }
   }

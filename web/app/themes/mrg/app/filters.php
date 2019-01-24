@@ -95,13 +95,13 @@ add_filter('acf/fields/google_map/api', function ($api) {
 /**
  * Blade SVG Sage. https://github.com/Log1x/blade-svg-sage
  */
- add_filter('bladesvg', function () {
-     return [
-         'svg_path' => 'dist/images/svg',
-         'spritesheet_path' => 'resources/svg/spritesheet.svg',
-         'spritesheet_url' => '',
-         'sprite_prefix' => '',
-         'inline' => true,
-         'class' => 'icon'
-     ];
- });
+ // add_filter('bladesvg', function () {
+ //     return [
+ //         'svg_path' => 'dist/images/svg',
+ //         'spritesheet_path' => 'resources/svg/spritesheet.svg',
+ //         'spritesheet_url' => '',
+ //         'sprite_prefix' => '',
+ //         'inline' => true,
+ //         'class' => 'icon'
+ //     ];
+ // });
