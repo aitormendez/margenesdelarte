@@ -39,11 +39,23 @@ $event
 
 ->addTab('Dónde', ['placement' => 'left'])
     ->addPostObject('donde', [
-    'label' => 'Dónde',
-    'instructions' => __('Elige el lugar de la lista desplegable. Si no aparece el que buscas, deberás añadirlo en la pestaña Lugares', 'sage'),
-    'post_type' => ['location'],
+        'label' => 'Dónde',
+        'instructions' => __('Elige el lugar de la lista desplegable. Si no aparece el que buscas, deberás añadirlo en la pestaña Lugares', 'sage'),
+        'post_type' => ['location'],
+        'return_format' => 'object',
+      'ui' => 1,
+])
+
+->addTab('Producciones', ['placement' => 'left'])
+    ->addRelationship('related_productions', [
+    'label' => __('Related Productions', 'sage'),
+    'instructions' => __('Selecciona las producciones relacionadas con este evento', 'sage'),
+    'post_type' => ['productions'],
+    'filters' => [
+        0 => 'search',
+        1 => 'taxonomy',
+    ],
     'return_format' => 'object',
-    'ui' => 1,
 ]);
 
 return $event;
