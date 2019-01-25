@@ -9,7 +9,6 @@ import {
 } from "gsap/all";
 import 'gsap/src/minified/plugins/ScrollToPlugin.min';
 import TimelineMax from 'gsap/src/minified/TimelineMax.min';
-
 /* eslint-enable */
 
 export default {
@@ -58,12 +57,29 @@ export default {
     }
 
     // flecha
-    flecha1.click(function() {
-      elProceso.bannerUp();
+
+    if (viewportWidth >= 700) {
+      flecha1.click(function(event) {
+        event.preventDefault();
+        elProceso.bannerUp();
+      });
+    } else {
+      flecha1.click(function(event) {
+      event.preventDefault();
+      TweenMax.to(window, 0.8, {
+        scrollTo: {
+          y: ".content",
+        },
+        ease: Elastic.easeOut,
+      });
     });
+    }
+
     flecha2.click(function() {
       elProceso.bannerDownBig();
     });
+
+
 
 
     // timelines

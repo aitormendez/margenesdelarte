@@ -4,7 +4,8 @@
 
 body {
   font-family: $ff-base;
-  font-size: 18px;
+  font-size: 16px;
+  line-height: 1.2em;
   min-height: 2000px;
 
   &.fix {
@@ -12,11 +13,19 @@ body {
     height: 100vh;
     overflow: hidden;
   }
+
+  @include tablet-portrait {
+    &:not(.home) {
+      .content {
+        margin-top: 125px;
+      }
+    }
+  }
 }
 
 a {
   text-decoration: none;
-  color: $color-azul;
+  color: $color-link;
   transition: color 0.5s, background-color 0.5s;
 
   &:active,
