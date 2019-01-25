@@ -91,9 +91,6 @@ export default {
       elProceso.bannerDownBig();
     });
 
-
-
-
     // timelines
     // https://css-tricks.com/writing-smarter-animation-code/
 
