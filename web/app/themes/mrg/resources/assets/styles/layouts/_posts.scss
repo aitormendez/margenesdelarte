@@ -1,0 +1,31 @@
+.single {
+  .content {
+    padding: $pad;
+
+    .main {
+      article {
+        header {
+          h1 {
+            line-height: 1.2em;
+          }
+        }
+      }
+    }
+  }
+
+  @include tablet-portrait {
+    .content {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 700px;
+      padding-left: $pad-4;
+      padding-right: $pad-4;
+    }
+  }
+
+  @include tablet-landscape {
+    .content {
+      max-width: 900px;
+    }
+  }
+}
