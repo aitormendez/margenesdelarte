@@ -37,6 +37,7 @@ export default {
 
     let flecha1 = $('#flecha-1');
     let flecha2 = $('#flecha-2');
+    let flecha3 = $('#flecha-3');
     let viewportHeight = $(window).height(),
     viewportWidth = $(window).width(),
     yPos,
@@ -56,13 +57,24 @@ export default {
       yPos = bannerHeight;
     }
 
-    // flecha
+    // flechas scroll
 
     if (viewportWidth >= 700) {
       flecha1.click(function(event) {
         event.preventDefault();
         elProceso.bannerUp();
       });
+
+      flecha3.click(function(event) {
+      event.preventDefault();
+      TweenMax.to(window, 0.8, {
+        scrollTo: {
+          y: viewportHeight,
+        },
+        ease: Power2.easeOut,
+      });
+    });
+
     } else {
       flecha1.click(function(event) {
       event.preventDefault();
