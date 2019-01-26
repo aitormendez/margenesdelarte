@@ -6,6 +6,7 @@
  * Author URI: https://e451.net
  * Text Domain: mrg-CPT
  * License: MIT License
+ * https://github.com/johnbillion/extended-cpts
  */
 
 namespace mrg;
@@ -44,11 +45,25 @@ add_action( 'init', function() {
       'filter_items_list'     => __( 'Filter items list', 'mrg-CPT' ),
   ];
 
+  $cols_production = [
+    'post_author',
+  ];
+
+  $supports_production = [
+    'author',
+    'title',
+    'editor',
+    'thumbnail',
+  ];
+
   register_extended_post_type(
       'production',
       [
           'show_in_rest' => true,
+          'show_in_feed' => true,
           'labels'       => $args_production,
+          'admin_cols'   => $cols_production,
+          'supports'     => $supports_production,
       ]
   );
 
@@ -86,6 +101,7 @@ add_action( 'init', function() {
       'event',
       [
           'show_in_rest' => true,
+          'show_in_feed' => true,
           'labels'       => $args_events,
       ]
   );
@@ -124,6 +140,7 @@ add_action( 'init', function() {
       'location',
       [
           'show_in_rest' => true,
+          'show_in_feed' => true,
           'labels'       => $args_location,
       ]
   );
