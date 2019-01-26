@@ -64,6 +64,16 @@ add_action( 'init', function() {
           'labels'       => $args_production,
           'admin_cols'   => $cols_production,
           'supports'     => $supports_production,
+          'admin_cols' => [
+            'edition' => [
+              'taxonomy' => 'edition'
+            ],
+          ],
+          'admin_filters' => [
+            'edition' => [
+              'taxonomy' => 'edition'
+            ],
+          ],
       ]
   );
 
@@ -97,12 +107,47 @@ add_action( 'init', function() {
       'filter_items_list'     => __( 'Filter items list', 'mrg-CPT' ),
   ];
 
+  $cols_event = [
+    'post_author' => [
+    	'title'      => 'Post author',
+    	'post_field' => 'post_author',
+    ],
+    'edition' => [
+      'title'    => __('Edition', 'mrg-CPT'),
+      'taxonomy' => 'edition',
+    ],
+    'ambit' => [
+      'title'    => __('Ambit', 'mrg-CPT'),
+      'taxonomy' => 'ambit',
+    ],
+    'start_date' => array(
+      'title'       => __('Start Date', 'mrg-CPT'),
+      'meta_key'    => 'start_date',
+      'date_format' => 'D, d M Y',
+      'default'  => 'DESC',
+    ),
+  ];
+
+  $supports_event = [
+    'author',
+    'title',
+    'editor',
+    'thumbnail',
+  ];
+
   register_extended_post_type(
       'event',
       [
-          'show_in_rest' => true,
-          'show_in_feed' => true,
-          'labels'       => $args_events,
+          'show_in_rest'  => true,
+          'show_in_feed'  => true,
+          'labels'        => $args_events,
+          'admin_cols'    => $cols_event,
+          'supports'     => $supports_event,
+          'admin_filters' => [
+            'edition' => [
+              'taxonomy' => 'edition',
+            ],
+          ],
       ]
   );
 
@@ -152,11 +197,25 @@ add_action( 'init', function() {
       'event'
     ],
     [
-      'show_in_rest' => true,
   		'meta_box' => 'radio',
-    ], [
+    ],
+    [
   		'singular' => __( 'Edition', 'mrg-CPT' ),
   		'plural'   => __( 'Editions', 'mrg-CPT' ),
+	   ]
+  );
+
+  register_extended_taxonomy(
+    'ambit',
+    [
+      'event'
+    ],
+    [
+  		'meta_box' => 'radio',
+    ],
+    [
+  		'singular' => __( 'Ambit', 'mrg-CPT' ),
+  		'plural'   => __( 'Ambits', 'mrg-CPT' ),
 	   ]
   );
 
@@ -166,7 +225,6 @@ add_action( 'init', function() {
       'event'
     ],
     [
-      'show_in_rest' => true,
   		'meta_box' => 'radio',
     ], [
   		'singular' => __( 'Meeting', 'mrg-CPT' ),

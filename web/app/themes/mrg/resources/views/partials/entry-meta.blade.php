@@ -1,6 +1,7 @@
 <div class="meta">
-  <p class="epi">{{ __('Edition', 'sage') }}: <span>{{ $edicion_term }}</span></p>
+
   @if (is_singular('production'))
+    <p class="epi">{{ __('Edition', 'sage') }}: <span>{{ $edicion_term }}</span></p>
       @if ($eventos_relacionados['numero'] == 'singular')
         <div class="grupo">
         <p class="epi">{{ __('Related activity', 'sage') }}:</p>
