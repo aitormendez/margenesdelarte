@@ -50,7 +50,7 @@ $event
     ->addRelationship('related_productions', [
     'label' => __('Related Productions', 'sage'),
     'instructions' => __('Selecciona las producciones relacionadas con este evento', 'sage'),
-    'post_type' => ['productions'],
+    'post_type' => ['production'],
     'filters' => [
         0 => 'search',
         1 => 'taxonomy',
