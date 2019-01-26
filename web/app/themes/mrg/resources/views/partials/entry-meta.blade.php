@@ -1,6 +1,15 @@
 <div class="meta">
+  <p class="epi">{{ __('Edition', 'sage') }}: <span>{{ $edicion_term }}</span></p>
   @if (is_singular('production'))
-    {!! $eventos_relacionados !!}
+      @if ($eventos_relacionados['numero'] == 'singular')
+        <div class="grupo">
+        <p class="epi">{{ __('Related activity', 'sage') }}:</p>
+      @elseif ($eventos_relacionados['numero'] == 'plural')
+        <div class="grupo">
+        <p class="epi">{{ __('Related activities', 'sage') }}</p>
+      @endif
+    {!! $eventos_relacionados['eventos'] !!}
+    </div>
   @else
     <time class="updated" datetime="{{ get_post_time('c', true) }}">{{ get_the_date() }}</time>
     <p class="byline author vcard">

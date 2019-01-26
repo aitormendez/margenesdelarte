@@ -19,13 +19,34 @@ class SingleProduction extends Controller
       ]
     ]);
 
+    $cantidad_eventos = count($eventos);
+
     if ($eventos) {
+
+      if ($cantidad_eventos == 1 ) {
+        $numero = 'singular';
+      } elseif ($cantidad_eventos > 1) {
+        $numero = 'plural';
+      }
+
       $data = '<ul>';
       foreach ($eventos as $evento) {
         $data .= '<li> <a href="'. get_permalink( $evento->ID ) . '">' . $evento->post_title . '</a></li>';
       }
       $data .= '</ul>';
+    } else {
+      $numero = 'cero';
     }
-    return $data;
+    return ['numero' => $numero, 'eventos' => $data];
+  }
+
+  public function edicionTerm()
+  {
+    $terms = get_terms([
+      'taxonomy' => 'edition',
+    ]);
+
+    $edi = $terms[0]->name;
+    return $edi;
   }
 }
