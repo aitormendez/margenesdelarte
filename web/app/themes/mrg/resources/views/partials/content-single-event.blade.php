@@ -5,9 +5,18 @@
     @include('partials/entry-meta')
   </header>
   <div class="entry-content">
-@dump($data)
-@dump($related_productions)
     @php the_content() @endphp
   </div>
-  @php comments_template('/partials/comments.blade.php') @endphp
+  <div
+    id="map{{ get_the_ID() }}"
+    class="map" lat="{{ $data['mapa']['lat'] }}"
+    lng="{{ $data['mapa']['lng'] }}"
+    nombre="{{ $data['nombre_lugar'] }}"
+    link="{{ $data['link_location'] }}"
+  >
+
+  </div>
+
+  @dump($data)
+  @dump($related_productions)
 </article>

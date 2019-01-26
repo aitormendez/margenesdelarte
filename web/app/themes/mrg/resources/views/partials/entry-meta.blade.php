@@ -11,6 +11,24 @@
       @endif
     {!! $eventos_relacionados['eventos'] !!}
     </div>
+  @elseif (is_singular('event'))
+    <div class="bloque">
+      <p class="epi">{{ __('When', 'sage') }}</p>
+      <p class="fecha">{{ $data['start_date'] }}</p>
+      <p class="horario">{{ $data['horario'] }}</p>
+    </div>
+    <div class="bloque">
+      <p class="epi">{{ __('Where', 'sage') }}</p>
+      <div class="direccion">{!! $data['direccion'] !!}</div>
+    </div>
+    <div class="bloque">
+      <p class="epi">{{ __('Productions', 'sage') }}</p>
+      @foreach ($related_productions as $related_production)
+        <p><a href="{{ get_permalink($related_production->ID) }}">{{ $related_production->post_title }}</a> </p>
+      @endforeach
+    </div>
+
+
   @else
     <time class="updated" datetime="{{ get_post_time('c', true) }}">{{ get_the_date() }}</time>
     <p class="byline author vcard">

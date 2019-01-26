@@ -12,20 +12,27 @@ class SingleEvent extends Controller
 
     $mapa = get_field('mapa', $location_post_object->ID);
 
+    $nombre_lugar = get_the_title($location_post_object->ID);
+
+    $link_location = get_permalink($location_post_object->ID);
+
     $direccion =
-    '<p>' . get_the_title($location_post_object->ID) . '</p>'
-    . '<p>' . get_field('direccion', $location_post_object->ID) . '</p>'
-    . '<p>' . get_field('codigo_postal', $location_post_object->ID) . ', ' . get_field('poblacion', $location_post_object->ID) . '</p>';
+    '<p>' . $nombre_lugar . '</p>' .
+    '<p>' . get_field('direccion', $location_post_object->ID) . '</p>' .
+    '<p>' . get_field('codigo_postal', $location_post_object->ID) . ', ' .
+            get_field('poblacion', $location_post_object->ID) . '</p>';
 
     $start_date = get_field('start_date');
 
     $horario = __('From', 'sage') . ' ' . get_field('start_time') . ' ' . __('to') . ' ' .  get_field('end_time');
 
     $data = [
-      $mapa,
-      $direccion,
-      $start_date,
-      $horario,
+      'mapa' => $mapa,
+      'direccion' => $direccion,
+      'start_date' => $start_date,
+      'horario' => $horario,
+      'nombre_lugar' => $nombre_lugar,
+      'link_location' => $link_location,
     ];
 
     return $data;
