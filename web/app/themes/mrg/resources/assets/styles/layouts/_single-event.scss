@@ -30,12 +30,10 @@
   .map-container {
     position: absolute;
     left: 0;
-    height: 400px;
-    width: 100vw;
+    width: calc(100vw - 15px);
 
     .map {
       height: 400px;
-      width: 100vw;
     }
   }
 }
