@@ -1,0 +1,13 @@
+.single-event {
+  .map-container {
+    position: absolute;
+    left: 0;
+    height: 400px;
+    width: 100vw;
+
+    .map {
+      height: 400px;
+      width: 100vw;
+    }
+  }
+}

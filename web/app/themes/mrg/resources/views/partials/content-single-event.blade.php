@@ -7,16 +7,16 @@
   <div class="entry-content">
     @php the_content() @endphp
   </div>
-  <div
-    id="map{{ get_the_ID() }}"
-    class="map" lat="{{ $data['mapa']['lat'] }}"
-    lng="{{ $data['mapa']['lng'] }}"
-    nombre="{{ $data['nombre_lugar'] }}"
-    link="{{ $data['link_location'] }}"
-  >
-
+  <div class="map-container">
+    <div
+      id="map{{ get_the_ID() }}"
+      class="map" lat="{{ $data['mapa']['lat'] }}"
+      lng="{{ $data['mapa']['lng'] }}"
+      nombre="{{ $data['nombre_lugar'] }}"
+      link="{{ $data['link_location'] }}"
+    >
   </div>
 
-  @dump($data)
-  @dump($related_productions)
+
+  </div>
 </article>

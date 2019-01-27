@@ -21,7 +21,8 @@ add_action('wp_enqueue_scripts', function () {
 
     $data = array(
         'homeUrl' => get_bloginfo( 'url' ),
-        'presentGif' => \App\asset_path('images/videogif/present.gif')
+        'presentGif' => \App\asset_path('images/videogif/present.gif'),
+        'marker' => \App\asset_path('images/img/marker.png'),
     );
     wp_localize_script('sage/main.js', 'mrg', $data);
 
