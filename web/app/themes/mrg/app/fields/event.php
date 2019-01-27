@@ -11,23 +11,13 @@ $event
 
 $event
 ->addTab('Cuándo', ['placement' => 'left'])
-    ->addDatePicker('start_date', [
-        'label' => __('Start date', 'sage'),
+    ->addDateTimePicker('start', [
+        'label' => __('Start', 'sage'),
     ])
 
-    ->addDatePicker('end_date', [
-        'label' => __('End date', 'sage'),
+    ->addDateTimePicker('end', [
+        'label' => __('End', 'sage'),
     ])
-
-    ->addTimePicker('start_time', [
-        'label' => __('Start time', 'sage'),
-    ])
-    ->conditional('all_day', '==', '0')
-
-    ->addTimePicker('end_time', [
-        'label' => __('End time', 'sage'),
-    ])
-    ->conditional('all_day', '==', '0')
 
     ->addTrueFalse('all_day', [
         'label' => __('All day', 'sage'),

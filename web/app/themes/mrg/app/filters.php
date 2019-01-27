@@ -93,15 +93,42 @@ add_filter('acf/fields/google_map/api', function ($api) {
 });
 
 /**
- * Blade SVG Sage. https://github.com/Log1x/blade-svg-sage
+ * Crear json con objetos event para fullcalendar
  */
- // add_filter('bladesvg', function () {
- //     return [
- //         'svg_path' => 'dist/images/svg',
- //         'spritesheet_path' => 'resources/svg/spritesheet.svg',
- //         'spritesheet_url' => '',
- //         'sprite_prefix' => '',
- //         'inline' => true,
- //         'class' => 'icon'
- //     ];
- // });
+ add_action('save_post', function(){
+
+   $args_event = [
+     'post_type' => 'event',
+     'post_status' => 'publish',
+     'nopaging' => true,
+   ];
+
+   $event_query = new \WP_Query( $args_event );
+
+   if ( $event_query->have_posts() ) {
+    	while ( $event_query->have_posts() ) {
+    		$event_query->the_post();
+
+        $all_day = get_field('all_day');
+        $start_obj = new \DateTime(get_field('start', false, false));
+        $end_obj = new \DateTime(get_field('end', false, false));
+        $start = $start_obj->format('c') ;
+        $end = $end_obj->format('c') ;
+        $permalink = get_permalink();
+
+
+        $array[] = [
+          'title'  => get_the_title(),
+          'url'    => $permalink,
+          'allDay' => $all_day,
+          'start'  => $start,
+          'end'  => $end,
+        ];
+    	} // end while
+    } // end if
+
+
+   $fp = fopen(get_template_directory().'/events.json', 'w');
+   fwrite($fp, json_encode($array));
+   fclose($fp);
+ });

@@ -11,6 +11,7 @@ import home from './routes/home';
 import aboutUs from './routes/about';
 import single from './routes/single';
 import singleEvent from './routes/single-event';
+import postTypeArchiveEvent from './routes/archive-event';
 
 // import then needed Font Awesome functionality
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
@@ -35,6 +36,7 @@ const routes = new Router({
   aboutUs,
   single,
   singleEvent,
+  postTypeArchiveEvent,
 });
 
 // Load Events

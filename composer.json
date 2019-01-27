@@ -94,7 +94,8 @@
     "wpackagist-plugin/imsanity": "*",
     "johnbillion/extended-cpts": "^4.2.3",
     "wpackagist-plugin/classic-editor": "*",
-    "stoutlogic/acf-builder": "^1.8"
+    "stoutlogic/acf-builder": "^1.8",
+    "wpackagist-plugin/query-monitor": "^3.1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2",
