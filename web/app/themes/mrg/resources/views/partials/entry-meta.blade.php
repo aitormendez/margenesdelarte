@@ -22,7 +22,7 @@
       <div class="direccion">{!! $data['direccion'] !!}</div>
     </div>
     <div class="bloque">
-      <p class="epi">{{ __('Productions', 'sage') }}</p>
+      <p class="epi">{{ __('Related documents', 'sage') }}</p>
       @foreach ($related_productions as $related_production)
         <p><a href="{{ get_permalink($related_production->ID) }}">{{ $related_production->post_title }}</a> </p>
       @endforeach

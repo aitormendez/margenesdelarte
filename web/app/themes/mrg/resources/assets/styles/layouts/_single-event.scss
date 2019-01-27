@@ -1,4 +1,32 @@
 .single-event {
+  .meta {
+    font-family: $ff-sans;
+    font-size: 0.9rem;
+
+    .bloque {
+      margin-bottom: $pad;
+    }
+
+    p {
+      margin-bottom: 0;
+      margin-top: 0;
+
+      &.epi {
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      &.fecha {
+        font-size: 2rem;
+        line-height: 1em;
+      }
+
+      &.horario {
+        text-transform: uppercase;
+      }
+    }
+  }
+
   .map-container {
     position: absolute;
     left: 0;

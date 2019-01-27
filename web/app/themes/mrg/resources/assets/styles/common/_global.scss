@@ -36,34 +36,6 @@ a {
   }
 }
 
-.meta {
-  font-family: $ff-sans;
-  font-size: 0.9rem;
-  text-transform: uppercase;
-
-  .epi {
-    margin-top: 0;
-    margin-bottom: 0;
-  }
-
-  ul {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-left: 0;
-    list-style-type: none;
-  }
-
-  @include tablet-portrait {
-    .grupo {
-      display: flex;
-
-      ul {
-        margin-left: 5px;
-      }
-    }
-  }
-}
-
 h1,
 h2,
 h3 {
