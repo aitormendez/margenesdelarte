@@ -41,6 +41,8 @@ export default {
       let miPopup = L.marker([latitud, longitud], {icon: myIcon}).addTo(mapa);
 
       miPopup.bindPopup('<a href="'+ link + '">' + nombre + '</a>');
+      
+      new L.Control.Zoom({ position: 'topright' }).addTo(mapa);
 
     })
 
