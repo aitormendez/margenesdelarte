@@ -40,4 +40,6 @@ class SingleEvent extends Controller
 
   protected $acf = 'related_productions';
 
+  use Partials\Edition;
+
 }

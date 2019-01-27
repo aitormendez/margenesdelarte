@@ -149,10 +149,6 @@ export default {
         this.runnerName = runnerName;
       }
 
-      this.stopRunner = function(runnerName) {
-        console.log(runnerName + 'STOP');
-      }
-
       this.startRunner = function(runnerName) {
         if (runnerName == 'bannerDownBig') {
           $('.banner').addClass('big');
@@ -161,7 +157,6 @@ export default {
           $('.banner').removeClass('big');
           $('#flecha-1').addClass('hidden');
         }
-        console.log(runnerName + 'START');
       }
 
     }

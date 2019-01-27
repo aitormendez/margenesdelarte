@@ -7,7 +7,6 @@ export default {
     // JavaScript to be fired on the single post
     /* eslint-disable */
     var logoMarker = mrg.marker;
-    console.log(logoMarker);
     /* eslint-enable */
 
     let mapa = $('.map');

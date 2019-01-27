@@ -1,4 +1,8 @@
 .single-event {
+  h1 {
+    margin-top: 0;
+  }
+
   .meta {
     font-family: $ff-sans;
     font-size: 0.9rem;
@@ -22,6 +26,10 @@
       }
 
       &.horario {
+        text-transform: uppercase;
+      }
+
+      &.edicion {
         text-transform: uppercase;
       }
     }
