@@ -9,6 +9,11 @@ export default {
 
     $('#calendar').fullCalendar({
       events: themeUri + '/resources/events.json',
+      header: {
+        left:   'title',
+        center: 'agendaWeek, month',
+        right:  'today prev,next',
+      },
     })
 
   },

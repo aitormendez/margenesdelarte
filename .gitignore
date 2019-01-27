@@ -8,6 +8,8 @@ web/app/uploads/*
 
 !web/app/mu-plugins/mrg
 
+web/app/themes/mrg/resources/events.json
+
 # WordPress
 web/wp
 web/.htaccess

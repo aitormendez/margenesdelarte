@@ -122,7 +122,7 @@ add_action( 'init', function() {
     ],
     'start_date' => array(
       'title'       => __('Start Date', 'mrg-CPT'),
-      'meta_key'    => 'start_date',
+      'meta_key'    => 'start',
       'date_format' => 'D, d M Y',
       'default'  => 'DESC',
     ),
@@ -146,6 +146,9 @@ add_action( 'init', function() {
           'admin_filters' => [
             'edition' => [
               'taxonomy' => 'edition',
+            ],
+            'ambit' => [
+              'taxonomy' => 'ambit',
             ],
           ],
       ]
