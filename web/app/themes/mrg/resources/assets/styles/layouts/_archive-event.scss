@@ -1,5 +1,71 @@
 .post-type-archive-event {
-  #calendar {
-    // background-color: $gray;
+  .calendar-container {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+
+    #calendar {
+      margin-left: $pad;
+      margin-right: $pad;
+      font-family: $ff-sans;
+
+      h2 {
+        text-transform: uppercase;
+      }
+
+      button {
+        font-weight: 200;
+        text-transform: uppercase;
+      }
+
+      .fc-widget-header {
+        font-weight: normal;
+        text-transform: uppercase;
+        border: none;
+
+        th {
+          border: none;
+        }
+      }
+
+      .fc-state-default {
+        background-color: $gray-lighter;
+        background-image: none;
+        border: none;
+        color: #000;
+        text-shadow: none;
+        box-shadow: none;
+      }
+
+      .fc-state-hover,
+      .fc-state-down,
+      .fc-state-active,
+      .fc-state-disabled {
+        color: #000;
+        background-color: $gray-lighter;
+      }
+
+      .fc-state-hover {
+        color: #000;
+        text-decoration: none;
+      }
+
+      .fc-state-down,
+      .fc-state-active {
+        background-color: $color-rojo;
+        color: #fff;
+        background-image: none;
+        box-shadow: none;
+      }
+    }
+  }
+
+  @include tablet-portrait {
+    .calendar-container {
+      #calendar {
+        margin-left: $pad-4;
+        margin-right: $pad-4;
+      }
+    }
   }
 }

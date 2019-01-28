@@ -9,7 +9,9 @@
     {!! get_search_form(false) !!}
   @endif
 
-  <div id="calendar"></div>
+  <div class="calendar-container">
+    <div id="calendar"></div>
+  </div>
 
 
   @while (have_posts()) @php the_post() @endphp

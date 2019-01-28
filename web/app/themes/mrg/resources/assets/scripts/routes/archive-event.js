@@ -9,6 +9,8 @@ export default {
 
     $('#calendar').fullCalendar({
       events: themeUri + '/resources/events.json',
+      eventColor: '#e30000',
+      height: 650,
       header: {
         left:   'title',
         center: 'agendaWeek, month',
