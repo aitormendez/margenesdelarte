@@ -22,6 +22,11 @@
       @endif
     </nav>
   </div>
+  @if (is_post_type_archive(['event', 'location']) || is_page('programadas') || is_page('calendario')|| is_page('anteriores'))
+    @if (has_nav_menu('activities_navigation'))
+      {!! wp_nav_menu(['theme_location' => 'activities_navigation', 'menu_class' => 'nav']) !!}
+    @endif
+  @endif
   <div id="hamb"></div>
   <a id="flecha-1" class="flecha-aba"></a>
 </header>

@@ -20,6 +20,16 @@ body {
         margin-top: 144px;
       }
     }
+
+    &.anteriores,
+    &.programadas,
+    &.calendario,
+    &.post-type-archive-event,
+    &.post-type-archive-location {
+      .content {
+        margin-top: 163px;
+      }
+    }
   }
 }
 

@@ -57,6 +57,7 @@ add_action('after_setup_theme', function () {
     register_nav_menus([
         'general_navigation' => __('General Navigation', 'sage'),
         'contents_navigation' => __('Contents Navigation', 'sage'),
+        'activities_navigation' => __('Activities Navigation', 'sage'),
     ]);
 
     /**

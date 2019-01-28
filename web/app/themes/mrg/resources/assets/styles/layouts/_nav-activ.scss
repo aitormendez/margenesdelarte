@@ -1,0 +1,83 @@
+.anteriores,
+.programadas,
+.calendario,
+.post-type-archive-event,
+.post-type-archive-location {
+  .content {
+    margin-top: 163px;
+  }
+
+  .banner {
+    padding: $pad-1 0 0;
+
+    > .container {
+      padding-left: $pad-1;
+      padding-right: $pad-1;
+    }
+  }
+
+  .menu-actividades-container {
+    #menu-actividades {
+      padding-left: 0;
+      list-style-type: none;
+
+      li {
+        &.act {
+          font-weight: bold;
+          margin-bottom: $pad-1;
+          padding-bottom: $pad-1;
+          border-bottom: 2px solid #000;
+        }
+
+        &.current-menu-item {
+          background-color: #fff;
+        }
+
+        a {
+          display: block;
+          padding: 0 3px;
+        }
+      }
+    }
+  }
+
+  @include tablet-portrait {
+    .menu-actividades-container {
+      margin-top: $pad-1;
+      font-size: 0.8rem;
+      background-color: #000;
+      width: 100%;
+
+      #menu-actividades {
+        display: flex;
+        justify-content: center;
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: $ff-sans;
+        font-weight: 200;
+
+        li {
+          margin-left: 5px;
+          margin-right: 5px;
+
+          &.act {
+            position: relative;
+            top: 1px;
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            font-weight: 400;
+          }
+
+          &.current-menu-item {
+            background-color: $color-rojo;
+          }
+
+          a {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+}
