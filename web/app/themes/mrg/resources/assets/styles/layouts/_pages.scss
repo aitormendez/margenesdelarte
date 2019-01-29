@@ -18,6 +18,12 @@
       max-width: 700px;
       padding-left: $pad-4;
       padding-right: $pad-4;
+
+      .page-header {
+        h1 {
+          margin-top: 0;
+        }
+      }
     }
   }
 
