@@ -14,35 +14,39 @@
       padding-left: $pad-1;
       padding-right: $pad-1;
     }
-  }
 
-  .menu-actividades-container {
-    #menu-actividades {
-      padding-left: 0;
-      list-style-type: none;
+    .menu-actividades-container {
+      #menu-actividades {
+        padding-left: 0;
+        list-style-type: none;
 
-      li {
-        &.act {
-          font-weight: bold;
-          margin-bottom: $pad-1;
-          padding-bottom: $pad-1;
-          border-bottom: 2px solid #000;
-        }
+        li {
+          &.act {
+            font-weight: bold;
+            margin-bottom: $pad-1;
+            padding-bottom: $pad-1;
+            border-bottom: 2px solid #000;
+          }
 
-        &.current-menu-item {
-          background-color: #fff;
-        }
+          &.current-menu-item {
+            background-color: #fff;
+          }
 
-        a {
-          display: block;
-          padding: 0 3px;
+          a {
+            display: block;
+            padding: 0 3px;
+
+            &:hover {
+              color: $gray-light-semi;
+            }
+          }
         }
       }
     }
   }
 
   @include tablet-portrait {
-    .menu-actividades-container {
+    .banner .menu-actividades-container {
       margin-top: $pad-1;
       font-size: 0.8rem;
       background-color: #000;

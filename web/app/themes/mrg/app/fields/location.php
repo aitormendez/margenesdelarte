@@ -10,7 +10,7 @@ $locat
     ->setLocation('post_type', '==', 'location');
 
 $locat
-    ->addTab('Mapa', ['placement' => 'left'])
+    ->addTab(__('map', 'sage'), ['placement' => 'left'])
       ->addGoogleMap('mapa', [
           'label' => __('Location', 'sage'),
           'instructions' => __('Elige la localización en el mapa', 'sage'),
@@ -21,18 +21,18 @@ $locat
           'height' => '300',
       ])
 
-    ->addTab('Dirección', ['placement' => 'left'])
+    ->addTab(__('Address', 'sage'), ['placement' => 'left'])
       ->addTextarea('direccion', [
       'label' => __('Address', 'sage'),
       'rows' => '5',
       ])
-      ->addText('poblacion', [
+      ->addText(__('City', 'sage'), [
         'label' => __('City', 'sage'),
       ])
       ->addText('codigo_postal', [
         'label' => __('Zip code', 'sage'),
       ])
-      ->addText('pais', [
+      ->addText(__('Country', 'sage'), [
         'label' => __('Country', 'sage'),
         'default_value' => 'España',
       ]);

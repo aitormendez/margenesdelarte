@@ -1,0 +1,100 @@
+.content-info {
+  font-family: $ff-sans;
+  background-color: #000;
+  padding: $pad;
+  background-image: url("../images/svg/fondo-rayado-gris-osc.svg");
+
+  a:hover {
+    color: #fff;
+  }
+
+  .container {
+    > div {
+      margin-right: $pad-3;
+      margin-bottom: $pad-1;
+      font-size: 1.2rem;
+
+      ul {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+        list-style-type: none;
+
+        li {
+          a {
+            display: block;
+            line-height: 1.2em;
+          }
+        }
+      }
+
+      &.social {
+        a {
+          display: inline-block;
+          font-size: 1.5rem;
+
+          &:first-child {
+            margin-right: 5px;
+          }
+        }
+      }
+
+      &.logos {
+        .logo-aguila {
+          margin-bottom: $pad;
+        }
+      }
+    }
+  }
+
+  @include tablet-portrait {
+    .container {
+      display: flex;
+      justify-content: space-between;
+
+      > div {
+        margin-bottom: 0;
+        margin-right: $pad-1;
+
+        &.logos {
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+          justify-content: flex-end;
+          margin-right: 0;
+        }
+
+        ul {
+          li {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include tablet-landscape {
+    .container {
+      > div {
+        margin-bottom: 0;
+        margin-right: $pad-3;
+
+        &.logos {
+          flex-direction: row;
+          align-items: flex-start;
+
+          .logo-aguila {
+            margin-right: $pad;
+          }
+        }
+
+        ul {
+          li {
+            font-size: 1.1rem;
+          }
+        }
+      }
+    }
+  }
+}
