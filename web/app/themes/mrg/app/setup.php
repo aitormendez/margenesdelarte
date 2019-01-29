@@ -59,6 +59,7 @@ add_action('after_setup_theme', function () {
         'contents_navigation' => __('Contents Navigation', 'sage'),
         'activities_navigation' => __('Activities Navigation', 'sage'),
         'etc_navigation' => __('Etc Navigation', 'sage'),
+        'contents_footer_navigation' => __('Contents Footer Navigation', 'sage'),
     ]);
 
     /**
