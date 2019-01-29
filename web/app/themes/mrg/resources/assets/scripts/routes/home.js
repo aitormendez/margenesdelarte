@@ -18,6 +18,11 @@ export default {
       video.css('background-image', `url(${mrg.actiGif})`)
     });
 
+    $('.menu-grupo').mouseenter(function(){
+      ruido.css('opacity', 0.2);
+      video.css('background-image', `url(${mrg.grupoGif})`)
+    });
+
     $('.menu-item').mouseleave(function(){
       ruido.css('opacity', 1);
       video.css('background-image', 'none')

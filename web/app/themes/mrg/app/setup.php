@@ -23,6 +23,7 @@ add_action('wp_enqueue_scripts', function () {
         'homeUrl' => get_bloginfo( 'url' ),
         'presentGif' => \App\asset_path('images/videogif/present.gif'),
         'actiGif' => \App\asset_path('images/videogif/actividades.gif'),
+        'grupoGif' => \App\asset_path('images/videogif/grupo.gif'),
         'marker' => \App\asset_path('images/img/marker.png'),
         'themeUri' => get_theme_file_uri(),
     );

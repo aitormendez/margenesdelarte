@@ -83,7 +83,8 @@
           .programadas &,
           .anteriores &,
           .post-type-archive-event &,
-          .post-type-archive-location & {
+          .post-type-archive-location &,
+          .grupo & {
             opacity: 0.2;
           }
         }
@@ -96,6 +97,10 @@
           .post-type-archive-event &,
           .post-type-archive-location & {
             background-image: url("../images/videogif/actividades.gif");
+          }
+
+          .grupo & {
+            background-image: url("../images/videogif/grupo.gif");
           }
         }
       }
