@@ -200,9 +200,6 @@ add_action( 'init', function() {
       'event'
     ],
     [
-  		'meta_box' => 'radio',
-    ],
-    [
   		'singular' => __( 'Edition', 'mrg-CPT' ),
   		'plural'   => __( 'Editions', 'mrg-CPT' ),
 	   ]
@@ -232,6 +229,21 @@ add_action( 'init', function() {
     ], [
   		'singular' => __( 'Meeting', 'mrg-CPT' ),
   		'plural'   => __( 'Meetings', 'mrg-CPT' ),
+	   ]
+  );
+
+  register_extended_taxonomy(
+    'origin',
+    [
+      'production',
+      'event'
+    ],
+    [
+  		'meta_box' => 'radio',
+    ],
+    [
+  		'singular' => __( 'Origin', 'mrg-CPT' ),
+  		'plural'   => __( 'Origin', 'mrg-CPT' ),
 	   ]
   );
 
