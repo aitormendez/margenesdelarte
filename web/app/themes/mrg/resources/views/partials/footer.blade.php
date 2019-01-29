@@ -1,16 +1,16 @@
 <footer class="content-info">
   <div class="container">
-    @if (has_nav_menu('general_navigation'))
-      {!! wp_nav_menu(['theme_location' => 'general_navigation', 'menu_class' => 'nav']) !!}
-    @endif
+    <div>@if (has_nav_menu('general_navigation'))
+        {!! wp_nav_menu(['theme_location' => 'general_navigation', 'menu_class' => 'nav']) !!}
+      @endif
+      @if (has_nav_menu('etc_navigation'))
+        {!! wp_nav_menu(['theme_location' => 'etc_navigation', 'menu_class' => 'nav']) !!}
+      @endif</div>
     @if (has_nav_menu('contents_footer_navigation'))
       {!! wp_nav_menu(['theme_location' => 'contents_footer_navigation', 'menu_class' => 'nav']) !!}
     @endif
     @if (has_nav_menu('activities_navigation'))
       {!! wp_nav_menu(['theme_location' => 'activities_navigation', 'menu_class' => 'nav']) !!}
-    @endif
-    @if (has_nav_menu('etc_navigation'))
-      {!! wp_nav_menu(['theme_location' => 'etc_navigation', 'menu_class' => 'nav']) !!}
     @endif
     <div class="social">
       <!-- Facebook icon -->
