@@ -1,6 +1,7 @@
 import 'lightgallery/dist/js/lightgallery';
 import 'lightgallery/modules/lg-fullscreen';
 import 'lightgallery/modules/lg-hash';
+import Plyr from 'plyr/dist/plyr';
 
 export default {
   init() {
@@ -15,6 +16,10 @@ export default {
       thumbContHeight: 60,
       hideBarsDelay: 1000,
     });
+
+    // plyr
+    const players = Plyr.setup('.wp-block-embed-youtube .wp-block-embed__wrapper');
+
 
   },
   finalize() {
