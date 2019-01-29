@@ -1,5 +1,4 @@
 <div class="meta">
-
   @if (is_singular('production'))
     <p class="epi">{{ __('Edition', 'sage') }}: <span>{{ $edicion_term }}</span></p>
       @if ($eventos_relacionados['numero'] == 'singular')

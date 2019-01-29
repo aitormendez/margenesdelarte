@@ -22,9 +22,18 @@ class SingleEvent extends Controller
     '<p>' . get_field('codigo_postal', $location_post_object->ID) . ', ' .
             get_field('poblacion', $location_post_object->ID) . '</p>';
 
-    $start_date = get_field('start_date');
+    $s_date =
+    $start_obj = new \DateTime(get_field('start', false, false));
+    $start_date = $start_obj->format('j/m/Y');
+    $start_time = $start_obj->format('G:i');
 
-    $horario = __('From', 'sage') . ' ' . get_field('start_time') . ' ' . __('to') . ' ' .  get_field('end_time');
+    $end_obj = new \DateTime(get_field('end', false, false));
+    $end_date = $end_obj->format('j/m/Y');
+    $end_time = $end_obj->format('G:i');
+
+
+
+    $horario = __('From', 'sage') . ' ' . $start_time . ' ' . __('to') . ' ' .  $end_time;
 
     $data = [
       'mapa' => $mapa,
