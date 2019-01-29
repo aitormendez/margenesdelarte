@@ -13,6 +13,11 @@ export default {
       video.css('background-image', `url(${mrg.presentGif})`)
     });
 
+    $('.menu-acti').mouseenter(function(){
+      ruido.css('opacity', 0.2);
+      video.css('background-image', `url(${mrg.actiGif})`)
+    });
+
     $('.menu-item').mouseleave(function(){
       ruido.css('opacity', 1);
       video.css('background-image', 'none')

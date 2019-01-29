@@ -79,10 +79,24 @@
         &.ruido {
           background-image: url("../images/videogif/ruido.gif");
           background-size: cover;
+
+          .programadas &,
+          .anteriores &,
+          .post-type-archive-event &,
+          .post-type-archive-location & {
+            opacity: 0.2;
+          }
         }
 
         &.video {
           background-size: cover;
+
+          .programadas &,
+          .anteriores &,
+          .post-type-archive-event &,
+          .post-type-archive-location & {
+            background-image: url("../images/videogif/actividades.gif");
+          }
         }
       }
     }
