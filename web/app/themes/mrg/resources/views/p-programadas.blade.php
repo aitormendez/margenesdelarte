@@ -3,7 +3,7 @@
 --}}
 
 @query([
-  'post_type' => 'event',
+  'post_type' => 'lkjlkj',
   'posts_per_page' => 2,
   'paged'=> (get_query_var('paged')) ? get_query_var('paged') : 1,
 ])
@@ -15,7 +15,11 @@
 @section('content')
 
   @if (!$query->have_posts())
-    <h1>No hay posts</h1>
+    <div class="no-posts">
+      <p>{{ __('There is no scheduled activities at this time.', 'sage') }}</p>
+      <p><a href="{{ $home_url }}/anteriores">{{ __('You can see past activities.', 'sage') }}</a> </p>
+    </div>
+
   @else
 
     <div class="infinite-container">

@@ -80,3 +80,19 @@ $trans: 0.5s;
     visibility: visible;
   }
 }
+
+.dashed-black {
+  border: 3px dashed black;
+  border-image-source: url("../images/svg/dashed-black.svg");
+  border-image-slice: 16;
+  border-image-width: 16px;
+  border-image-repeat: round;
+}
+
+.dashed-grey {
+  border: 3px dashed black;
+  border-image-source: url("../images/svg/dashed-grey.svg");
+  border-image-slice: 16;
+  border-image-width: 16px;
+  border-image-repeat: round;
+}
