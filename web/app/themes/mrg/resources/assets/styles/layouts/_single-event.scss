@@ -1,4 +1,8 @@
 .single-event {
+  .content {
+    padding-bottom: 0 !important;
+  }
+
   h1 {
     margin-top: 0;
   }
@@ -36,9 +40,9 @@
   }
 
   .map-container {
-    position: absolute;
-    left: 0;
-    width: calc(100vw - 15px);
+    position: relative;
+    left: calc(-50vw + 50%);
+    width: calc(100vw - 8px);
 
     .map {
       height: 400px;
