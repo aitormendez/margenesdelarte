@@ -60,3 +60,14 @@ h3 {
 figure {
   margin: 0;
 }
+
+// infinite scroll
+.page-load-status {
+  display: none; /* hidden by default */
+}
+
+.mi-loader {
+  width: 300px;
+  height: 200px;
+  background-color: #000;
+}
