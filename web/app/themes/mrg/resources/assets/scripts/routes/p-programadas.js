@@ -1,47 +1,68 @@
 import InfiniteScroll from 'infinite-scroll/dist/infinite-scroll.pkgd';
+import 'isotope-layout/dist/isotope.pkgd';
+import 'imagesloaded/imagesloaded.pkgd';
+
 
 export default {
   init() {
     // JavaScript to be fired
 
-    // Infinite scroll
-
-    let main = $('.infinite-container').infiniteScroll({
-      // options
-      path: '.older a',
-      append: 'article',
-      history: false,
-      hideNav: '.pager',
-      button: '.view-more-button',
-      status: '.page-load-status',
-    });
-
-    let viewMoreButton = $('.view-more-button');
-    let buttonCont = $('.button-container');
+    // Infinite scroll + Isotope
+    // https://infinite-scroll.com/options.html#outlayer
 
 
-    var infScroll = main.data('infiniteScroll');
+    const $grid = $('.infinite-container').isotope({
+        itemSelector: '.event',
+        masonry: {
+          columnWidth: 50,
+        },
+      });
+      $grid.imagesLoaded().progress(function() {
+        $grid.isotope('layout');
+      });
 
-    main.on( 'load.infiniteScroll', onPageLoad );
 
-    main.on( 'last.infiniteScroll', function( event, response, path ) {
-      console.log( 'Loaded: ' + path );
-      buttonCont.hide();
-    });
 
-    function onPageLoad() {
-      if ( infScroll.loadCount == 1 ) {
-        // after 2nd page loaded
-        // disable loading on scroll
-        main.infiniteScroll( 'option', {
-          loadOnScroll: false,
-        });
-        // show button
-        viewMoreButton.show();
-        // remove event listener
-        main.off( 'load.infiniteScroll', onPageLoad );
-      }
-    }
+
+    // var isot = grid.data('isotope');
+    //
+    // let main = grid.infiniteScroll({
+    //   // options
+    //   path: '.older a',
+    //   append: 'article',
+    //   history: false,
+    //   hideNav: '.pager',
+    //   button: '.view-more-button',
+    //   status: '.page-load-status',
+    // });
+    //
+    // let viewMoreButton = $('.view-more-button');
+    // let buttonCont = $('.button-container');
+    //
+    //
+    // var infScroll = main.data('infiniteScroll');
+    //
+    // main.on( 'load.infiniteScroll', onPageLoad );
+    //
+    // main.on( 'last.infiniteScroll', function() {
+    //   buttonCont.hide();
+    // });
+    //
+    // function onPageLoad() {
+    //   if ( infScroll.loadCount == 1 ) {
+    //     main.infiniteScroll( 'option', {
+    //       loadOnScroll: false,
+    //     });
+    //     viewMoreButton.show();
+    //     main.off( 'load.infiniteScroll', onPageLoad );
+    //   }
+    // }
+
+
+
+
+
+
 
   },
 };

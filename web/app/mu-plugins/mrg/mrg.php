@@ -142,7 +142,7 @@ add_action( 'init', function() {
           'show_in_feed'  => true,
           'labels'        => $args_events,
           'admin_cols'    => $cols_event,
-          'supports'     => $supports_event,
+          'supports'      => $supports_event,
           'admin_filters' => [
             'edition' => [
               'taxonomy' => 'edition',
@@ -193,55 +193,51 @@ add_action( 'init', function() {
       ]
   );
 
-  register_extended_taxonomy(
-    'edition',
+  register_extended_taxonomy( 'edition',
     [
       'production',
       'event'
     ],
     [
+      'meta_box' => 'radio',
+      'hierarchical' => false,
   		'singular' => __( 'Edition', 'mrg-CPT' ),
   		'plural'   => __( 'Editions', 'mrg-CPT' ),
 	   ]
   );
 
-  register_extended_taxonomy(
-    'ambit',
+  register_extended_taxonomy( 'ambit',
     [
       'event'
     ],
     [
-  		'meta_box' => 'radio',
-    ],
-    [
+      'meta_box' => 'radio',
+      'hierarchical' => false,
   		'singular' => __( 'Ambit', 'mrg-CPT' ),
   		'plural'   => __( 'Ambits', 'mrg-CPT' ),
 	   ]
   );
 
-  register_extended_taxonomy(
-    'meeting',
+  register_extended_taxonomy( 'meeting',
     [
       'event'
     ],
     [
-  		'meta_box' => 'radio',
-    ], [
+      'meta_box' => 'radio',
+      'hierarchical' => false,
   		'singular' => __( 'Meeting', 'mrg-CPT' ),
   		'plural'   => __( 'Meetings', 'mrg-CPT' ),
 	   ]
   );
 
-  register_extended_taxonomy(
-    'origin',
+  register_extended_taxonomy( 'origin',
     [
       'production',
       'event'
     ],
     [
-  		'meta_box' => 'radio',
-    ],
-    [
+      'meta_box' => 'radio',
+      'hierarchical' => false,
   		'singular' => __( 'Origin', 'mrg-CPT' ),
   		'plural'   => __( 'Origin', 'mrg-CPT' ),
 	   ]

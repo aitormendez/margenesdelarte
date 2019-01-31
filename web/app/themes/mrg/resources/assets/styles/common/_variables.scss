@@ -96,3 +96,11 @@ $trans: 0.5s;
   border-image-width: 16px;
   border-image-repeat: round;
 }
+
+.dotted-black {
+  border: 3px dashed black;
+  border-image-source: url("../images/svg/dotted-black.svg");
+  border-image-slice: 6;
+  border-image-width: 6px;
+  border-image-repeat: round;
+}

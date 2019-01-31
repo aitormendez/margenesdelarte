@@ -3,7 +3,7 @@
 --}}
 
 @query([
-  'post_type' => 'lkjlkj',
+  'post_type' => 'event',
   'posts_per_page' => 2,
   'paged'=> (get_query_var('paged')) ? get_query_var('paged') : 1,
 ])
@@ -24,7 +24,7 @@
 
     <div class="infinite-container">
       @posts
-        @include('partials.content-'.get_post_type())
+        @include('partials.content-event')
       @endposts
     </div>
 
@@ -32,12 +32,12 @@
       <div class="loader-ellips infinite-scroll-request">
         <div class="mi-loader"></div>
       </div>
-      <p class="infinite-scroll-last">End of content</p>
-      <p class="infinite-scroll-error">No more pages to load</p>
+      <p class="infinite-scroll-last">{{ __('End of content', 'sage') }}</p>
+      <p class="infinite-scroll-error">{{ __('No more pages to load', 'sage') }}</p>
     </div>
 
     <div class="button-container">
-      <button class="view-more-button">View more</button>
+      <button class="view-more-button boton">View more</button>
     </div>
 
     <nav class="pager">

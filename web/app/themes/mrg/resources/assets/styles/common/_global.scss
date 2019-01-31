@@ -62,14 +62,36 @@ figure {
 }
 
 // infinite scroll
+// ---------------------------------------
 .page-load-status {
   display: none; /* hidden by default */
 }
 
 .mi-loader {
-  width: 300px;
-  height: 200px;
+  padding: $pad-4;
   background-color: #000;
+  background-image: url("../images/svg/flecha-aba-gran-blanco.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 4px;
+}
+
+.infinite-scroll-last,
+.infinite-scroll-error {
+  font-family: $ff-sans;
+  text-transform: uppercase;
+  color: $gray-light;
+  text-align: center;
+  padding: $pad-2;
+  background-color: $gray-lighter;
+
+  @extend .dashed-grey;
+}
+
+.button-container {
+  margin-top: $pad-3;
+  display: flex;
+  justify-content: center;
 }
 
 // cuando no hay posts

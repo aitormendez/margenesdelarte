@@ -4,25 +4,12 @@ namespace App\Controllers\Partials;
 
 trait Images
 {
-  public static function hero()
+  public static function featured()
   {
     global $post;
 
     if (has_post_thumbnail()) {
-      $data = get_the_post_thumbnail($post->ID, 'hd');
-    }
-    return $data;
-  }
-}
-
-trait ImagesSingle
-{
-  public function hero()
-  {
-    global $post;
-
-    if (has_post_thumbnail()) {
-      $data = get_the_post_thumbnail($post->ID, 'hd');
+      $data = get_the_post_thumbnail($post->ID, 'large');
     }
     return $data;
   }

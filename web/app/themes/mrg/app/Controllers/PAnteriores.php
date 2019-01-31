@@ -15,6 +15,6 @@ class PAnteriores extends Controller
 
   protected $acf = 'related_productions';
 
-  use Partials\Edition;
+  use Partials\Edicion;
 
 }
