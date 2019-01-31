@@ -13,4 +13,14 @@ trait Images
     }
     return $data;
   }
+
+  public static function clase()
+  {
+    if (has_post_thumbnail()) {
+      $data = 'con-imagen';
+    } else {
+      $data = 'sin-imagen';
+    }
+    return $data;
+  }
 }

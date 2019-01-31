@@ -1,5 +1,5 @@
 {{--
-  Template Name: Anteriores
+  Template Name: Programadas
 --}}
 
 @query([
@@ -22,7 +22,7 @@
 
   @else
 
-    <div class="infinite-container">
+    <div class="grid">
       @posts
         @include('partials.content-event')
       @endposts
@@ -36,7 +36,7 @@
       <p class="infinite-scroll-error">{{ __('No more pages to load', 'sage') }}</p>
     </div>
 
-    <div class="button-container">
+    <div class="button-container hide">
       <button class="view-more-button boton">View more</button>
     </div>
 

@@ -6,15 +6,7 @@ use Sober\Controller\Controller;
 
 class PAnteriores extends Controller
 {
-  public function data()
-  {
+  use Partials\ActivitiesLoop;
 
-
-    return $data;
-  }
-
-  protected $acf = 'related_productions';
-
-  use Partials\Edicion;
-
+  use Partials\Images;
 }

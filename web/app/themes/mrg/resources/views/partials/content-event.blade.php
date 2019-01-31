@@ -1,4 +1,8 @@
-<article @php post_class() @endphp>
+@php
+  $clase = PProgramadas::clase()
+@endphp
+
+<article @php post_class($clase) @endphp>
   <header>
     <p class="edition">{{ __('Edition', 'sage') }}:  {{ PProgramadas::editionLoop() }}</p>
     {!! PProgramadas::featured() !!}
