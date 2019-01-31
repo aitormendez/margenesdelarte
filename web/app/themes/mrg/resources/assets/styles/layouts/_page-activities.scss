@@ -75,4 +75,16 @@
       width: calc(33% - 30px);
     }
   }
+
+  @include desktop {
+    article {
+      width: calc(25% - 30px);
+    }
+  }
+
+  @include big-desktop {
+    article {
+      width: calc(20% - 30px);
+    }
+  }
 }
