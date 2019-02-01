@@ -60,9 +60,6 @@
         font-weight: 200;
 
         li {
-          margin-left: 5px;
-          margin-right: 5px;
-
           &.act {
             position: relative;
             top: 1px;
@@ -77,6 +74,7 @@
           }
 
           a {
+            padding: 5px 9px;
             color: #fff;
           }
         }

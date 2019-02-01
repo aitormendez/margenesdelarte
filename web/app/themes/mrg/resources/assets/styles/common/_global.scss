@@ -32,7 +32,13 @@ body {
     &.post-type-archive-event,
     &.post-type-archive-location {
       .content {
-        margin-top: 163px;
+        margin-top: 154px;
+      }
+    }
+
+    &.post-type-archive-location {
+      .content {
+        padding-top: 0;
       }
     }
   }
