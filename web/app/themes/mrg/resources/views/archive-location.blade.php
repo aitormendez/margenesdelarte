@@ -9,7 +9,7 @@
     {!! get_search_form(false) !!}
   @endif
 
-  <div id="map" class="map"></div>
+  <div id="map" class="map"><a id="flecha-location-1" class="flecha-aba">@svg('flecha-aba-peq')</a></div>
 
   <div class="list">
     @while (have_posts()) @php the_post() @endphp

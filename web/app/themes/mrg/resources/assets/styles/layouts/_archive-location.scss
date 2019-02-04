@@ -2,6 +2,13 @@
   #map {
     width: calc(100vw - 15px);
     height: calc(100vh);
+
+    #flecha-location-1 {
+      position: absolute;
+      z-index: 1000;
+      bottom: 0;
+      left: calc(50vw - 12px);
+    }
   }
 
   @include tablet-portrait {
