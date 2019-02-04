@@ -82,6 +82,7 @@
 
           .programadas &,
           .anteriores &,
+          .presentacion-2019 &,
           .post-type-archive-event &,
           .post-type-archive-location &,
           .grupo &,
@@ -102,6 +103,10 @@
 
           .grupo & {
             background-image: url("../images/videogif/grupo.gif");
+          }
+
+          .presentacion-2019 & {
+            background-image: url("../images/videogif/present.gif");
           }
 
           .contacto & {
