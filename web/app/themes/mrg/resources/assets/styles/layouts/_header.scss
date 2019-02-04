@@ -84,7 +84,8 @@
           .anteriores &,
           .post-type-archive-event &,
           .post-type-archive-location &,
-          .grupo & {
+          .grupo &,
+          .contacto & {
             opacity: 0.2;
           }
         }
@@ -101,6 +102,10 @@
 
           .grupo & {
             background-image: url("../images/videogif/grupo.gif");
+          }
+
+          .contacto & {
+            background-image: url("../images/videogif/contacto.gif");
           }
         }
       }

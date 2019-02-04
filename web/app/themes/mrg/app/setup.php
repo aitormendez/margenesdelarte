@@ -24,6 +24,7 @@ add_action('wp_enqueue_scripts', function () {
         'presentGif' => \App\asset_path('images/videogif/present.gif'),
         'actiGif' => \App\asset_path('images/videogif/actividades.gif'),
         'grupoGif' => \App\asset_path('images/videogif/grupo.gif'),
+        'contactoGif' => \App\asset_path('images/videogif/contacto.gif'),
         'marker' => \App\asset_path('images/img/marker-red.png'),
         'themeUri' => get_theme_file_uri(),
     );
