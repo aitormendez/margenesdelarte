@@ -95,7 +95,7 @@ add_filter('acf/fields/google_map/api', function ($api) {
 /**
  * Crear json con objetos event para fullcalendar
  */
- add_action('save_post', function(){
+ add_action('save_post_event', function(){
 
    $args_event = [
      'post_type' => 'event',
@@ -131,4 +131,43 @@ add_filter('acf/fields/google_map/api', function ($api) {
    $fp = fopen(get_template_directory().'/events.json', 'w');
    fwrite($fp, json_encode($array));
    fclose($fp);
+
+   wp_reset_postdata();
  });
+
+ /**
+  * Crear json con lugares para Leaflet
+  */
+
+  add_action('save_post_location', function(){
+    $args_location = [
+      'post_type' => 'location',
+      'post_status' => 'publish',
+      'nopaging' => true,
+    ];
+
+    $location_query = new \WP_Query( $args_location );
+
+    if ( $location_query->have_posts() ) {
+     	while ( $location_query->have_posts() ) {
+     		$location_query->the_post();
+
+         $mapa = get_field('mapa');
+         $permalink = get_permalink();
+         $lat_lng = [$mapa['lat'], $mapa['lng']];
+
+
+         $array[] = [
+           'title'  => get_the_title(),
+           'url'    => $permalink,
+           'latLng' => $lat_lng,
+         ];
+     	} // end while
+     } // end if
+
+     $fp = fopen(get_template_directory().'/location.json', 'w');
+     fwrite($fp, json_encode($array));
+     fclose($fp);
+
+     wp_reset_postdata();
+  });

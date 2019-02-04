@@ -1,4 +1,3 @@
-
 import L from 'leaflet/dist/leaflet.js';
 import 'leaflet.fullscreen/Control.FullScreen';
 

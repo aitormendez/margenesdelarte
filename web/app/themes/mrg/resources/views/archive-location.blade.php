@@ -9,7 +9,7 @@
     {!! get_search_form(false) !!}
   @endif
 
-  <div id="map"></div>
+  <div id="map" class="map"></div>
 
   <div class="list">
     @while (have_posts()) @php the_post() @endphp

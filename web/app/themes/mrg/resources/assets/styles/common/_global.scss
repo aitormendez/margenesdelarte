@@ -113,3 +113,9 @@ figure {
 
   @extend .dashed-grey;
 }
+
+// leaflet overrides
+
+.leaflet-popup-content-wrapper {
+  border-radius: 3px;
+}
