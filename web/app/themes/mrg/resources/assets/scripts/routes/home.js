@@ -1,6 +1,7 @@
 export default {
   init() {
     // JavaScript to be fired on the home page
+    /* eslint-disable no-undef */
 
     // preloader for videogifs
 
@@ -9,8 +10,10 @@ export default {
         $("<img />").attr("src", arguments[i]);
       }
     }
-    /* eslint-disable no-undef */
-    $.preloadImages(mrg.actiGif, mrg.presentGif, mrg.contactoGif, mrg.grupoGif);
+
+    $.preloadImages(mrg.actiGif, mrg.presentGif, mrg.contactoGif, mrg.grupoGif, mrg.edicionGif, mrg.invitadosGif, mrg.jornadasGif);
+
+    // videogifs
 
     let logo = $('.logo');
     let ruido =$('.ruido');
@@ -33,9 +36,24 @@ export default {
       video.css('background-image', `url(${mrg.contactoGif})`)
     });
 
+    $('.menu-edi').mouseenter(function(){
+      ruido.css('opacity', 0.2);
+      video.css('background-image', `url(${mrg.edicionGif})`)
+    });
+
     $('.menu-grupo').mouseenter(function(){
       ruido.css('opacity', 0.2);
       video.css('background-image', `url(${mrg.grupoGif})`)
+    });
+
+    $('.menu-invitados').mouseenter(function(){
+      ruido.css('opacity', 0.2);
+      video.css('background-image', `url(${mrg.invitadosGif})`)
+    });
+
+    $('.menu-jornadas').mouseenter(function(){
+      ruido.css('opacity', 0.2);
+      video.css('background-image', `url(${mrg.jornadasGif})`)
     });
 
     $('.menu-item').mouseleave(function(){

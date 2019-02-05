@@ -24,7 +24,10 @@ add_action('wp_enqueue_scripts', function () {
         'presentGif' => \App\asset_path('images/videogif/present.gif'),
         'actiGif' => \App\asset_path('images/videogif/actividades.gif'),
         'grupoGif' => \App\asset_path('images/videogif/grupo.gif'),
+        'edicionGif' => \App\asset_path('images/videogif/edicion.gif'),
         'contactoGif' => \App\asset_path('images/videogif/contacto.gif'),
+        'invitadosGif' => \App\asset_path('images/videogif/invitados.gif'),
+        'jornadasGif' => \App\asset_path('images/videogif/jornadas.gif'),
         'marker' => \App\asset_path('images/img/marker-red.png'),
         'themeUri' => get_theme_file_uri(),
     );

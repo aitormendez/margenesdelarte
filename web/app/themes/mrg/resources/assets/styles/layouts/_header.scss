@@ -86,7 +86,10 @@
           .post-type-archive-event &,
           .post-type-archive-location &,
           .grupo &,
-          .contacto & {
+          .contacto &,
+          .edicion-2018 &,
+          .invitados &,
+          .jornadas & {
             opacity: 0.2;
           }
         }
@@ -111,6 +114,18 @@
 
           .contacto & {
             background-image: url("../images/videogif/contacto.gif");
+          }
+
+          .invitados & {
+            background-image: url("../images/videogif/invitados.gif");
+          }
+
+          .edicion-2018 & {
+            background-image: url("../images/videogif/edicion.gif");
+          }
+
+          .jornadas & {
+            background-image: url("../images/videogif/jornadas.gif");
           }
         }
       }
