@@ -2,11 +2,21 @@ export default {
   init() {
     // JavaScript to be fired on the home page
 
+    // preloader for videogifs
+
+    $.preloadImages = function() {
+      for (var i = 0; i < arguments.length; i++) {
+        $("<img />").attr("src", arguments[i]);
+      }
+    }
+    /* eslint-disable no-undef */
+    $.preloadImages(mrg.actiGif, mrg.presentGif, mrg.contactoGif, mrg.grupoGif);
+
     let logo = $('.logo');
     let ruido =$('.ruido');
     let video =$('.video');
 
-    /* eslint-disable no-undef */
+
 
     $('.menu-present').mouseenter(function(){
       ruido.css('opacity', 0.2);
