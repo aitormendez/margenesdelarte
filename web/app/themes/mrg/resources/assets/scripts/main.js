@@ -11,6 +11,7 @@ import home from './routes/home';
 import aboutUs from './routes/about';
 import single from './routes/single';
 import singleEvent from './routes/single-event';
+import singleLocation from './routes/single-location';
 import postTypeArchiveEvent from './routes/archive-event';
 import postTypeArchiveLocation from './routes/archive-location';
 import pProgramadas from './routes/p-programadas';
@@ -43,6 +44,7 @@ const routes = new Router({
   postTypeArchiveLocation,
   pProgramadas,
   pAnteriores,
+  singleLocation,
 });
 
 // Load Events

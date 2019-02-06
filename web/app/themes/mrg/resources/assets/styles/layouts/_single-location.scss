@@ -1,0 +1,47 @@
+.single-location {
+  .content {
+    padding-bottom: 0 !important;
+  }
+
+  article {
+    h1 {
+      margin-top: 0;
+    }
+
+    .meta {
+      font-family: $ff-sans;
+      font-size: 0.9rem;
+
+      .bloque {
+        margin-bottom: $pad;
+
+        p {
+          margin-bottom: 0;
+          margin-top: 0;
+
+          &.epi {
+            text-transform: uppercase;
+            font-weight: bold;
+          }
+        }
+
+        ul {
+          list-style-type: none;
+          padding-left: 0;
+          margin-top: 0;
+          margin-bottom: $pad-4;
+        }
+      }
+    }
+
+    .map-container {
+      position: relative;
+      left: calc(-50vw + 50%);
+      width: calc(100vw - 8px);
+
+      #map {
+        height: 400px;
+      }
+    }
+  }
+}

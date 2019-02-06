@@ -1,5 +1,6 @@
 <div class="meta">
   @if (is_singular('production'))
+
     <p class="epi">{{ __('Edition', 'sage') }}: <span>{{ $edicion_term }}</span></p>
       @if ($eventos_relacionados['numero'] == 'singular')
         <div class="grupo">
@@ -10,7 +11,9 @@
       @endif
     {!! $eventos_relacionados['eventos'] !!}
     </div>
+
   @elseif (is_singular('event'))
+
     <div class="bloque">
       <p class="epi">{{ __('When', 'sage') }}</p>
       <p class="fecha">{{ $data['start_date'] }}</p>
@@ -28,6 +31,25 @@
         @endforeach
       @endif
     </div>
+
+  @elseif (is_singular('location'))
+
+    <div class="bloque">
+      <p class="epi">{{ __('Address', 'sage') }}</p>
+      <div class="direccion">
+        <p>{{ $direccion }}</p>
+        <p>{{ $codigo_postal }}, {{ $City }}</p>
+      </div>
+    </div>
+    @if (sizeof($related_locations) > 0)
+      <div class="bloque">
+        <p class="epi">{{ __('Activities at this place', 'sage') }}</p>
+        <ul class="actividades">
+          {!! $related_locations !!}
+        </ul>
+      </div>
+    @endif
+
   @else
     <time class="updated" datetime="{{ get_post_time('c', true) }}">{{ get_the_date() }}</time>
     <p class="byline author vcard">
@@ -35,5 +57,6 @@
         {{ get_the_author() }}
       </a>
     </p>
+
   @endif
 </div>

@@ -33,7 +33,7 @@ $event
         'instructions' => __('Elige el lugar de la lista desplegable. Si no aparece el que buscas, deberás añadirlo en la pestaña Lugares', 'sage'),
         'post_type' => ['location'],
         'return_format' => 'object',
-      'ui' => 1,
+        'ui' => 1,
 ])
 
 ->addTab('Producciones', ['placement' => 'left'])

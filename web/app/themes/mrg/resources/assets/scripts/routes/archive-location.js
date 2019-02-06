@@ -55,7 +55,7 @@ export default {
         iconUrl: logoMarker,
         iconSize: [29, 29],
         iconAnchor: [15, 15],
-        popupAnchor: [0, -20],
+        popupAnchor: [0, -10],
       });
 
       // instantiate bounds
