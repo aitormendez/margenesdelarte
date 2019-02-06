@@ -11,10 +11,12 @@
 
   <div id="map" class="map"><a id="flecha-location-1" class="flecha-aba">@svg('flecha-aba-peq')</a></div>
 
-  <div class="list">
-    @while (have_posts()) @php the_post() @endphp
-      @include('partials.content-'.get_post_type())
-    @endwhile
-    </div>
-  {!! get_the_posts_navigation() !!}
+
+    <ul class="list">
+      @while (have_posts()) @php the_post() @endphp
+        @include('partials.content-'.get_post_type())
+      @endwhile
+    </ul>
+
+
 @endsection

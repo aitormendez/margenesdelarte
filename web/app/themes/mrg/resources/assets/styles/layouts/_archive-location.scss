@@ -16,4 +16,24 @@
       height: calc(100vh - 154px);
     }
   }
+
+  .list {
+    list-style-type: none;
+    padding-left: 0;
+
+    li {
+      border-bottom: 1px solid #000;
+      padding-top: 0;
+      padding-bottom: 0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      a {
+        padding: $pad;
+        padding-bottom: $pad;
+      }
+    }
+  }
 }

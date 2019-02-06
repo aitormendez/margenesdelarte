@@ -10,6 +10,8 @@ export default {
 
     // flecha
     //--------------------------------------------------------------
+
+
     let flechaLocation1 = $('#flecha-location-1');
 
     flechaLocation1.click(function(event) {
@@ -21,8 +23,6 @@ export default {
         ease: Power1.easeOut,
       });
     });
-
-
 
 
     // mapa
@@ -71,14 +71,9 @@ export default {
           icon: myIcon,
           title: locations[i].title,
         }).addTo(map)
-        marker.bindPopup('<p>' + locations[i].title + '<p>' );
+        marker.bindPopup('<a href="' + locations[i].url + '">' + locations[i].title + '<a>' );
         bounds.extend(latLng);
         map.fitBounds(bounds);
-
-        // loop logs
-        // console.log('LAT-LNG: ' + latLng);
-        // console.log(bounds);
-
       } // <--end loop
     }
 
