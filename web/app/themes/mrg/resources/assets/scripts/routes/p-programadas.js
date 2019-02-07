@@ -15,10 +15,6 @@ export default {
     // https://infinite-scroll.com/extras.html#webpack-browserify
     // https://stackoverflow.com/questions/47906150/imagesloaded-required-for-outlayer-option
 
-    // jQueryBridget( 'Isotope', isotope, $ );
-
-
-
 
     InfiniteScroll.imagesLoaded = imagesLoaded;
 
@@ -39,7 +35,6 @@ export default {
           var main = $grid.infiniteScroll({
             path: '.older a',
             append: 'article',
-            debug: true,
             outlayer: iso,
             history: false,
             hideNav: '.pager',
@@ -67,52 +62,6 @@ export default {
           }
 
         });
-
-
-
-
-
-
-
-
-    // var iso = $grid.data('isotope');
-
-    // let main = $grid.infiniteScroll({
-    //   // options
-    //   path: '.older a',
-    //   append: 'article',
-    //   history: false,
-    //   hideNav: '.pager',
-    //   button: '.view-more-button',
-    //   status: '.page-load-status',
-    //   outlayer: iso,
-    // });
-    //
-    // let viewMoreButton = $('.view-more-button');
-    // let buttonCont = $('.button-container');
-    //
-    //
-    // var infScroll = main.data('infiniteScroll');
-    //
-    // main.on( 'load.infiniteScroll', onPageLoad );
-    //
-    // main.on( 'last.infiniteScroll', function() {
-    //   buttonCont.hide();
-    // });
-    //
-    // function onPageLoad() {
-    //   $grid.Isotope('layout');
-    //   if ( infScroll.loadCount == 1 ) {
-    //     main.infiniteScroll( 'option', {
-    //       loadOnScroll: false,
-    //     });
-    //     viewMoreButton.show();
-    //     main.off( 'load.infiniteScroll', onPageLoad );
-    //   }
-    // }
-    //
-    //
-
 
 
 

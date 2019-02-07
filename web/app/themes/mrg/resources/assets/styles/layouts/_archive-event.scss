@@ -3,6 +3,7 @@
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: $pad;
 
     #calendar {
       margin-left: $pad;
@@ -60,6 +61,57 @@
         color: #fff;
         background-image: none;
         box-shadow: none;
+      }
+    }
+  }
+
+  article {
+    border-top: 2px solid #000;
+    padding-top: $pad-2;
+    padding-bottom: $pad-2;
+
+    header {
+      h2 {
+        margin-top: 0;
+        margin-bottom: 0;
+        line-height: 1.2em;
+      }
+
+      .fecha,
+      .aviso {
+        display: inline-block;
+        font-family: $ff-sans;
+        font-size: 2rem;
+        line-height: 1.2em;
+        text-transform: uppercase;
+        margin-right: $pad;
+        margin-top: 0;
+        margin-bottom: 0;
+      }
+    }
+
+    &.con-imagen {
+      header {
+        svg {
+          position: relative;
+          top: 5px;
+          animation: brownian 0.02s infinite;
+        }
+
+        img {
+          margin-top: $pad;
+          margin-bottom: $pad;
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+
+    &.programada {
+      background-color: $color-rojo;
+
+      a {
+        color: #fff;
       }
     }
   }

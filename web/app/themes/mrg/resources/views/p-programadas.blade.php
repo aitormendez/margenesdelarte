@@ -24,7 +24,7 @@
 
     <div class="grid">
       @posts
-        @include('partials.content-event')
+        @include('partials.content-event-grid')
       @endposts
     </div>
 

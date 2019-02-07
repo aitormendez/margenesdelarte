@@ -1,8 +1,13 @@
 import 'fullcalendar/dist/fullcalendar.js';
 import 'fullcalendar/dist/locale/es.js';
+var InfiniteScroll = require('infinite-scroll');
 
 export default {
   init() {
+
+    // Calendar.io
+    // -----------------------------------------------
+
     /* eslint-disable */
     let themeUri = mrg.themeUri;
     /* eslint-enable */
@@ -17,6 +22,34 @@ export default {
         right:  'today prev,next',
       },
     })
+
+    // infinite-scroll
+    // -----------------------------------------------
+
+    $('.infinite-container').infiniteScroll({
+      // options
+      path: '.nav-previous a',
+      append: 'article',
+      history: false,
+      hideNav: '.nav-links',
+      button: '.view-more-button',
+      status: '.page-load-status',
+    });
+
+
+    // brownian movement on arrow
+    //------------------------------------------------
+
+    let viewportWidth = $(window).width();
+
+    if (viewportWidth >= 700) {
+      $('header svg').on('animationiteration webkitAnimationIteration oanimationiteration MSAnimationIteration', function(e) {
+        $(this).css({top: Math.floor(Math.random() * 5 + 5) + 'px'},0);
+        $(this).css({left: Math.floor(Math.random() * 5) + 'px'},0);
+      });
+    }
+
+
 
   },
   finalize() {

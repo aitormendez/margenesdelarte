@@ -23,4 +23,18 @@ trait ActivitiesLoop
 
     return $start_date;
   }
+
+  public static function programadaAnterior()
+  {
+    $start_obj = new \DateTime(get_field('start', false, false));
+    $today_obj = new \DateTime(date());
+
+    if ($start_obj >= $today_obj) {
+      $programada_anterior = 'programada';
+    } else {
+      $programada_anterior = 'anterior';
+    }
+
+    return $programada_anterior;
+  }
 }
