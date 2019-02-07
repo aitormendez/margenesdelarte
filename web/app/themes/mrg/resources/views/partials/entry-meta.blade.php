@@ -23,6 +23,12 @@
       <p class="epi">{{ __('Where', 'sage') }}</p>
       <div class="direccion">{!! $data['direccion'] !!}</div>
     </div>
+
+    <div class="bloque">
+      <p class="epi">{{ __('Ambit', 'sage') }}</p>
+      <div class="ambito">{{ PProgramadas::ambito() }}</div>
+    </div>
+
     <div class="bloque">
       @if ($related_productions)
         <p class="epi">{{ __('Related documents', 'sage') }}</p>
@@ -31,6 +37,8 @@
         @endforeach
       @endif
     </div>
+
+
 
   @elseif (is_singular('location'))
 

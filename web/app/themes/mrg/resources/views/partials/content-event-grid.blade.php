@@ -6,6 +6,7 @@ $clase = $clase_imagen . ' ' . $clase_tipo;
 
 <article @php post_class($clase) @endphp>
   <header>
+    <p class="ambito">{{ PProgramadas::ambito() }}</p>
     {!! PProgramadas::featured() !!}
     <h2 class="entry-title"><a href="{{ get_permalink() }}">{{ get_the_title() }}</a></h2>
     <p class="fecha">{{ PProgramadas::fecha() }}</p>

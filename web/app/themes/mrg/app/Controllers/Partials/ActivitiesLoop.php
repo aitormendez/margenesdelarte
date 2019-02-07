@@ -37,4 +37,19 @@ trait ActivitiesLoop
 
     return $programada_anterior;
   }
+
+  public static function ambito()
+  {
+    global $post;
+
+    $terms = get_the_terms($post->ID, 'ambit');
+
+    if ($terms[0]->slug == 'publico') {
+      $ambito = __('Public call', 'sage');
+    } else {
+      $ambito = __('Restricted to the research group', 'sage');
+    }
+
+    return $ambito;
+  }
 }
