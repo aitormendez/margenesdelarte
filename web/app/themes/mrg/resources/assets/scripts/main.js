@@ -16,19 +16,20 @@ import postTypeArchiveEvent from './routes/archive-event';
 import postTypeArchiveLocation from './routes/archive-location';
 import pProgramadas from './routes/p-programadas';
 import pAnteriores from './routes/p-anteriores';
+import taxOrigin from './routes/tax-origin';
 
 // import then needed Font Awesome functionality
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
 
 // import the Facebook and Twitter icons
 import { faFacebook, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faFileAlt, faCalendarAlt } from "@fortawesome/free-solid-svg-icons";
 
 // add the imported icons to the library
-library.add(faFacebook, faTwitter);
+library.add(faFacebook, faTwitter, faFileAlt, faCalendarAlt);
 
 // tell FontAwesome to watch the DOM and add the SVGs when it detects icon markup
 dom.watch();
-
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -45,6 +46,7 @@ const routes = new Router({
   pProgramadas,
   pAnteriores,
   singleLocation,
+  taxOrigin,
 });
 
 // Load Events

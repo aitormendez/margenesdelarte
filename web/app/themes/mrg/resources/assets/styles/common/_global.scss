@@ -20,7 +20,7 @@ body {
   @include tablet-portrait {
     &:not(.home) {
       .content {
-        margin-top: 144px;
+        margin-top: 125px;
         padding-top: $pad-4;
         padding-bottom: $pad-4;
       }
@@ -36,7 +36,8 @@ body {
       }
     }
 
-    &.post-type-archive-location {
+    &.post-type-archive-location,
+    &.tax-origin {
       .content {
         padding-top: 0;
       }
@@ -140,5 +141,14 @@ figure {
     .centrar {
       max-width: 900px;
     }
+  }
+}
+
+// Page header
+
+.page-header {
+  p {
+    font-style: italic;
+    color: $gray-light-semi;
   }
 }

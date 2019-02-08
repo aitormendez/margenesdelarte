@@ -52,4 +52,11 @@ trait ActivitiesLoop
 
     return $ambito;
   }
+
+  public static function postType()
+  {
+    $post_type = get_post_type();
+
+    return $post_type;
+  }
 }

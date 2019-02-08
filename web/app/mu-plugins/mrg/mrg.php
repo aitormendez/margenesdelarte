@@ -196,10 +196,11 @@ add_action( 'init', function() {
   register_extended_taxonomy( 'edition',
     [
       'production',
-      'event'
+      'event',
+      'location',
     ],
     [
-      'meta_box' => 'radio',
+      'meta_box' => 'simple',
       'hierarchical' => false,
   		'singular' => __( 'Edition', 'mrg-CPT' ),
   		'plural'   => __( 'Editions', 'mrg-CPT' ),

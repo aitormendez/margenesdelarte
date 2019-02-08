@@ -1,0 +1,75 @@
+.tax-origin {
+  article {
+    border-top: 2px solid #000;
+
+    header {
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      h2 {
+        line-height: 1.2em;
+      }
+    }
+
+    .bloque-izquierda {
+      min-width: 100px;
+    }
+
+    .tipo-de-post {
+      display: flex;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+      .post-type {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: $ff-sans;
+        text-transform: uppercase;
+      }
+    }
+
+    &.programada {
+      background-color: $color-rojo;
+
+      .next-call {
+        display: flex;
+        border-bottom: 4px dotted #fff;
+        padding-bottom: 10px;
+
+        .bloque-izquierda {
+          svg {
+            position: relative;
+            animation: brownian 0.02s infinite;
+          }
+        }
+
+        .bloque-derecha {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+
+          p {
+            display: inline-block;
+            margin-top: 0;
+            margin-bottom: 0;
+            font-family: $ff-sans;
+            font-size: 24px;
+            line-height: 26px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+
+            &.fecha {
+              margin-right: $pad;
+            }
+          }
+        }
+      }
+
+      a {
+        color: #fff;
+      }
+    }
+  }
+}

@@ -19,6 +19,12 @@ class App extends Controller
             }
             return __('Latest Posts', 'sage');
         }
+        if (is_tax('origin', 'invitado')) {
+            return __('Guests', 'sage');
+        }
+        if (is_tax('origin', 'grupo')) {
+            return __('Research group', 'sage');
+        }
         if (is_archive()) {
             return get_the_archive_title();
         }
