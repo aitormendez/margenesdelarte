@@ -2,12 +2,12 @@
 $clase_imagen = PProgramadas::clase();
 $clase_tipo = PProgramadas::programadaAnterior();
 $ambito = PProgramadas::ambito();
-$clase = $clase_imagen . ' ' . $clase_tipo;
+$clase = $clase_imagen . ' ' . $clase_tipo . ' article';
 $post_type = get_post_type();
 @endphp
 
 
-<article @php post_class($clase) @endphp>
+<a href="{{ get_permalink() }}" role="article" @php post_class($clase) @endphp>
   <header>
     @if ($post_type == 'event')
       @if ($ambito == 'publico')
@@ -23,10 +23,10 @@ $post_type = get_post_type();
     @if (has_post_thumbnail())
       {!! PProgramadas::featured() !!}
     @endif
-    <h2 class="entry-title"><a href="{{ get_permalink() }}">{{ get_the_title() }}</a></h2>
+    <h2 class="entry-title">{{ get_the_title() }}</h2>
     <p class="fecha">{{ PProgramadas::fecha() }}</p>
   </header>
   <div class="entry-summary">
-    @php the_excerpt() @endphp
+    {!! PProgramadas::extracto() !!}
   </div>
-</article>
+</a>

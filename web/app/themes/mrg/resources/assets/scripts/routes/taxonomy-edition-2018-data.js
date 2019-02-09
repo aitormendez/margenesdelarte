@@ -21,7 +21,7 @@ export default {
           var $grid = $('.infinite-container');
 
           $grid.isotope({
-            itemSelector: 'article',
+            itemSelector: '.article',
             layoutMode: 'masonry',
           });
 
@@ -29,7 +29,7 @@ export default {
 
           var main = $grid.infiniteScroll({
             path: '.nav-previous a',
-            append: 'article',
+            append: '.article',
             outlayer: iso,
             history: false,
             hideNav: '.nav-links',

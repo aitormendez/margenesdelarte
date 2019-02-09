@@ -23,11 +23,13 @@
     display: none;
   }
 
-  article {
+  .article {
+    display: block;
     padding: $pad;
     margin: $pad;
     font-family: $ff-sans;
     border: 1px dotted #000;
+    color: #000;
 
     header {
       p {
@@ -125,25 +127,25 @@
   }
 
   @include tablet-portrait {
-    article {
+    .article {
       width: calc(50% - 30px);
     }
   }
 
   @include tablet-landscape {
-    article {
+    .article {
       width: calc(33% - 30px);
     }
   }
 
   @include desktop {
-    article {
+    .article {
       width: calc(25% - 30px);
     }
   }
 
   @include big-desktop {
-    article {
+    .article {
       width: calc(20% - 30px);
     }
   }

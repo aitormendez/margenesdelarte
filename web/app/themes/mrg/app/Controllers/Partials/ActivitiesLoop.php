@@ -59,4 +59,18 @@ trait ActivitiesLoop
 
     return $post_type;
   }
+
+  public static function extracto()
+  {
+    global $post;
+    $excerpt = $post->post_excerpt;
+
+    if ($excerpt == '') {
+      $extracto = wp_trim_words(strip_tags(get_the_content( '' )));
+    } else {
+      $extracto = $excerpt;
+    }
+
+    return $extracto;
+  }
 }

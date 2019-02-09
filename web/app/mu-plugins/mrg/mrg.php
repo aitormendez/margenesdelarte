@@ -54,6 +54,7 @@ add_action( 'init', function() {
     'title',
     'editor',
     'thumbnail',
+    'excerpt',
   ];
 
   register_extended_post_type(
@@ -133,6 +134,7 @@ add_action( 'init', function() {
     'title',
     'editor',
     'thumbnail',
+    'excerpt',
   ];
 
   register_extended_post_type(

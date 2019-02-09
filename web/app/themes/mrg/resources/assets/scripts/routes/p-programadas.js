@@ -26,7 +26,7 @@ export default {
           var $grid = $('.grid');
 
           $grid.isotope({
-            itemSelector: 'article',
+            itemSelector: '.article',
             layoutMode: 'masonry',
           });
 
@@ -34,7 +34,7 @@ export default {
 
           var main = $grid.infiniteScroll({
             path: '.older a',
-            append: 'article',
+            append: '.article',
             outlayer: iso,
             history: false,
             hideNav: '.pager',
