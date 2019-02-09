@@ -17,6 +17,7 @@ import postTypeArchiveLocation from './routes/archive-location';
 import pProgramadas from './routes/p-programadas';
 import pAnteriores from './routes/p-anteriores';
 import taxOrigin from './routes/tax-origin';
+import taxonomyEdition2018Data from './routes/taxonomy-edition-2018-data';
 
 // import then needed Font Awesome functionality
 import { library, dom } from '@fortawesome/fontawesome-svg-core';
@@ -47,6 +48,7 @@ const routes = new Router({
   pAnteriores,
   singleLocation,
   taxOrigin,
+  taxonomyEdition2018Data,
 });
 
 // Load Events

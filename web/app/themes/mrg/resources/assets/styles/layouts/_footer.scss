@@ -48,6 +48,8 @@
   }
 
   @include tablet-portrait {
+    padding: $pad-4;
+
     .container {
       display: flex;
       justify-content: space-between;

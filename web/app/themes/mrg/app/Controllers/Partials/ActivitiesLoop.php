@@ -27,7 +27,7 @@ trait ActivitiesLoop
   public static function programadaAnterior()
   {
     $start_obj = new \DateTime(get_field('start', false, false));
-    $today_obj = new \DateTime(date());
+    $today_obj = new \DateTime(date('c'));
 
     if ($start_obj >= $today_obj) {
       $programada_anterior = 'programada';

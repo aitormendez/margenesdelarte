@@ -1,4 +1,4 @@
-@if (is_tax())
+@if (is_tax('origin'))
   <div class="page-header centrar-container">
     <div class="centrar">
       <h1>{!! App::title() !!}</h1>
@@ -10,9 +10,5 @@
 @else
   <div class="page-header">
     <h1>{!! App::title() !!}</h1>
-    @if (is_tax('origin'))
-        {!! term_description() !!}
-    @endif
   </div>
-
 @endif

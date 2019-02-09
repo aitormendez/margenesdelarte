@@ -1,5 +1,16 @@
+.taxonomy-edition-2018-data {
+  .page-header {
+    padding: $pad;
+    font-family: $ff-sans;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+}
+
 .p-programadas,
-.p-anteriores {
+.p-anteriores,
+.taxonomy-edition-2018-data {
   .content {
     max-width: none;
   }

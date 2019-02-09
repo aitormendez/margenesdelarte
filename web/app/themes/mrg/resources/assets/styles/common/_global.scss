@@ -42,6 +42,12 @@ body {
         padding-top: 0;
       }
     }
+
+    &.taxonomy-edition-2018-data {
+      .content {
+        padding-top: $pad;
+      }
+    }
   }
 }
 

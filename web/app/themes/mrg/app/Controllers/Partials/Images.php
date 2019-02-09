@@ -8,10 +8,7 @@ trait Images
   {
     global $post;
 
-    if (has_post_thumbnail()) {
-      $data = get_the_post_thumbnail($post->ID, 'large');
-    }
-    return $data;
+    return get_the_post_thumbnail($post->ID, 'large');
   }
 
   public static function clase()
