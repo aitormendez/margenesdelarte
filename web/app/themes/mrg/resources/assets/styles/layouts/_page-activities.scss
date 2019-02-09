@@ -11,6 +11,10 @@
 .p-programadas,
 .p-anteriores,
 .taxonomy-edition-2018-data {
+  .pager {
+    display: none;
+  }
+
   .content {
     max-width: none;
   }
@@ -79,6 +83,43 @@
           background-color: #fff;
           padding: 0 5px;
         }
+      }
+    }
+
+    &.ambit-publico {
+      .ambito {
+        display: flex;
+        align-items: center;
+        padding: $pad;
+        background-color: $color-rojo;
+
+        svg {
+          position: relative;
+          margin-right: $pad;
+          animation: brownian 0.02s infinite;
+        }
+
+        span {
+          display: block;
+          position: relative;
+          top: 3px;
+          font-size: 1rem;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+        }
+      }
+    }
+
+    &.ambit-restringido {
+      .ambito {
+        padding: 9px 5px 5px;
+        background-color: $gray-lighter;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        color: $gray-light-semi;
+        font-size: 0.7rem;
+        text-align: center;
+        font-weight: 200;
       }
     }
   }

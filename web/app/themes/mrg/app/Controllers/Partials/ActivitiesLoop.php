@@ -45,9 +45,9 @@ trait ActivitiesLoop
     $terms = get_the_terms($post->ID, 'ambit');
 
     if ($terms[0]->slug == 'publico') {
-      $ambito = __('Public call', 'sage');
+      $ambito = 'publico';
     } else {
-      $ambito = __('Restricted to the research group', 'sage');
+      $ambito = 'restringido';
     }
 
     return $ambito;

@@ -63,6 +63,18 @@ export default {
 
         });
 
+        // brownian movement on arrow
+        //------------------------------------------------
+
+        let viewportWidth = $(window).width();
+
+        if (viewportWidth >= 700) {
+          $('.ambito svg').on('animationiteration webkitAnimationIteration oanimationiteration MSAnimationIteration', function(e) {
+            $(this).css({top: Math.floor(Math.random() * 5) + 'px'},0);
+            $(this).css({left: Math.floor(Math.random() * 5) + 'px'},0);
+          });
+        }
+
 
 
 

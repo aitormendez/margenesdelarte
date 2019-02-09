@@ -1,14 +1,24 @@
 @php
 $clase_imagen = PProgramadas::clase();
 $clase_tipo = PProgramadas::programadaAnterior();
+$ambito = PProgramadas::ambito();
 $clase = $clase_imagen . ' ' . $clase_tipo;
 $post_type = get_post_type();
 @endphp
 
+
 <article @php post_class($clase) @endphp>
   <header>
     @if ($post_type == 'event')
-      <p class="ambito">{{ PProgramadas::ambito() }}</p>
+      @if ($ambito == 'publico')
+        <div class="ambito">
+          @svg('flecha-der-peq')
+          <span>{{  __('Public call', 'sage') }}</span>
+        </div>
+      @else
+        <div class="ambito">{{  __('Restricted to the research group', 'sage') }}</div>
+      @endif
+
     @endif
     @if (has_post_thumbnail())
       {!! PProgramadas::featured() !!}
