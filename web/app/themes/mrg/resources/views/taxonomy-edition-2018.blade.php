@@ -13,7 +13,7 @@
 
   <div class="infinite-container">
     @while (have_posts()) @php the_post() @endphp
-      @include('partials.content-event-grid')
+      @include('partials.content-grid')
     @endwhile
   </div>
 
