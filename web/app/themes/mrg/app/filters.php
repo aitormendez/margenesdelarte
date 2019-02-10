@@ -180,9 +180,3 @@ add_action('pre_get_posts', function($query){
      $query->set('post_type', 'production');
   }
 });
-
-
-// add_filter('the_excerpt', function($output){
-//   global $post;
-//   return $output;
-// });
