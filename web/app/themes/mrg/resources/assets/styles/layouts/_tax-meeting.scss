@@ -1,0 +1,99 @@
+.tax-meeting {
+  .page-header {
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    h1 {
+      font-family: $ff-sans;
+      font-size: 2.3rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .meta {
+      margin-top: $pad-3;
+      margin-bottom: $pad-3;
+      font-family: $ff-sans;
+      font-size: 1.2rem;
+      line-height: 1.2em;
+
+      p {
+        margin-top: 0;
+        margin-bottom: 0;
+        text-transform: uppercase;
+
+        .epi {
+          font-weight: bold;
+        }
+      }
+    }
+
+    p {
+      color: #000;
+      font-style: normal;
+    }
+  }
+
+  .programa {
+    padding-top: $pad-3;
+
+    h2 {
+      font-family: $ff-sans;
+      font-size: 2.3rem;
+      line-height: 1.2em;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: bold;
+    }
+
+    .epigrafe-fecha {
+      margin-top: $pad-3;
+      font-family: $ff-sans;
+      font-size: 1rem;
+      line-height: 1.3em;
+      text-transform: uppercase;
+      border-bottom: 2px solid #000;
+      letter-spacing: 0.05em;
+
+      h3 {
+        margin-bottom: 10px;
+      }
+    }
+
+    .evento {
+      padding-top: $pad;
+      padding-bottom: $pad;
+      border-bottom: 1px dotted $gray;
+
+      .centrar {
+        display: flex;
+      }
+
+      .date-group {
+        min-width: 150px;
+
+        p {
+          font-family: $ff-sans;
+          font-size: 1rem;
+          text-transform: uppercase;
+          letter-spacing: 0.05em;
+          margin-top: 0;
+          margin-bottom: 0;
+
+          .epi {
+            font-weight: bold;
+          }
+        }
+      }
+
+      h4 {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-size: 1.2rem;
+        font-weight: normal;
+      }
+    }
+  }
+}

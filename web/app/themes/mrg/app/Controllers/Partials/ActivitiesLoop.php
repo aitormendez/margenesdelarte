@@ -15,11 +15,8 @@ trait ActivitiesLoop
 
   public static function fecha()
   {
-    global $post;
-
     $start_obj = new \DateTime(get_field('start', false, false));
     $start_date = $start_obj->format('j/m/Y');
-
 
     return $start_date;
   }

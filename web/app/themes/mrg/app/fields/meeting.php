@@ -33,7 +33,7 @@ $event
     ->addImage('poster', [
         'label' => __('Meeting poster'),
         'instructions' => __('Meeting poster'),
-        'return_format' => 'array',
+        'return_format' => 'ID',
         'preview_size' => 'medium',
 ]);
 

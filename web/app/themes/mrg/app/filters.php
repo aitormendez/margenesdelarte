@@ -180,3 +180,21 @@ add_action('pre_get_posts', function($query){
      $query->set('post_type', 'production');
   }
 });
+
+/**
+ * ordenar events por start date en meeting
+ */
+add_action('pre_get_posts', function($query){
+
+	if( is_admin() ) {
+		return $query;
+	}
+
+	if( $query->is_tax('meeting') && $query->is_main_query()) {
+		$query->set('orderby', 'meta_value');
+		$query->set('meta_key', 'start');
+		$query->set('order', 'ASC');
+	}
+
+  return $query;
+});

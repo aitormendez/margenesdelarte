@@ -37,7 +37,8 @@ body {
     }
 
     &.post-type-archive-location,
-    &.tax-origin {
+    &.tax-origin,
+    &.tax-meeting {
       .content {
         padding-top: 0;
       }
@@ -130,7 +131,7 @@ figure {
 // centrar columna
 
 .centrar-container {
-  padding: $pad;
+  padding: 0 $pad;
 
   @include tablet-portrait {
     .centrar {
