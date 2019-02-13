@@ -9,8 +9,11 @@
         <div class="grupo">
         <p class="epi">{{ __('Related activities', 'sage') }}</p>
       @endif
-    {!! $eventos_relacionados['eventos'] !!}
-    </div>
+
+      @if ($eventos_relacionados['numero'] !== 'cero')
+        {!! $eventos_relacionados['eventos'] !!}
+      @endif
+
 
   @elseif (is_singular('event'))
 

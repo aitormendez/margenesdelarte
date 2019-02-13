@@ -23,10 +23,12 @@ trait ActivitiesLoop
 
   public static function programadaAnterior()
   {
+
     $start_obj = new \DateTime(get_field('start', false, false));
     $today_obj = new \DateTime(date('c'));
+    $post_type = get_post_type();
 
-    if ($start_obj >= $today_obj) {
+    if ($start_obj >= $today_obj && $post_type == 'event') {
       $programada_anterior = 'programada';
     } else {
       $programada_anterior = 'anterior';

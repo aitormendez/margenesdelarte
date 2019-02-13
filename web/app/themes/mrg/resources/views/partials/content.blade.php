@@ -2,13 +2,14 @@
 $clase_imagen = PProgramadas::clase();
 $clase_tipo = PProgramadas::programadaAnterior();
 $clase = $clase_imagen . ' ' . $clase_tipo . ' centrar-container';
+$post_type = PProgramadas::postType();
 @endphp
 
 
 
 <article @php post_class($clase) @endphp>
   <header class="centrar">
-    @if ($clase_tipo == 'programada')
+    @if ($clase_tipo == 'programada' && $post_type == 'event')
       <div class="next-call">
         <div class="bloque-izquierda">
           @svg('flecha-der-med')
@@ -20,9 +21,6 @@ $clase = $clase_imagen . ' ' . $clase_tipo . ' centrar-container';
       </div>
     @endif
     @if (is_tax())
-      @php
-        $post_type = PProgramadas::postType();
-      @endphp
       <div class="tipo-de-post">
         @if ($post_type == 'event')
           <div class="bloque-izquierda">
