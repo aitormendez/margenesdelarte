@@ -114,13 +114,13 @@
 
     &.ambit-restringido {
       .ambito {
-        padding: 9px 5px 5px;
+        padding: 9px 9px 5px;
         background-color: $gray-lighter;
         text-transform: uppercase;
         letter-spacing: 0.05em;
         color: $gray-light-semi;
         font-size: 0.7rem;
-        text-align: center;
+        line-height: 1.1em;
         font-weight: 200;
       }
     }

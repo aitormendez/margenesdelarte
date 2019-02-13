@@ -6,7 +6,10 @@ export default {
     // infinite-scroll
     // -----------------------------------------------
 
-    $('.infinite-container').infiniteScroll({
+    let viewMoreButton = $('.view-more-button');
+    let buttonCont = $('.button-container');
+
+    let main = $('.infinite-container').infiniteScroll({
       // options
       path: '.nav-previous a',
       append: 'article',
@@ -15,6 +18,24 @@ export default {
       button: '.view-more-button',
       status: '.page-load-status',
     });
+
+    main.on( 'load.infiniteScroll', onPageLoad );
+
+    var infScroll = main.data('infiniteScroll');
+
+    main.on( 'last.infiniteScroll', function() {
+      buttonCont.hide();
+    });
+
+    function onPageLoad() {
+      if ( infScroll.loadCount == 1 ) {
+        main.infiniteScroll( 'option', {
+          loadOnScroll: false,
+        });
+        buttonCont.removeClass('hide');
+        main.off( 'load.infiniteScroll', onPageLoad );
+      }
+    }
 
 
     // brownian movement on arrow
