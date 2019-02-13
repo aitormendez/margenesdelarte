@@ -6,6 +6,14 @@
   'post_type' => 'event',
   'posts_per_page' => 8,
   'paged'=> (get_query_var('paged')) ? get_query_var('paged') : 1,
+  'meta_query' 		=> [
+    [
+      'key'			=> 'start',
+	        'compare'		=> '>=',
+	        'value'			=> $now,
+	        'type'			=> 'DATETIME'
+    ]
+  ]
 ])
 
 

@@ -72,4 +72,11 @@ trait ActivitiesLoop
 
     return $extracto;
   }
+
+  public function now()
+  {
+    $date_now = date('Y-m-d H:i:s');
+
+    return $date_now;
+  }
 }

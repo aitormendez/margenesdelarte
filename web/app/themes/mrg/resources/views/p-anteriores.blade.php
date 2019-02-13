@@ -6,6 +6,14 @@
   'post_type' => 'event',
   'posts_per_page' => 2,
   'paged'=> (get_query_var('paged')) ? get_query_var('paged') : 1,
+  'meta_query' 		=> [
+    [
+      'key'			=> 'start',
+	        'compare'		=> '<=',
+	        'value'			=> $now,
+	        'type'			=> 'DATETIME'
+    ]
+  ]
 ])
 
 
@@ -16,13 +24,13 @@
 
   @if (!$query->have_posts())
     <div class="no-posts">
-      <p>{{ __('There is no scheduled activities at this time.', 'sage') }}</p>
-      <p><a href="{{ $home_url }}/anteriores">{{ __('You can see past activities.', 'sage') }}</a> </p>
+      <p>{{ __('There is no past activities at this time.', 'sage') }}</p>
     </div>
 
   @else
 
     <div class="grid">
+      {{ $now }}
       @posts
         @include('partials.content-grid')
       @endposts
