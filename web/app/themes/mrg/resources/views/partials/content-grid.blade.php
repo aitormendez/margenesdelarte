@@ -23,7 +23,7 @@ $post_type = get_post_type();
     @if (has_post_thumbnail())
       {!! PProgramadas::featured() !!}
     @endif
-    <h2 class="entry-title">{{ get_the_title() }}</h2>
+    <h2 class="entry-title">{!! get_the_title() !!}</h2>
     <p class="fecha">{{ PProgramadas::fecha() }}</p>
   </header>
   <div class="entry-summary">

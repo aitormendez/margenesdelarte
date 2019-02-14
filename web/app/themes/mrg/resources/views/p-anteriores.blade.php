@@ -23,14 +23,14 @@
 @section('content')
 
   @if (!$query->have_posts())
-    <div class="no-posts">
-      <p>{{ __('There is no past activities at this time.', 'sage') }}</p>
+    <div class="centrar-container">
+      <div class="alert alert-warning centrar">
+        {{ __('There is no content in this section yet', 'sage') }}
+      </div>
     </div>
-
   @else
 
     <div class="grid">
-      {{ $now }}
       @posts
         @include('partials.content-grid')
       @endposts

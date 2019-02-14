@@ -10,5 +10,4 @@ class PProgramadas extends Controller
 
   use Partials\Images;
 
-  
 }

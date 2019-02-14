@@ -5,11 +5,10 @@
   @include('partials.page-header')
 
   @if (!have_posts())
-    <div class="centrar-container">
-      <div class="alert alert-warning centrar">
-        {{ __('There is no content in this section yet', 'sage') }}
-      </div>
+    <div class="alert alert-warning">
+      {{ __('Sorry, no results were found.', 'sage') }}
     </div>
+    {!! get_search_form(false) !!}
   @endif
 
   <div class="infinite-container">
