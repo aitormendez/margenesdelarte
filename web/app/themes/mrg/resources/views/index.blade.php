@@ -18,18 +18,10 @@
     @endwhile
   </div>
 
-  <div class="page-load-status centrar-container">
-    <div class="centrar">
-      <div class="loader-ellips infinite-scroll-request">
-        <div class="mi-loader"></div>
-      </div>
-      <p class="infinite-scroll-last">{{ __('End of content', 'sage') }}</p>
-      <p class="infinite-scroll-error">{{ __('No more pages to load', 'sage') }}</p>
-    </div>
-  </div>
+  @include('partials.loader')
 
   <div class="button-container hide">
-    <button class="view-more-button boton">View more</button>
+    <button class="view-more-button boton">{{ __('View more', 'sage') }}</button>
   </div>
 
   {!! get_the_posts_navigation() !!}

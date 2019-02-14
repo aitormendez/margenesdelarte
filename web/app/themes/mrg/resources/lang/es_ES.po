@@ -1,0 +1,345 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-02-14 19:45+0100\n"
+"PO-Revision-Date: 2019-02-14 19:51+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_ES\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: resources/functions.php:17
+msgid "Sage &rsaquo; Error"
+msgstr ""
+
+#: resources/functions.php:27
+msgid "You must be using PHP 7.1 or greater."
+msgstr ""
+
+#: resources/functions.php:27
+msgid "Invalid PHP version"
+msgstr ""
+
+#: resources/functions.php:34
+msgid "You must be using WordPress 4.7.0 or greater."
+msgstr ""
+
+#: resources/functions.php:34
+msgid "Invalid WordPress version"
+msgstr ""
+
+#: resources/functions.php:43
+msgid "You must run <code>composer install</code> from the Sage directory."
+msgstr ""
+
+#: resources/functions.php:44
+msgid "Autoloader not found."
+msgstr ""
+
+#: resources/functions.php:59
+#, php-format
+msgid "Error locating <code>%s</code> for inclusion."
+msgstr ""
+
+#: app/Controllers/App.php:20
+msgid "Latest Posts"
+msgstr "Últimas entradas"
+
+#: app/Controllers/App.php:23
+msgid "Guests"
+msgstr "Invitados"
+
+#: app/Controllers/App.php:26
+msgid "Research group"
+msgstr "Grupo de investigación"
+
+#: app/Controllers/App.php:32
+#, php-format
+msgid "Search Results for %s"
+msgstr "Resultados de búsqueda para %s"
+
+#: app/Controllers/App.php:35
+msgid "Not Found"
+msgstr "No encontrado"
+
+#: app/Controllers/SingleEvent.php:36
+#: resources/views/partials/page-header.blade.php:17
+#: resources/views/taxonomy-meeting.blade.php:47
+msgid "From"
+msgstr "De"
+
+#: app/Controllers/SingleEvent.php:36
+msgid "to"
+msgstr "a"
+
+#: app/Controllers/TaxonomyMeeting.php:24
+#, php-format
+msgid "%2$s %1$s"
+msgstr "%1$s de %2$s"
+
+#: app/fields/event.php:15 app/fields/meeting.php:15
+msgid "Start"
+msgstr "Comienza"
+
+#: app/fields/event.php:19 app/fields/meeting.php:19
+msgid "End"
+msgstr "Termina"
+
+#: app/fields/event.php:23
+msgid "All day"
+msgstr "Todo el día"
+
+#: app/fields/event.php:26
+msgid "Yes"
+msgstr "Sí"
+
+#: app/fields/event.php:27
+msgid "No"
+msgstr "No"
+
+#: app/fields/event.php:33 app/fields/meeting.php:26
+msgid ""
+"Elige el lugar de la lista desplegable. Si no aparece el que buscas, deberás "
+"añadirlo en la pestaña Lugares"
+msgstr ""
+
+#: app/fields/event.php:41
+msgid "Related Productions"
+msgstr "Producciones relacionadas"
+
+#: app/fields/event.php:42
+msgid "Selecciona las producciones relacionadas con este evento"
+msgstr ""
+
+#: app/fields/location.php:13
+msgid "map"
+msgstr "Mapa"
+
+#: app/fields/location.php:15
+msgid "Location"
+msgstr "Lugar"
+
+#: app/fields/location.php:16
+msgid "Elige la localización en el mapa"
+msgstr ""
+
+#: app/fields/location.php:24 app/fields/location.php:26
+#: resources/views/partials/entry-meta.blade.php:49
+msgid "Address"
+msgstr "Dirección"
+
+#: app/fields/location.php:29 app/fields/location.php:30
+msgid "City"
+msgstr "Ciudad"
+
+#: app/fields/location.php:33
+msgid "Zip code"
+msgstr "Código postal"
+
+#: app/fields/location.php:35 app/fields/location.php:36
+msgid "Country"
+msgstr "País"
+
+#: app/fields/meeting.php:7
+msgid "Meeting"
+msgstr "Jornadas"
+
+#: app/fields/meeting.php:13 resources/views/partials/entry-meta.blade.php:21
+msgid "When"
+msgstr "Cuándo"
+
+#: app/fields/meeting.php:23 resources/views/partials/entry-meta.blade.php:26
+msgid "Where"
+msgstr "Dónde"
+
+#: app/fields/meeting.php:32 app/fields/meeting.php:34
+#: app/fields/meeting.php:35
+msgid "Meeting poster"
+msgstr "Cartel de las jornadas"
+
+#: app/fields/options.php:14
+msgid "Year"
+msgstr "Año"
+
+#: app/fields/options.php:15
+msgid "Choose the year for the actual edition. Will be shown on the front page"
+msgstr "Elija el año de la edición actual. Se mostrará en la portada"
+
+#: app/filters.php:33
+msgid "Continued"
+msgstr "Leer más"
+
+#: app/setup.php:64
+msgid "General Navigation"
+msgstr "Navegación General"
+
+#: app/setup.php:65
+msgid "Contents Navigation"
+msgstr "Navegación de contenidos"
+
+#: app/setup.php:66
+msgid "Activities Navigation"
+msgstr "Navegación de actividades"
+
+#: app/setup.php:67
+msgid "Etc Navigation"
+msgstr "Navegación etc"
+
+#: app/setup.php:68
+msgid "Contents Footer Navigation"
+msgstr "Contenido navegación de pie de pagina"
+
+#: app/setup.php:107
+msgid "Primary"
+msgstr ""
+
+#: app/setup.php:111
+msgid "Footer"
+msgstr ""
+
+#: resources/views/404.blade.php:8
+msgid "Sorry, but the page you were trying to view does not exist."
+msgstr "La página que estás intentando ver no existe."
+
+#: resources/views/archive-event.blade.php:7
+#: resources/views/archive-location.blade.php:7
+#: resources/views/front-page.blade.php:7 resources/views/index-bak.blade.php:9
+#: resources/views/search.blade.php:8
+#: resources/views/taxonomy-edition-2018.blade.php:9
+#: resources/views/taxonomy-meeting.blade.php:9
+msgid "Sorry, no results were found."
+msgstr "Lo sentimos, no se encontraron resultados."
+
+#: resources/views/archive-event.blade.php:26
+#: resources/views/partials/loader.blade.php:5
+#: resources/views/taxonomy-edition-2018.blade.php:25
+msgid "End of content"
+msgstr "Fin del contenido"
+
+#: resources/views/archive-event.blade.php:27
+#: resources/views/partials/loader.blade.php:6
+#: resources/views/taxonomy-edition-2018.blade.php:26
+msgid "No more pages to load"
+msgstr "No hay más páginas"
+
+#: resources/views/index.blade.php:10 resources/views/p-anteriores.blade.php:28
+msgid "There is no content in this section yet"
+msgstr "No hay contenido en esta sección todavía"
+
+#: resources/views/index.blade.php:24
+#: resources/views/partials/loader.blade.php:10
+msgid "View more"
+msgstr "Ver más"
+
+#: resources/views/p-anteriores.blade.php:44
+#: resources/views/p-programadas.blade.php:42
+msgid "Newer posts"
+msgstr "Nuevas entradas"
+
+#: resources/views/p-anteriores.blade.php:45
+#: resources/views/p-programadas.blade.php:43
+msgid "Older posts"
+msgstr "Entradas antiguas"
+
+#: resources/views/p-programadas.blade.php:27
+msgid "There is no scheduled activities at this time."
+msgstr "No hay actividades programadas en este momento."
+
+#: resources/views/p-programadas.blade.php:28
+msgid "You can see past activities."
+msgstr "Puedes ver las actividades pasadas."
+
+#: resources/views/partials/comments.blade.php:21
+msgid "&larr; Older comments"
+msgstr "&larr; Comentarios anteriores"
+
+#: resources/views/partials/comments.blade.php:24
+msgid "Newer comments &rarr;"
+msgstr "Comentarios posteriores &rarr;"
+
+#: resources/views/partials/comments.blade.php:33
+msgid "Comments are closed."
+msgstr "Los comentarios están cerrados."
+
+#: resources/views/partials/content-grid.blade.php:16
+msgid "Public call"
+msgstr "Convocatoria pública"
+
+#: resources/views/partials/content-grid.blade.php:19
+msgid "Restricted to the research group"
+msgstr "Restringido al grupo de investigación"
+
+#: resources/views/partials/content-page.blade.php:2
+#: resources/views/partials/content-single-production.blade.php:11
+#: resources/views/partials/content-single.blade.php:10
+msgid "Pages:"
+msgstr "Páginas:"
+
+#: resources/views/partials/content-single-event.blade.php:4
+msgid "Activity"
+msgstr "Actividad"
+
+#: resources/views/partials/content-single-event.blade.php:4
+#: resources/views/partials/entry-meta.blade.php:4
+msgid "Edition"
+msgstr "Edición"
+
+#: resources/views/partials/content.blade.php:19
+msgid "Next call"
+msgstr "Próxima convocatoria"
+
+#: resources/views/partials/content.blade.php:27
+msgid "Activitiy"
+msgstr "Actividad"
+
+#: resources/views/partials/content.blade.php:34
+msgid "Document"
+msgstr "Documento"
+
+#: resources/views/partials/entry-meta-bak.blade.php:3
+#: resources/views/partials/entry-meta.blade.php:67
+msgid "By"
+msgstr "Por"
+
+#: resources/views/partials/entry-meta.blade.php:7
+msgid "Related activity"
+msgstr "Actividad relacionada"
+
+#: resources/views/partials/entry-meta.blade.php:10
+msgid "Related activities"
+msgstr "Actividades relacionadas"
+
+#: resources/views/partials/entry-meta.blade.php:31
+msgid "Ambit"
+msgstr "Ámbito"
+
+#: resources/views/partials/entry-meta.blade.php:37
+msgid "Related documents"
+msgstr "Documentos relacionados"
+
+#: resources/views/partials/entry-meta.blade.php:57
+msgid "Activities at this place"
+msgstr "Actividades en este lugar"
+
+#: resources/views/partials/page-header.blade.php:18
+#: resources/views/taxonomy-meeting.blade.php:48
+msgid "To"
+msgstr "A"
+
+#: resources/views/partials/page-header.blade.php:19
+msgid "At"
+msgstr "En"
+
+#: resources/views/taxonomy-meeting.blade.php:19
+msgid "Program"
+msgstr "Programa"

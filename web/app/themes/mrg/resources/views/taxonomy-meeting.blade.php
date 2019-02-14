@@ -47,7 +47,7 @@
                 <p><span class="epi">{{ __('From', 'sage') }}</span> {{ $fechas_eventos['start_time'] }}</p>
                 <p><span class="epi">{{ __('To', 'sage') }}</span> {{ $fechas_eventos['end_time'] }}</p>
               </div>
-              <h4 class="entry-title"><a href="{{ get_permalink() }}">{{ get_the_title() }}</a></h4>
+              <h4 class="entry-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h4>
             </div>
           </div>
         </div>

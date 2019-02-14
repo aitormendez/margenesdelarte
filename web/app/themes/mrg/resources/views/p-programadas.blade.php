@@ -36,17 +36,7 @@
       @endposts
     </div>
 
-    <div class="page-load-status">
-      <div class="loader-ellips infinite-scroll-request">
-        <div class="mi-loader"></div>
-      </div>
-      <p class="infinite-scroll-last">{{ __('End of content', 'sage') }}</p>
-      <p class="infinite-scroll-error">{{ __('No more pages to load', 'sage') }}</p>
-    </div>
-
-    <div class="button-container hide">
-      <button class="view-more-button boton">View more</button>
-    </div>
+    @include('partials.loader')
 
     <nav class="pager">
       <li class="newer">{{ previous_posts_link( __('Newer posts', 'sage'), $query->max_num_pages) }}</li>

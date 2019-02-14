@@ -192,8 +192,14 @@ add_action('init', function () {
 
 if( function_exists('acf_add_local_field_group') );
 
-
 /**
  * image sizes
  */
 add_image_size( 'very-large', 2000 );
+
+/**
+ * lang
+ */
+add_action('after_setup_theme', function () {
+    load_theme_textdomain('sage', get_template_directory() . '/lang');
+});

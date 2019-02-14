@@ -15,8 +15,16 @@ trait ActivitiesLoop
 
   public static function fecha()
   {
-    $start_obj = new \DateTime(get_field('start', false, false));
-    $start_date = $start_obj->format('j/m/Y');
+    global $post;
+    $post_type = get_post_type();
+
+    if ($post_type == 'event') {
+      $start_obj = new \DateTime(get_field('start', false, false));
+      $start_date = $start_obj->format('j/m/Y');
+    } else {
+      $start_date = get_the_date();
+    }
+
 
     return $start_date;
   }
@@ -41,10 +49,16 @@ trait ActivitiesLoop
   {
     global $post;
 
+    $post_type = get_post_type();
+
     $terms = get_the_terms($post->ID, 'ambit');
 
-    if ($terms[0]->slug == 'publico') {
-      $ambito = 'publico';
+    if ($post_type == 'event') {
+      if ($terms[0]->slug == 'publico') {
+        $ambito = 'publico';
+      } else {
+        $ambito = 'restringido';
+      }
     } else {
       $ambito = 'restringido';
     }
