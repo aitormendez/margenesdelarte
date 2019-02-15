@@ -18,7 +18,7 @@ export default {
     });
 
     // plyr
-    const players = Plyr.setup('.wp-block-embed-youtube .wp-block-embed__wrapper');
+    const players = Plyr.setup('.is-type-video .wp-block-embed__wrapper');
 
 
   },

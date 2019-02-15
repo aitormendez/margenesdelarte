@@ -3,16 +3,24 @@
 --}}
 
 @query([
-  'post_type' => 'event',
-  'posts_per_page' => 8,
+  'post_type' => ['event'],
+  'posts_per_page' => 10,
   'paged'=> (get_query_var('paged')) ? get_query_var('paged') : 1,
   'meta_query' 		=> [
+    'relation'		=> 'AND',
     [
       'key'			=> 'start',
 	        'compare'		=> '>=',
 	        'value'			=> $now,
 	        'type'			=> 'DATETIME'
     ]
+  ],
+  'tax_query' => [
+    [
+      'taxonomy' => 'edition',
+      'field'    => 'slug',
+      'terms'    => '2019',
+    ],
   ]
 ])
 

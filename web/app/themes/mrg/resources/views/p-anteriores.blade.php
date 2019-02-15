@@ -3,8 +3,8 @@
 --}}
 
 @query([
-  'post_type' => 'event',
-  'posts_per_page' => 2,
+  'post_type' => ['event'],
+  'posts_per_page' => 10,
   'paged'=> (get_query_var('paged')) ? get_query_var('paged') : 1,
   'meta_query' 		=> [
     [
@@ -13,6 +13,13 @@
 	        'value'			=> $now,
 	        'type'			=> 'DATETIME'
     ]
+  ],
+  'tax_query' => [
+    [
+      'taxonomy' => 'edition',
+      'field'    => 'slug',
+      'terms'    => '2019',
+    ],
   ]
 ])
 
@@ -23,7 +30,7 @@
 @section('content')
 
   @if (!$query->have_posts())
-    <div class="centrar-container">
+    <div class="no-posts centrar-container">
       <div class="alert alert-warning centrar">
         {{ __('There is no content in this section yet', 'sage') }}
       </div>
