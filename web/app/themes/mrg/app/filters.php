@@ -218,3 +218,23 @@ add_action('pre_get_posts', function($query){
 
   }
 });
+
+/**
+ * Eliminar eventos del 2018 en tax origin
+ */
+add_action('pre_get_posts', function($query){
+  if (! is_admin() && $query->is_main_query() && $query->is_tax('origin')) {
+
+    $taxquery = [
+      [
+        'taxonomy' => 'edition',
+        'field' => 'slug',
+        'terms' => array( '2019' ),
+        'operator'=> 'IN'
+      ]
+    ];
+
+    $query->set( 'tax_query', $taxquery );
+
+  }
+});
