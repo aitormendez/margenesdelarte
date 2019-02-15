@@ -38,8 +38,6 @@
 
     @include('partials.loader')
 
-
-
     <nav class="pager">
       <li class="newer">{{ previous_posts_link( __('Newer posts', 'sage'), $query->max_num_pages) }}</li>
       <li class="older">{{ next_posts_link( __('Older posts', 'sage'), $query->max_num_pages) }}</li>
