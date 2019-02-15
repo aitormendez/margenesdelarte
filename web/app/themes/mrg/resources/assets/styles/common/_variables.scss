@@ -34,6 +34,10 @@ $pad-3: calc(#{$pad} * 3);
 $pad-4: calc(#{$pad} * 4);
 $trans: 0.5s;
 
+/** slick carousel  */
+$slick-loader-path: "~slick-carousel/slick/";
+$slick-font-path: "#{$slick-loader-path}fonts/";
+
 // responsive breakpoints
 @mixin phone-only {
   @media (max-width: 425px) {
