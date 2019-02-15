@@ -198,3 +198,23 @@ add_action('pre_get_posts', function($query){
 
   return $query;
 });
+
+/**
+ * Eliminar eventos del 2018 en página de calendario (post type event)
+ */
+add_action('pre_get_posts', function($query){
+  if (! is_admin() && $query->is_main_query() && $query->is_post_type_archive('event')) {
+
+    $taxquery = [
+      [
+        'taxonomy' => 'edition',
+        'field' => 'slug',
+        'terms' => array( '2019' ),
+        'operator'=> 'IN'
+      ]
+    ];
+
+    $query->set( 'tax_query', $taxquery );
+
+  }
+});

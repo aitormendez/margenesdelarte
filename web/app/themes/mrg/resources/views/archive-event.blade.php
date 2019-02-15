@@ -2,13 +2,6 @@
 
 @section('content')
 
-  @if (!have_posts())
-    <div class="alert alert-warning">
-      {{ __('Sorry, no results were found.', 'sage') }}
-    </div>
-    {!! get_search_form(false) !!}
-  @endif
-
   <div class="calendar-container">
     <div id="calendar"></div>
   </div>
