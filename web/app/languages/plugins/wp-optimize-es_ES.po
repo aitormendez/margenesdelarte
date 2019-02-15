@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - WP-Optimize - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2019-01-04 10:56:49+0000\n"
+"PO-Revision-Date: 2019-02-09 01:49:29+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,30 @@ msgstr ""
 "X-Generator: GlotPress/2.4.0-alpha\n"
 "Language: es\n"
 "Project-Id-Version: Plugins - WP-Optimize - Stable (latest release)\n"
+
+#: optimizations/orphandata.php:17
+msgid "%s orphaned relationship data deleted"
+msgid_plural "%s orphaned relationship data deleted"
+msgstr[0] "%s relación de datos huérfanos borrada"
+msgstr[1] "%s relaciones de datos huérfanos borradas"
+
+#: templates/settings/may-also-like.php:198
+msgid "Preview, select and remove data and records available for optimization from the database"
+msgstr "Previsualiza, selecciona y borra datos y registros disponibles para optimizar en la base de datos"
+
+#: templates/settings/may-also-like.php:196
+#: templates/settings/may-also-like.php:197
+msgid "Optimization Preview"
+msgstr "Vista previa de optimización"
+
+#: templates/settings/may-also-like.php:185
+msgid "Make your site run faster by only loading parts of a web-page when it is visible to the user"
+msgstr "Haz que tu sitio vaya más rápido cargando partes de una página web solo cuando estén visibles para el usuario"
+
+#: templates/settings/may-also-like.php:183
+#: templates/settings/may-also-like.php:184
+msgid "Lazy Loading"
+msgstr "Carga diferida"
 
 #: wp-optimize.php:782
 msgid "%s was not repaired. For more details, please check the logs (configured in your logging destinations settings)."
@@ -96,15 +120,15 @@ msgstr "Limpieza programada"
 msgid "Read our FAQ here"
 msgstr "Lee nuestras preguntas frecuentes aquí"
 
-#: templates/database/tables-body.php:37
+#: templates/database/tables-body.php:41
 msgid "inactive"
 msgstr "inactivo"
 
-#: templates/database/tables-body.php:35
+#: templates/database/tables-body.php:39
 msgid "not installed"
 msgstr "no Instalado"
 
-#: templates/database/tables-body.php:28
+#: templates/database/tables-body.php:32
 msgid "Belongs to:"
 msgstr "Pertenece a:"
 
@@ -120,11 +144,11 @@ msgstr "Haz una copia de seguridad con UpdraftPlus antes de realizar cualquier a
 msgid "The #1 optimization plugin!"
 msgstr "¡El plugin de optimización número 1!"
 
-#: templates/admin-page-header.php:18 templates/pages-menu.php:37
+#: templates/pages-menu.php:37 templates/admin-page-header.php:18
 msgid "Team lead"
 msgstr "Líder del proyecto"
 
-#: templates/admin-page-header.php:5 templates/pages-menu.php:24
+#: templates/pages-menu.php:24 templates/admin-page-header.php:5
 msgid "Useful links"
 msgstr "Enlaces útiles"
 
@@ -148,7 +172,7 @@ msgstr "Base de datos"
 msgid "Remove"
 msgstr "Eliminar"
 
-#: wp-optimize.php:788 templates/cache/browser-cache.php:32
+#: templates/cache/browser-cache.php:32 wp-optimize.php:788
 msgid "Update"
 msgstr "Actualizar"
 
@@ -180,17 +204,17 @@ msgstr "Compresión Gzip"
 msgid "Tables"
 msgstr "Tablas"
 
-#: optimizations/orphanedtables.php:124
+#: optimizations/orphanedtables.php:131
 msgid "Delete orphaned database tables"
 msgstr "Eliminar tablas huérfanas de la bases de datos"
 
-#: optimizations/orphanedtables.php:51
+#: optimizations/orphanedtables.php:57
 msgid "Deleting %s orphaned table was unsuccessful"
 msgid_plural "Repairing %s orphaned tables were unsuccessful"
 msgstr[0] "El borrado de %s tabla huérfana ha fallado"
 msgstr[1] "El borrado de %s tablas huérfanas ha fallado"
 
-#: optimizations/orphanedtables.php:48
+#: optimizations/orphanedtables.php:54
 msgid "%s orphaned table deleted"
 msgid_plural "%s orphaned tables deleted"
 msgstr[0] "%s tablas huérfanas eliminadas"
@@ -205,7 +229,7 @@ msgstr "Hemos añadido con éxito la configuración de compresión Gzip al archi
 msgid "We can't definitely determine Gzip status as API doesn't return correct answer."
 msgstr "No podemos determinar definitivamente el estado de Gzip ya que la API no devuelve la respuesta correcta."
 
-#: wp-optimize.php:882 templates/database/tables-body.php:29
+#: templates/database/tables-body.php:33 wp-optimize.php:882
 #: includes/wp-optimize-database-information.php:411
 #: includes/wp-optimize-database-information.php:456
 msgid "WordPress core"
@@ -293,13 +317,13 @@ msgstr "No se han encontrado comentarios spam ni en la papelera"
 msgid "Post ID"
 msgstr "ID de la entrada"
 
-#: optimizations/spam.php:84 optimizations/trackbacks.php:54
-#: optimizations/pingbacks.php:53
+#: optimizations/spam.php:84 optimizations/pingbacks.php:53
+#: optimizations/trackbacks.php:54
 msgid "Comment"
 msgstr "Comentario"
 
-#: optimizations/spam.php:83 optimizations/unapproved.php:66
-#: optimizations/trackbacks.php:53 optimizations/pingbacks.php:52
+#: optimizations/spam.php:83 optimizations/pingbacks.php:52
+#: optimizations/unapproved.php:66 optimizations/trackbacks.php:53
 msgid "Author"
 msgstr "Autor"
 
@@ -325,19 +349,19 @@ msgstr "Fecha"
 msgid "Title"
 msgstr "Título"
 
-#: optimizations/revisions.php:62 optimizations/spam.php:82
-#: optimizations/transient.php:142 optimizations/transient.php:148
-#: optimizations/trash.php:77 optimizations/postmeta.php:45
-#: optimizations/commentmeta.php:74 optimizations/unapproved.php:65
-#: optimizations/trackbacks.php:52 optimizations/pingbacks.php:51
-#: optimizations/autodraft.php:66
+#: optimizations/spam.php:82 optimizations/transient.php:142
+#: optimizations/transient.php:148 optimizations/revisions.php:62
+#: optimizations/postmeta.php:45 optimizations/trash.php:77
+#: optimizations/pingbacks.php:51 optimizations/unapproved.php:65
+#: optimizations/autodraft.php:66 optimizations/trackbacks.php:52
+#: optimizations/commentmeta.php:74
 msgid "ID"
 msgstr "ID"
 
-#: optimizations/revisions.php:50 optimizations/spam.php:68
-#: optimizations/trash.php:58 optimizations/commentmeta.php:51
-#: optimizations/unapproved.php:51 optimizations/trackbacks.php:38
-#: optimizations/pingbacks.php:37 optimizations/autodraft.php:54
+#: optimizations/spam.php:68 optimizations/revisions.php:50
+#: optimizations/trash.php:58 optimizations/pingbacks.php:37
+#: optimizations/unapproved.php:51 optimizations/autodraft.php:54
+#: optimizations/trackbacks.php:38 optimizations/commentmeta.php:51
 msgid "no title"
 msgstr "sin título"
 
@@ -486,13 +510,13 @@ msgstr "%s no se ha reparado. Para más información, por favor, comprueba tus r
 msgid "Repair database tables"
 msgstr "Reparar tablas de la base de datos"
 
-#: optimizations/orphanedtables.php:114 optimizations/repairtables.php:144
+#: optimizations/repairtables.php:144 optimizations/orphanedtables.php:121
 msgid "%s corrupted table found"
 msgid_plural "%s corrupted tables found"
 msgstr[0] "%s  tabla corrupta encontradas"
 msgstr[1] "%s tablas corruptas encontradas"
 
-#: optimizations/orphanedtables.php:112 optimizations/repairtables.php:142
+#: optimizations/repairtables.php:142 optimizations/orphanedtables.php:119
 msgid "No corrupted tables found"
 msgstr "No se encontraron tablas corruptas"
 
@@ -539,12 +563,6 @@ msgstr "Añadir destino del inicio de sesión"
 #: templates/settings/settings-auto-cleanup.php:6
 msgid "Take control of clean-ups: Upgrade to Premium for a more powerful and flexible scheduler"
 msgstr "Toma el control de la limpieza: Adquiere la versión Premium para una organización de tareas más potente y flexible."
-
-#: optimizations/orphandata.php:17
-msgid "%s orphaned meta data deleted"
-msgid_plural "%s orphaned meta data deleted"
-msgstr[0] "%s metadato huérfano borrado"
-msgstr[1] "%s metadatos huérfanos borrados"
 
 #: optimizations/optimizetables.php:93
 msgid "Other tables will be optimized (%s)."
@@ -667,129 +685,129 @@ msgstr "¡Gracias por instalar WP-Optimize!"
 msgid "Find out more."
 msgstr "Saber más."
 
-#: templates/settings/may-also-like.php:317
+#: templates/settings/may-also-like.php:343
 msgid "Logging in with Keyy is simple. Once users have installed the app onto their smartphone and secured it using a fingerprint or 4-number pin, they just open the app, point it at the moving on-screen barcode and voila!"
 msgstr "Acceder con Keyy es sencillo. Una vez que los usuarios hayan instalado la app en su telefóno móvil y configurado usando una huella dactilar o número pin de 4 cifras, solo abre la aplicación, toca en el código de barras de la pantalla y voila!"
 
-#: templates/settings/may-also-like.php:314
+#: templates/settings/may-also-like.php:340
 msgid "Using innovative RSA public-key cryptography, Keyy is highly secure and prevents password-based hacking risks such as brute-forcing, key-logging, shoulder-surfing and connection sniffing."
 msgstr "Usando una innovadora criptografia de clave pública RSA, Keyy is muy segura y previene riesgos de ataques de fuerza bruta, key-logging, miradas por encima del hombro o analizadores de conexión."
 
-#: templates/settings/may-also-like.php:311
+#: templates/settings/may-also-like.php:337
 msgid "Keyy is a unique 2-factor authentication plugin that allows you to log in to your website with just a wave of your smartphone. It represents the ultimate UX, doing away with the need for usernames, passwords and other 2FA tokens."
 msgstr "Keyy es un único plugin de autenticación de 2 factores (AF2) que te permite acceder a tu página web con solo un movimiento de tu teléfono móvil. Es la experiencia de usuario definitiva, eliminando la necesidad de nombres de usuario, contraseñas u otros tokens A2F."
 
-#: templates/settings/may-also-like.php:308
+#: templates/settings/may-also-like.php:334
 msgid "Keyy – instant &amp; secure logins with a wave of your phone"
 msgstr "Keyy - instantaneo y seguro acceso con un movimiento de tu teléfono"
 
-#: templates/settings/may-also-like.php:307
+#: templates/settings/may-also-like.php:333
 msgid "Keyy Two Factor Authentication"
 msgstr "Keyy autenticación de dos factores"
 
-#: templates/settings/may-also-like.php:302
+#: templates/settings/may-also-like.php:328
 msgid "Easily improve the look of your site, your conversion rate and bottom line."
 msgstr "Mejora fácilmente el aspecto de tu sitio, tu tasa de conversión y el resultado final."
 
-#: templates/settings/may-also-like.php:299
+#: templates/settings/may-also-like.php:325
 msgid "With Metaslider, creating them couldn’t be easier: simply select images from your WordPress Media Library, drag and drop them into place. You can then set the slide captions, links and SEO fields all from one page."
 msgstr "Con Metaslider, crearlos no puede ser más sencillo: simplemente selecciona imágenes de tu bliblioteca de médios de WordPress, arrástralas y sueltalas en su lugar. Puedes, después, añadir los títulos, enlaces y campos SEO todo desde la misma página."
 
-#: templates/settings/may-also-like.php:296
+#: templates/settings/may-also-like.php:322
 msgid "Sliders instantly make a web-page more eye-catching and engaging."
 msgstr "Los carruseles hacen una página web más atractiva instantaneamente. "
 
-#: templates/settings/may-also-like.php:293
+#: templates/settings/may-also-like.php:319
 msgid "With Metaslider, WordPress’ most popular slider plugin, you can add unique, SEO-optimizing slideshow to your blog or website in a matter of seconds!"
 msgstr "Con Metaslider, el plugin de carruseles más popular de WordPress, puedes añadir carruseles únicos y optimizados para SEO a tu blog o página web en cuestión de segundos."
 
-#: templates/settings/may-also-like.php:290
+#: templates/settings/may-also-like.php:316
 msgid "MetaSlider - hold visitors’ attention to increase conversion and profits."
 msgstr "MetaSlider - manten la atención de tus visitantes para aumentar la conversión y beneficio."
 
-#: templates/settings/may-also-like.php:289
+#: templates/settings/may-also-like.php:315
 msgid "Meta Slider"
 msgstr "Meta Slider"
 
-#: templates/settings/may-also-like.php:283
+#: templates/settings/may-also-like.php:309
 msgid "With a wide range of useful features, including automated backup schedules and sophisticated one click updates, UpdraftCentral is sure to boost to your productivity and save you time."
 msgstr "Con una gran variedad de características, incluidas copias de seguridad automatizadas y actualizaciones en un click, UpdraftCentral seguro que mejorará tu productividad y te ahorrará tiempo."
 
-#: templates/settings/may-also-like.php:280
+#: templates/settings/may-also-like.php:306
 msgid "UpdraftCentral is a powerful tool that allows you to efficiently manage, update, backup and even restore multiple websites from just one location. You can also manage users and comments on all the sites at once, and through its central login feature, you can access each WP-dashboard with a single click."
 msgstr "UpdraftCentral es una potente herramienta que permite gestionar, actualizar, hacer copias de seguridad y restaurar multiples páginas web desde el mismo lugar. Puedes, también, gestionar usuarios y comentarios en todos los sitios a la vez y a traves de su acceso único puedes acceder a cada escritorio WordPress con un solo clic. "
 
-#: templates/settings/may-also-like.php:277
+#: templates/settings/may-also-like.php:303
 msgid "If you manage a few WordPress sites, you need UpdraftCentral."
 msgstr "Si gestionas algunos sitios de WordPress, necesitas UpdraftCentral."
 
-#: templates/settings/may-also-like.php:274
+#: templates/settings/may-also-like.php:300
 msgid "UpdraftCentral – save hours managing multiple WP sites from one place"
 msgstr "UpdraftCentral – ahorra horas gestionando múltiples sitios WP desde un solo lugar"
 
-#: templates/settings/may-also-like.php:272
+#: templates/settings/may-also-like.php:298
 msgid "UpdraftCentral Dashboard\n"
 msgstr "Escritorio UpdraftCentral\n"
 
-#: templates/settings/may-also-like.php:268
-#: templates/settings/may-also-like.php:285
-#: templates/settings/may-also-like.php:304
-#: templates/settings/may-also-like.php:319
+#: templates/settings/may-also-like.php:294
+#: templates/settings/may-also-like.php:311
+#: templates/settings/may-also-like.php:330
+#: templates/settings/may-also-like.php:345
 msgid "Try for free"
 msgstr "Pruébalo gratis"
 
-#: templates/settings/may-also-like.php:266
+#: templates/settings/may-also-like.php:292
 msgid "With a long-standing reputation for excellence and outstanding reviews, it’s no wonder that UpdraftPlus is the world’s most popular WordPress backup plugin."
 msgstr "Con una larga reputación de excelencia y buenas valoraciones no es una sorpresa que UpdraftPlus sea el plugin de copia de seguridad más popular del mundo WordPress."
 
-#: templates/settings/may-also-like.php:263
+#: templates/settings/may-also-like.php:289
 msgid "You can also migrate your website with few clicks without hassle."
 msgstr "También puedes migrar tu web con unos pocos clics sin problemas."
 
-#: templates/settings/may-also-like.php:260
+#: templates/settings/may-also-like.php:286
 msgid "With UpdraftPlus, you can rest assured that if the worst does happen, it's no big deal. rather than losing everything, you can simply restore the backup and be up and running again in no time at all."
 msgstr "Con UpdraftPlus puedes descansar tranquilo, si lo peor ocurre no será un gran problema. En vez de perder todo puedes, simplemente, restarurar la copia de seguridad y volver a funcionar en nada de tiempo."
 
-#: templates/settings/may-also-like.php:257
+#: templates/settings/may-also-like.php:283
 msgid "Hacking, server crashes, dodgy updates or simple user error can ruin everything."
 msgstr "Un ataque, un servidor roto, actualizaciones defectuosas o un simple error pueden estropearlo todo."
 
-#: templates/settings/may-also-like.php:254
+#: templates/settings/may-also-like.php:280
 msgid "If you’ve got a WordPress website, you need a backup."
 msgstr "Si tienes una web de WordPress, necesitas una copia de seguridad."
 
-#: templates/settings/may-also-like.php:251
+#: templates/settings/may-also-like.php:277
 msgid "UpdraftPlus – the ultimate protection for your site, hard work and business"
 msgstr "UpdraftPlus: la máxima protección para tu sitio, trabajo duro y negocios"
 
-#: templates/settings/may-also-like.php:234
+#: templates/settings/may-also-like.php:260
 msgid "Our other plugins"
 msgstr "Nuestros otros plugins"
 
-#: templates/settings/may-also-like.php:211
+#: templates/settings/may-also-like.php:237
 msgid "Get your specific queries addressed directly by our experts"
 msgstr "Obten respuestas a tus preguntas directamente de nuestros expertos."
 
-#: templates/settings/may-also-like.php:209
-#: templates/settings/may-also-like.php:210
+#: templates/settings/may-also-like.php:235
+#: templates/settings/may-also-like.php:236
 msgid "Premium support"
 msgstr "Soporte premium"
 
-#: templates/settings/may-also-like.php:198
+#: templates/settings/may-also-like.php:224
 msgid "Choose from a number of advanced options, like the ability to optimize individual DB tables"
 msgstr "Elije entre una serie de opciones avanzadas, como la capacidad de optimizar tablas de BBDD individuales"
 
-#: templates/settings/may-also-like.php:196
-#: templates/settings/may-also-like.php:197
+#: templates/settings/may-also-like.php:222
+#: templates/settings/may-also-like.php:223
 msgid "More choice and flexibility"
 msgstr "Más opciones y flexibilidad"
 
-#: templates/settings/may-also-like.php:185
+#: templates/settings/may-also-like.php:211
 msgid "Send log messages to three additional locations: Slack, Syslog and Simple History"
 msgstr "Envía mensajes de registro a tres destinos adicionales: Slack, Syslog y Simple History."
 
-#: templates/settings/may-also-like.php:183
-#: templates/settings/may-also-like.php:184
+#: templates/settings/may-also-like.php:209
+#: templates/settings/may-also-like.php:210
 msgid "Enhanced logging and reporting"
 msgstr "Informes y registro mejorados"
 
@@ -836,6 +854,8 @@ msgstr "Optimizar tablas individuales"
 #: templates/settings/may-also-like.php:188
 #: templates/settings/may-also-like.php:201
 #: templates/settings/may-also-like.php:214
+#: templates/settings/may-also-like.php:227
+#: templates/settings/may-also-like.php:240
 msgid "No"
 msgstr "No"
 
@@ -909,6 +929,8 @@ msgstr "Lleva a cabo limpiezas programadas diariamente, semanalmente, quincenalm
 #: templates/settings/may-also-like.php:191
 #: templates/settings/may-also-like.php:204
 #: templates/settings/may-also-like.php:217
+#: templates/settings/may-also-like.php:230
+#: templates/settings/may-also-like.php:243
 msgid "Yes"
 msgstr "Sí"
 
@@ -922,12 +944,12 @@ msgid "Auto-optimize database"
 msgstr "Optimización automática de la base de datos"
 
 #: templates/settings/may-also-like.php:35
-#: templates/settings/may-also-like.php:226
+#: templates/settings/may-also-like.php:252
 msgid "Upgrade now"
 msgstr "Actualizar ahora"
 
 #: templates/settings/may-also-like.php:32
-#: templates/settings/may-also-like.php:223
+#: templates/settings/may-also-like.php:249
 msgid "Installed"
 msgstr "Instalado"
 
@@ -1007,18 +1029,18 @@ msgid_plural "%s orphaned attachments found"
 msgstr[0] "%s adjunto huérfano encontrado"
 msgstr[1] "%s adjuntos huérfanos encontrados"
 
-#: optimizations/revisions.php:81 optimizations/revisions.php:125
 #: optimizations/spam.php:111 optimizations/spam.php:198
 #: optimizations/transient.php:180 optimizations/orphandata.php:20
-#: optimizations/orphandata.php:48 optimizations/trash.php:96
-#: optimizations/trash.php:169 optimizations/postmeta.php:65
-#: optimizations/postmeta.php:100 optimizations/attachments.php:33
+#: optimizations/orphandata.php:48 optimizations/revisions.php:81
+#: optimizations/revisions.php:125 optimizations/postmeta.php:65
+#: optimizations/postmeta.php:100 optimizations/trash.php:96
+#: optimizations/trash.php:169 optimizations/pingbacks.php:70
+#: optimizations/pingbacks.php:109 optimizations/unapproved.php:84
+#: optimizations/unapproved.php:130 optimizations/autodraft.php:85
+#: optimizations/autodraft.php:130 optimizations/trackbacks.php:71
+#: optimizations/trackbacks.php:111 optimizations/attachments.php:33
 #: optimizations/attachments.php:73 optimizations/commentmeta.php:103
-#: optimizations/commentmeta.php:172 optimizations/unapproved.php:84
-#: optimizations/unapproved.php:130 optimizations/trackbacks.php:71
-#: optimizations/trackbacks.php:111 optimizations/pingbacks.php:70
-#: optimizations/pingbacks.php:109 optimizations/autodraft.php:85
-#: optimizations/autodraft.php:130
+#: optimizations/commentmeta.php:172
 msgid "across %s site"
 msgid_plural "across %s sites"
 msgstr[0] "en %s sitio"
@@ -1201,7 +1223,7 @@ msgstr "Registro de eventos dentro del registro de errores de PHP"
 msgid "Run all selected optimizations"
 msgstr "Ejecuta todas las optimizaciones seleccionadas"
 
-#: wp-optimize.php:486 templates/database/optimize-table.php:25
+#: templates/database/optimize-table.php:25 wp-optimize.php:486
 msgid "Optimizations"
 msgstr "Optimizaciones"
 
@@ -1217,11 +1239,11 @@ msgstr "Ejecutar optimización"
 msgid "Optimization"
 msgstr "Optimización"
 
-#: templates/settings/may-also-like.php:250
+#: templates/settings/may-also-like.php:276
 msgid "UpdraftPlus"
 msgstr "UpdraftPlus"
 
-#: templates/admin-page-header.php:16 templates/pages-menu.php:35
+#: templates/pages-menu.php:35 templates/admin-page-header.php:16
 msgid "Newsletter"
 msgstr "Boletín"
 
@@ -1420,29 +1442,29 @@ msgstr "Si esta opción no está activa, entonces todos los datos desechables se
 msgid "This option will, where relevant, retain data from the chosen period, and remove any garbage data before that period."
 msgstr "Esta opción, donde sea importante, mantendrá todos los datos del periodo seleccionado, y eliminará todos los datos desechables anteriores a ese periodo."
 
-#: wp-optimize.php:1070 wp-optimize.php:1071 templates/admin-page-header.php:22
-#: templates/pages-menu.php:41
+#: templates/pages-menu.php:41 templates/admin-page-header.php:22
+#: wp-optimize.php:1070 wp-optimize.php:1071
 msgid "More plugins"
 msgstr "Más plugins"
 
-#: templates/settings/may-also-like.php:8 templates/admin-page-header.php:20
-#: templates/pages-menu.php:39
+#: templates/pages-menu.php:39 templates/settings/may-also-like.php:8
+#: templates/admin-page-header.php:20
 msgid "FAQs"
 msgstr "Preguntas frecuentes"
 
-#: templates/admin-page-header.php:14 templates/pages-menu.php:33
+#: templates/pages-menu.php:33 templates/admin-page-header.php:14
 msgid "Support"
 msgstr "Soporte"
 
-#: templates/admin-page-header.php:12 templates/pages-menu.php:31
+#: templates/pages-menu.php:31 templates/admin-page-header.php:12
 msgid "Twitter"
 msgstr "Twitter"
 
-#: templates/admin-page-header.php:10 templates/pages-menu.php:29
+#: templates/pages-menu.php:29 templates/admin-page-header.php:10
 msgid "News"
 msgstr "Noticias"
 
-#: templates/admin-page-header.php:6 templates/pages-menu.php:25
+#: templates/pages-menu.php:25 templates/admin-page-header.php:6
 msgid "Home"
 msgstr "Sitio web"
 
@@ -1564,39 +1586,39 @@ msgstr "Resultados de la optimización:"
 msgid "Total size of database:"
 msgstr "Tamaño total de la base de datos:"
 
-#: templates/database/tables-body.php:86
+#: templates/database/tables-body.php:90
 msgid "%s Table"
 msgid_plural "%s Tables"
 msgstr[0] "%d tabla"
 msgstr[1] "%d tablas"
 
-#: templates/database/tables-body.php:85
+#: templates/database/tables-body.php:89
 msgid "Total:"
 msgstr "Total:"
 
-#: templates/database/tables.php:28 templates/database/tables-body.php:51
-#: templates/database/tables-body.php:63
+#: templates/database/tables-body.php:55 templates/database/tables-body.php:67
+#: templates/database/tables.php:28
 msgid "Overhead"
 msgstr "Excedente"
 
-#: templates/database/tables.php:27 templates/database/tables-body.php:49
-#: templates/database/tables-body.php:62
+#: templates/database/tables-body.php:53 templates/database/tables-body.php:66
+#: templates/database/tables.php:27
 msgid "Type"
 msgstr "Tipo"
 
-#: templates/database/tables.php:26 templates/database/tables-body.php:46
+#: templates/database/tables-body.php:50 templates/database/tables.php:26
 msgid "Index Size"
 msgstr "Tamaño del índice"
 
-#: templates/database/tables.php:25 templates/database/tables-body.php:45
+#: templates/database/tables-body.php:49 templates/database/tables.php:25
 msgid "Data Size"
 msgstr "Tamaño de los datos"
 
-#: templates/database/tables.php:24 templates/database/tables-body.php:44
+#: templates/database/tables-body.php:48 templates/database/tables.php:24
 msgid "Records"
 msgstr "Registros"
 
-#: templates/database/tables.php:22 templates/database/tables-body.php:24
+#: templates/database/tables-body.php:28 templates/database/tables.php:22
 msgid "No."
 msgstr "No."
 
@@ -1628,17 +1650,16 @@ msgstr "Selecciona el tipo de programación (por defecto es semanal)"
 msgid "Enable scheduled clean-up and optimization (Beta feature)"
 msgstr "Habilitar limpieza programada y optimización (¡característica beta!)"
 
-#: wp-optimize.php:777 wp-optimize.php:787
 #: templates/settings/settings-trackback-and-comments.php:13
 #: templates/settings/settings-trackback-and-comments.php:29
-#: templates/cache/gzip-compression.php:43 templates/cache/browser-cache.php:32
+#: templates/cache/browser-cache.php:32 templates/cache/gzip-compression.php:43
+#: wp-optimize.php:777 wp-optimize.php:787
 msgid "Enable"
 msgstr "Habilitar"
 
-#: wp-optimize.php:778
 #: templates/settings/settings-trackback-and-comments.php:15
 #: templates/settings/settings-trackback-and-comments.php:31
-#: templates/cache/gzip-compression.php:43
+#: templates/cache/gzip-compression.php:43 wp-optimize.php:778
 msgid "Disable"
 msgstr "Deshabilitar"
 
@@ -1694,8 +1715,9 @@ msgstr "Aviso:"
 msgid "Optimize database tables"
 msgstr "Optimizar tablas de la base de datos"
 
-#: templates/settings/settings-logging.php:25 templates/database/tables.php:29
-#: templates/database/tables-body.php:70 templates/database/tables-body.php:99
+#: templates/settings/settings-logging.php:25
+#: templates/database/tables-body.php:74 templates/database/tables-body.php:103
+#: templates/database/tables.php:29
 msgid "Actions"
 msgstr "Acciones"
 
@@ -1883,7 +1905,7 @@ msgstr "La optimización programada fue ejecutada con fecha"
 msgid "Automatic Operation Completed"
 msgstr "Operación automática completada"
 
-#: templates/database/tables.php:23 templates/database/tables-body.php:25
+#: templates/database/tables-body.php:29 templates/database/tables.php:23
 msgid "Table"
 msgstr "Tabla"
 
