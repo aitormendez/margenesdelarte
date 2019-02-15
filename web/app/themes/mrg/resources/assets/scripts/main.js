@@ -10,6 +10,7 @@ import common from './routes/common';
 import home from './routes/home';
 import aboutUs from './routes/about';
 import single from './routes/single';
+import page from './routes/page';
 import singleEvent from './routes/single-event';
 import singleLocation from './routes/single-location';
 import postTypeArchiveEvent from './routes/archive-event';
@@ -49,6 +50,7 @@ const routes = new Router({
   singleLocation,
   taxOrigin,
   taxonomyEdition2018Data,
+  page,
 });
 
 // Load Events
