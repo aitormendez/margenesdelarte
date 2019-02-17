@@ -1,17 +1,51 @@
 .home {
   .content {
     .hero {
-      display: none;
+      position: relative;
+      background-color: #000;
+
+      #flecha-aba-peq,
+      #caret-down {
+        display: none;
+      }
+
+      .slider {
+        a[role="article"] {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          position: relative;
+          min-height: 400px;
+          padding-top: $pad;
+          font-family: $ff-sans;
+          color: #000;
+          background-size: cover;
+
+          p {
+            display: inline-block;
+            padding: $pad;
+            text-transform: uppercase;
+            background-color: #fff;
+            line-height: 1.2em;
+          }
+
+          h2 {
+            display: inline-block;
+            margin: 0;
+            padding: $pad;
+            background-color: $color-rojo;
+            line-height: 1.2em;
+          }
+        }
+      }
     }
   }
 
   @include tablet-portrait {
     .content {
       .hero {
-        display: block;
         width: 100%;
-        min-height: 100vh;
-        background-color: #000;
+        height: 100vh;
 
         .flecha-aba {
           display: block;
@@ -22,6 +56,7 @@
         #flecha-2 {
           width: 24px;
           height: 13px;
+          z-index: 7000;
 
           svg {
             position: absolute;
@@ -34,15 +69,51 @@
         }
 
         #flecha-3 {
+          position: absolute;
           bottom: $pad;
           width: 24px;
           height: 28px;
+          z-index: 401;
 
           svg {
             polygon {
               fill: #fff !important;
             }
           }
+        }
+
+        .slider {
+          height: 100vh;
+
+          a[role="article"] {
+            height: 100vh;
+
+            h2 {
+              display: inline-block;
+              padding: $pad-2;
+              font-size: 36px;
+              line-height: 1.2em;
+              font-weight: 200;
+            }
+
+            .fecha {
+              padding: $pad-2;
+              width: 250px;
+              font-size: 36px;
+              line-height: 1.2em;
+              font-weight: 600;
+            }
+          }
+        }
+
+        .slick-prev {
+          left: 10px;
+          z-index: 400;
+        }
+
+        .slick-next {
+          right: 10px;
+          z-index: 400;
         }
       }
     }

@@ -22,7 +22,6 @@ export default {
     let video =$('.video');
 
 
-
     $('.menu-present').mouseenter(function(){
       ruido.css('opacity', 0.2);
       video.css('background-image', `url(${mrg.presentGif})`)
@@ -62,6 +61,18 @@ export default {
       ruido.css('opacity', 1);
       video.css('background-image', 'none')
     });
+
+
+    // slick carousel
+    // -------------------------------------------
+
+    let viewportWidth = $(window).width();
+
+    if (viewportWidth >= 700) {
+      $('.slider').slick({
+        // appendArrows: $('.flechas-slider'),
+      });
+    }
 
 
 

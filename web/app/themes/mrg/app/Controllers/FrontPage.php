@@ -6,5 +6,6 @@ use Sober\Controller\Controller;
 
 class FrontPage extends Controller
 {
+  use Partials\ActivitiesLoop;
 
 }
