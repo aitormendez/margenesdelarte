@@ -18,7 +18,7 @@
       [
         'taxonomy' => 'edition',
         'field'    => 'slug',
-        'terms'    => '2018',
+        'terms'    => '2019',
       ],
       [
         'taxonomy' => 'ambit',
