@@ -23,6 +23,14 @@ $edi
       'default_value' => '2019',
       'layout' => 'vertical',
       'return_format' => 'value',
+    ])
+
+    ->addImage('sutitut_img', [
+        'label' => 'Imagen de sustituución',
+        'instructions' => 'Esta imagen aparecerá en portada cuando no haya posts para mostrar en el slider',
+        'return_format' => 'array',
+        'preview_size' => 'thumbnail',
+        'library' => 'all',
     ]);
 
 return $edi;

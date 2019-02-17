@@ -18,7 +18,7 @@
       [
         'taxonomy' => 'edition',
         'field'    => 'slug',
-        'terms'    => '2019',
+        'terms'    => '2018',
       ],
       [
         'taxonomy' => 'ambit',
@@ -29,23 +29,26 @@
   ])
 
   @if (!$query->have_posts())
-    <div class="alert alert-warning">
-      {{ __('Sorry, no results were found.', 'sage') }}
-    </div>
-    {!! get_search_form(false) !!}
+    @php
+      $sust_img = get_field('sutitut_img', 'option');
+    @endphp
+    <div class="sustitucion hero" style="background-image: url({{$sust_img[url]}})">
+      <a id="flecha-2" class="flecha-aba">@svg('caret-down-bla')</a>
+      <a id="flecha-3" class="flecha-aba">@svg('flecha-aba-peq-blan')</a>
+  @else
+    <div class="hero">
+      <a id="flecha-2" class="flecha-aba">@svg('caret-down-bla')</a>
+      <a id="flecha-3" class="flecha-aba">@svg('flecha-aba-peq-blan')</a>
+      <div class="slider">
+        @posts
+          @include('partials.content-slider')
+        @endposts
+      </div>
+
   @endif
+  </div>
 
-  <div class="hero">
-    <a id="flecha-2" class="flecha-aba">@svg('caret-down')</a>
-    <a id="flecha-3" class="flecha-aba">@svg('flecha-aba-peq-blan')</a>
 
-    <div class="slider">
-      @posts
-        @include('partials.content-slider')
-      @endposts
-    </div>
-
-  </div> {{-- hero --}}
 
 
   {!! get_the_posts_navigation() !!}

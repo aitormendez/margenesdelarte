@@ -70,7 +70,7 @@ export default {
 
     if (viewportWidth >= 700) {
       $('.slider').slick({
-        // appendArrows: $('.flechas-slider'),
+        autoplay: true,
       });
     }
 
