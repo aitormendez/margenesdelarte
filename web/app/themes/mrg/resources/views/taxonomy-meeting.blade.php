@@ -1,4 +1,5 @@
 @extends('layouts.app')
+{{-- https://wordpress.stackexchange.com/a/25594/77722 --}}
 
 @section('content')
 
@@ -9,16 +10,25 @@
       {{ __('Sorry, no results were found.', 'sage') }}
     </div>
     {!! get_search_form(false) !!}
+  @else
+
+
   @endif
 
-
-<div class="programa">
+  @php
+  global $posts;
+  $post_count = 1;
+  $total = count($posts);
+  // var_dump($total);
+  @endphp
 
   <div class="centrar-container">
     <div class="centrar">
       <h2>{{ __('Program', 'sage') }}</h2>
     </div>
   </div>
+
+<ul class="programa">
 
       @php static $day_check = ''; @endphp
 
@@ -28,35 +38,96 @@
           $current_day = $fechas_eventos['comparador']
         @endphp
 
-        @if ($current_day != $day_check)
-          <div class="epigrafe-fecha">
-            <div class="centrar-container">
-              <div class="centrar">
-                <h3>{{ $fechas_eventos['fecha_i18n'] }}</h3>
+        @if ($post_count == 1 AND $post_count !== $total)
+          @if ($current_day != $day_check)
+
+            <li class="un-dia">
+              <div class="centrar-container epigrafe-fecha">
+                <div class="centrar">
+                  <h3>{{ $fechas_eventos['fecha_i18n'] }}</h3>
+                </div>
               </div>
-            </div>
-          </div>
+
+              <ul class="lista-eventos-dia">
+
+          @endif
+
+            <li class="evento">
+              <div class="centrar-container">
+                <div class="centrar">
+                  <div class="date-group">
+                    <p><span class="epi">{{ __('From', 'sage') }}</span> {{ $fechas_eventos['start_time'] }} h.</p>
+                    <p><span class="epi">{{ __('To', 'sage') }}</span> {{ $fechas_eventos['end_time'] }} h.</p>
+                  </div>
+                  <h4 class="entry-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h4>
+                </div>
+              </div>
+            </li>
+            @php $day_check = $current_day @endphp
+        @elseif ($post_count > 1 AND $post_count !== $total)
+          @if ($current_day != $day_check)
+
+            </ul>{{-- !lista-eventos-dia --}}
+          </li> {{-- !un-dia --}}
+
+
+            <li class="un-dia">
+              <div class="centrar-container epigrafe-fecha">
+                <div class="centrar">
+                  <h3>{{ $fechas_eventos['fecha_i18n'] }}</h3>
+                </div>
+              </div>
+              <ul class="lista-eventos-dia">
+
+          @endif
+
+            <li class="evento">
+              <div class="centrar-container">
+                <div class="centrar">
+                  <div class="date-group">
+                    <p><span class="epi">{{ __('From', 'sage') }}</span> {{ $fechas_eventos['start_time'] }} h.</p>
+                    <p><span class="epi">{{ __('To', 'sage') }}</span> {{ $fechas_eventos['end_time'] }} h.</p>
+                  </div>
+                  <h4 class="entry-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h4>
+                </div>
+              </div>
+            </li>
+            @php $day_check = $current_day @endphp
+        @elseif ($post_count == $total)
+          @if ($current_day != $day_check)
+
+            </ul>{{-- !lista-eventos-dia --}}
+          </li> {{-- !un-dia --}}
+
+
+            <li class="un-dia">
+              <div class="centrar-container epigrafe-fecha">
+                <div class="centrar">
+                  <h3>{{ $fechas_eventos['fecha_i18n'] }}</h3>
+                </div>
+              </div>
+              <ul class="lista-eventos-dia">
+
+          @endif
+
+            <li class="evento">
+              <div class="centrar-container">
+                <div class="centrar">
+                  <div class="date-group">
+                    <p><span class="epi">{{ __('From', 'sage') }}</span> {{ $fechas_eventos['start_time'] }} h.</p>
+                    <p><span class="epi">{{ __('To', 'sage') }}</span> {{ $fechas_eventos['end_time'] }} h.</p>
+                  </div>
+                  <h4 class="entry-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h4>
+                </div>
+              </div>
+            </li>
+          </ul>{{-- !lista-eventos-dia --}}
+        </li> {{-- !un-dia --}}
+            @php $day_check = $current_day @endphp
         @endif
-        @php $day_check = $current_day @endphp
 
-
-        <div class="evento">
-          <div class="centrar-container">
-            <div class="centrar">
-              <div class="date-group">
-                <p><span class="epi">{{ __('From', 'sage') }}</span> {{ $fechas_eventos['start_time'] }}</p>
-                <p><span class="epi">{{ __('To', 'sage') }}</span> {{ $fechas_eventos['end_time'] }}</p>
-              </div>
-              <h4 class="entry-title"><a href="{{ get_permalink() }}">{!! get_the_title() !!}</a></h4>
-            </div>
-          </div>
-        </div>
-
-
-
+      @php $post_count++; @endphp
       @endwhile
 
-  </div>
-</div>
-
+</ul> {{-- !programa --}}
 @endsection
