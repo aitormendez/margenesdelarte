@@ -44,6 +44,7 @@
           @include('partials.content-slider')
         @endposts
       </div>
+      <div id="dots"></div>
 
   @endif
   </div>

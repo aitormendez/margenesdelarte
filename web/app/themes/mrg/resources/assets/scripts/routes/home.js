@@ -70,7 +70,9 @@ export default {
 
     if (viewportWidth >= 700) {
       $('.slider').slick({
-        autoplay: true,
+        autoplay: false,
+        dots: true,
+        appendDots: $('#dots'),
       });
     }
 
