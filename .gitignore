@@ -8,7 +8,8 @@ web/app/uploads/*
 
 !web/app/mu-plugins/mrg
 
-web/app/themes/mrg/resources/*s.json
+web/app/themes/mrg/resources/events.json
+web/app/themes/mrg/resources/location.json
 
 # WordPress
 web/wp

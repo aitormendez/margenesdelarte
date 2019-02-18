@@ -109,6 +109,7 @@
               font-size: 36px;
               line-height: 1.2em;
               font-weight: 200;
+              max-width: 60%;
             }
 
             .fecha {
@@ -128,6 +129,48 @@
         .slick-next {
           right: 10px;
           z-index: 400;
+        }
+      }
+    }
+  }
+
+  @include tablet-landscape {
+    .content {
+      .hero {
+        .slider {
+          a[role="article"] {
+            h2 {
+              max-width: 50%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include desktop {
+    .content {
+      .hero {
+        .slider {
+          a[role="article"] {
+            h2 {
+              max-width: 40%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @include big-desktop {
+    .content {
+      .hero {
+        .slider {
+          a[role="article"] {
+            h2 {
+              max-width: 30%;
+            }
+          }
         }
       }
     }
