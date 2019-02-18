@@ -15,9 +15,6 @@ export default {
     // https://infinite-scroll.com/extras.html#webpack-browserify
     // https://stackoverflow.com/questions/47906150/imagesloaded-required-for-outlayer-option
 
-    // jQueryBridget( 'Isotope', isotope, $ );
-
-
 
 
     InfiniteScroll.imagesLoaded = imagesLoaded;

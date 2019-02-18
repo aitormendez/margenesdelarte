@@ -4,6 +4,7 @@
 
   @query([
     'post_type' => ['event'],
+    'post_status' => 'publish',
     'nopaging' => true,
     'meta_query' 		=> [
       [
@@ -51,6 +52,33 @@
 
 
 
+  @query([
+    'post_type' => ['event', 'production'],
+    'post_status' => 'publish',
+    'posts_per_page' => 20,
+    'tax_query' => [
+      [
+        'taxonomy' => 'edition',
+        'field'    => 'slug',
+        'terms'    => '2019',
+      ]
+    ],
+  ])
 
-  {!! get_the_posts_navigation() !!}
+  <div class="grid">
+    @posts
+      @include('partials.content-grid')
+    @endposts
+  </div>
+
+  @include('partials.loader')
+  <nav class="pager">
+    <li class="newer">
+      {{ previous_posts_link( __('Newer posts', 'sage'), $query->max_num_pages) }}
+    </li>
+    <li class="older">
+      {{ next_posts_link( __('Older posts', 'sage'), $query->max_num_pages) }}
+    </li>
+  </nav>
+
 @endsection

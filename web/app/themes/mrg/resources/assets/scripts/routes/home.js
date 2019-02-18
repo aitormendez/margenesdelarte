@@ -1,4 +1,10 @@
 import 'slick-carousel/slick/slick.min.js';
+// var InfiniteScroll = require('infinite-scroll');
+var Isotope = require('isotope-layout');
+var imagesLoaded = require('imagesloaded');
+// var jQueryBridget = require('jquery-bridget');
+// jQueryBridget( 'isotope', Isotope, $ );
+// jQueryBridget( 'infiniteScroll', InfiniteScroll, $ );
 
 export default {
   init() {
@@ -75,6 +81,22 @@ export default {
         appendDots: $('#dots'),
       });
     }
+
+
+    // Isotope
+
+
+
+        $('.grid').imagesLoaded( function () {
+
+          var $grid = $('.grid');
+
+          $grid.isotope({
+            itemSelector: '.article',
+            layoutMode: 'masonry',
+          });
+
+        });
 
 
 
