@@ -2,9 +2,11 @@
   <div class="page-header centrar-container">
     <div class="centrar">
       <h1>{!! App::title() !!}</h1>
-      @if (is_tax('origin'))
           {!! term_description() !!}
-      @endif
+          @php
+            $term = get_term_by('slug', '2019', 'edition');
+          @endphp
+          <p>{{ get_field('aditional_info', $term)}}</p>
     </div>
   </div>
 @elseif (is_tax('meeting'))
@@ -24,6 +26,14 @@
     </div>
   </div>
 </div>
+@elseif (is_tax('edition', '2018'))
+  <div class="page-header">
+    <h1>Edición 2018</h1>
+    {!! term_description() !!}
+    @php $term = get_queried_object(); @endphp
+    <p>{{ get_field('aditional_info', $term) }}</p>
+  </div>
+
 @else
   <div class="page-header">
     <h1>{!! App::title() !!}</h1>

@@ -4,10 +4,19 @@ namespace App;
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
+acf_add_options_page([
+    'page_title' => get_bloginfo('name') . ' Theme Options',
+    'menu_title' => 'Theme Options',
+    'menu_slug'  => 'theme-options',
+    'capability' => 'edit_theme_options',
+    'position'   => '999',
+    'autoload'   => true
+]);
+
 $edi = new FieldsBuilder('Edición');
 
 $edi
-    ->setLocation('options_page', '==', 'acf-options-edicion');
+    ->setLocation('options_page', '==', 'theme-options');
 
 $edi
     ->addRadio('year', [

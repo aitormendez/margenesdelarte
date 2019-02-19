@@ -1,4 +1,13 @@
 .tax-origin {
+  .page-header {
+    p {
+      font-family: $ff-sans;
+      text-transform: uppercase;
+      color: #000;
+      font-style: normal;
+    }
+  }
+
   article {
     border-top: 2px solid #000;
     padding-bottom: $pad;
