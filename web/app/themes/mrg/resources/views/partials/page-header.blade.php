@@ -2,11 +2,13 @@
   <div class="page-header centrar-container">
     <div class="centrar">
       <h1>{!! App::title() !!}</h1>
-          {!! term_description() !!}
-          @php
-            $term = get_term_by('slug', '2019', 'edition');
-          @endphp
-          <p>{{ get_field('aditional_info', $term)}}</p>
+      {!! term_description() !!}
+      @if (is_tax('origin', 'grupo'))
+        @php
+          $term = get_term_by('slug', '2019', 'edition');
+        @endphp
+        <p>{{ get_field('aditional_info', $term)}}</p>
+      @endif
     </div>
   </div>
 @elseif (is_tax('meeting'))
