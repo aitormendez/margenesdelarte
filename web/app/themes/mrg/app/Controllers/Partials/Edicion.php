@@ -8,7 +8,7 @@ trait Edicion
   {
     global $post;
 
-    $data = get_terms('edition')[0]->name;
+    $data = wp_get_post_terms( $post->ID, 'edition')[0]->name;
 
     return $data;
   }

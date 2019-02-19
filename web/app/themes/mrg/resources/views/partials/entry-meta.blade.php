@@ -17,6 +17,13 @@
 
   @elseif (is_singular('event'))
 
+    @php  $ambito = PProgramadas::ambito() @endphp
+    @if ($ambito == 'restringido')
+      @php $ambito = __('Restricted to the research group', 'sage') @endphp
+    @else
+      @php $ambito = __('Public call', 'sage') @endphp
+    @endif
+
     <div class="bloque">
       <p class="epi">{{ __('When', 'sage') }}</p>
       <p class="fecha">{{ $data['start_date'] }}</p>
@@ -29,7 +36,7 @@
 
     <div class="bloque">
       <p class="epi">{{ __('Ambit', 'sage') }}</p>
-      <div class="ambito">{{ PProgramadas::ambito() }}</div>
+      <div class="ambito">{{ $ambito }}</div>
     </div>
 
     <div class="bloque">
