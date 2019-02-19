@@ -66,25 +66,33 @@ export default {
       });
 
       flecha3.click(function(event) {
-      event.preventDefault();
-      TweenMax.to(window, 0.8, {
-        scrollTo: {
-          y: viewportHeight,
-        },
-        ease: Power2.easeOut,
+        event.preventDefault();
+        TweenMax.to(window, 0.8, {
+          scrollTo: {
+            y: viewportHeight,
+          },
+          ease: Power2.easeOut,
+        });
       });
-    });
 
     } else {
       flecha1.click(function(event) {
-      event.preventDefault();
-      TweenMax.to(window, 0.8, {
-        scrollTo: {
-          y: ".content",
-        },
-        ease: Elastic.easeOut,
+        event.preventDefault();
+        TweenMax.to(window, 0.8, {
+          scrollTo: {
+            y: ".content",
+          },
+          ease: Elastic.easeOut,
+        });
       });
-    });
+
+      flecha3.click(function(event) {
+        event.preventDefault();
+        TweenMax.to(window, 0.8, {
+          scrollTo: '.grid',
+          ease: Elastic.easeOut,
+        });
+      });
     }
 
     flecha2.click(function() {

@@ -33,7 +33,7 @@
     @php
       $sust_img = get_field('sutitut_img', 'option');
     @endphp
-    <div class="sustitucion hero" style="background-image: url({{$sust_img[url]}})">
+    <div class="sustitucion hero" style="background-image: url({{$sust_img['url']}})">
       <a id="flecha-2" class="flecha-aba">@svg('caret-down-bla')</a>
       <a id="flecha-3" class="flecha-aba">@svg('flecha-aba-peq-blan')</a>
   @else
