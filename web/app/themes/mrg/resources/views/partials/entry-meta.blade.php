@@ -14,7 +14,6 @@
         {!! $eventos_relacionados['eventos'] !!}
       @endif
 
-
   @elseif (is_singular('event'))
 
     @php  $ambito = PProgramadas::ambito() @endphp
@@ -47,8 +46,6 @@
         @endforeach
       @endif
     </div>
-
-
 
   @elseif (is_singular('location'))
 

@@ -26,7 +26,7 @@ $locat
       'label' => __('Address', 'sage'),
       'rows' => '5',
       ])
-      ->addText(__('City', 'sage'), [
+      ->addText('City', [
         'label' => __('City', 'sage'),
       ])
       ->addText('codigo_postal', [

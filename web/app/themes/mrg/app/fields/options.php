@@ -13,7 +13,7 @@ acf_add_options_page([
     'autoload'   => true
 ]);
 
-$edi = new FieldsBuilder('Edición');
+$edi = new FieldsBuilder('theme_options');
 
 $edi
     ->setLocation('options_page', '==', 'theme-options');
