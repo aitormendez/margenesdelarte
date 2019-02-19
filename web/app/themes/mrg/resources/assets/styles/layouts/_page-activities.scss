@@ -128,20 +128,26 @@
       }
     }
 
-    &:hover::after {
+    &::after {
       content: "";
       display: block;
       position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
+      width: calc(100% - 60px);
+      height: calc(100% - 60px);
+      top: 15px;
+      left: 15px;
       padding: $pad;
       background-color: $color-rojo;
-      background-image: url("../images/svg/flecha-der-med.svg");
+      background-image: url("../images/svg/flecha-aba-med.svg");
       background-repeat: no-repeat;
-      background-position: 0 center;
+      background-position: center;
       color: #fff;
+      opacity: 0;
+      transition: opacity $trans;
+    }
+
+    &:hover::after {
+      opacity: 1;
     }
   }
 
