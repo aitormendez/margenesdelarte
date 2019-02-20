@@ -20,6 +20,8 @@ class SingleLocation extends Controller
 			]
 		]);
 
+    $list = "";
+
     foreach ($related_locations as $related_location) {
       $list .= '<li><a href="' . get_permalink($related_location->ID) .'">' . $related_location->post_title . '</li></a>';
     }
