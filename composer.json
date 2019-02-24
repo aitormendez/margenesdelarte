@@ -98,7 +98,7 @@
     "wpackagist-plugin/query-monitor": "^3.1",
     "wpackagist-plugin/easy-footnotes": "*",
     "wpackagist-plugin/wpforms-lite": "*",
-    "wpackagist-plugin/wp-mail-smtp": "*"
+    "wpackagist-plugin/easy-wp-smtp": "*"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.0.2",
