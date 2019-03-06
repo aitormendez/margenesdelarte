@@ -42,9 +42,8 @@ class SingleProduction extends Controller
 
   public function edicionTerm()
   {
-    $terms = get_terms([
-      'taxonomy' => 'edition',
-    ]);
+    global $post;
+    $terms = wp_get_post_terms($post->ID, 'edition');
 
     $edi = $terms[0]->name;
     return $edi;
