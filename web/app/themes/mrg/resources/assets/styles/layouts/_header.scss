@@ -4,8 +4,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 75px $pad;
-  height: 100vh;
+  padding: 75px $pad $pad-3;
   background-color: $gray-lighter;
   background-image: url("../images/img/bg-dot-gris.png");
   font-family: $ff-display;

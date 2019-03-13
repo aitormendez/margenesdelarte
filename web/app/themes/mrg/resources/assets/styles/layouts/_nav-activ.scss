@@ -2,12 +2,8 @@
 .p-programadas,
 .post-type-archive-event,
 .post-type-archive-location {
-  .content {
-    margin-top: 163px;
-  }
-
   .banner {
-    padding: $pad-1 0 0;
+    padding: $pad-1 0 $pad-3;
 
     > .container {
       padding-left: $pad-1;
@@ -45,6 +41,10 @@
   }
 
   @include tablet-portrait {
+    .content {
+      margin-top: 163px;
+    }
+
     .banner .menu-actividades-container {
       margin-top: $pad-1;
       font-size: 0.8rem;
