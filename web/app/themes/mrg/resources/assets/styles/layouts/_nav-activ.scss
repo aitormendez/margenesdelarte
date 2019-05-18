@@ -3,8 +3,6 @@
 .post-type-archive-event,
 .post-type-archive-location {
   .banner {
-    padding: $pad-1 0 $pad-3;
-
     > .container {
       padding-left: $pad-1;
       padding-right: $pad-1;
@@ -43,6 +41,10 @@
   @include tablet-portrait {
     .content {
       margin-top: 163px;
+    }
+
+    .banner {
+      padding: $pad-1 0 0;
     }
 
     .banner .menu-actividades-container {
