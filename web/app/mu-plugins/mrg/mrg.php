@@ -246,4 +246,15 @@ add_action( 'init', function() {
 	   ]
   );
 
+  register_extended_taxonomy( 'area',
+    [
+      'production',
+      'event'
+    ],
+    [
+      'meta_box' => 'simple',
+      'hierarchical' => false,
+	   ]
+  );
+
 }, 0 );

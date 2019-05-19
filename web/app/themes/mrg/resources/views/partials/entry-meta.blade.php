@@ -1,18 +1,32 @@
 <div class="meta">
   @if (is_singular('production'))
 
-    <p class="epi">{{ __('Edition', 'sage') }}: <span>{{ $edicion_term }}</span></p>
-      @if ($eventos_relacionados['numero'] == 'singular')
-        <div class="grupo">
-        <p class="epi">{{ __('Related activity', 'sage') }}:</p>
-      @elseif ($eventos_relacionados['numero'] == 'plural')
-        <div class="grupo">
-        <p class="epi">{{ __('Related activities', 'sage') }}</p>
-      @endif
+    <div class="bloque">
+      <p class="epi">{{ __('Edition', 'sage') }}</p>
+      <p>{{ $edicion_term }}</p>
+    </div>
 
-      @if ($eventos_relacionados['numero'] !== 'cero')
+    @if ($eventos_relacionados['numero'] !== 'cero')
+
+      <div class="bloque">
+          @if ($eventos_relacionados['numero'] == 'singular')
+          <div class="grupo">
+          <p class="epi">{{ __('Related activity', 'sage') }}:</p>
+        @elseif ($eventos_relacionados['numero'] == 'plural')
+          <div class="grupo">
+          <p class="epi">{{ __('Related activities', 'sage') }}</p>
+        @endif
         {!! $eventos_relacionados['eventos'] !!}
-      @endif
+      </div>
+
+    @endif
+
+    @if ($areas != '<ul>')
+      <div class="bloque">
+          <p class="epi">{{ __('Areas de investigación', 'sage') }}</p>
+          {!! $areas !!}
+      </div>
+    @endif
 
   @elseif (is_singular('event'))
 
@@ -46,6 +60,15 @@
         @endforeach
       @endif
     </div>
+
+    @if ($areas != '<ul>')
+      <div class="bloque">
+          <p class="epi">{{ __('Areas de investigación', 'sage') }}</p>
+          {!! $areas !!}
+      </div>
+    @endif
+
+
 
   @elseif (is_singular('location'))
 

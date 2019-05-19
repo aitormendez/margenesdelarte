@@ -11,6 +11,13 @@
       @endif
     </div>
   </div>
+  @elseif (is_tax('area'))
+  <div class="page-header centrar-container">
+    <div class="centrar">
+      <h1>{!! App::title() !!}</h1>
+      {!! term_description() !!}
+    </div>
+  </div>
 @elseif (is_tax('meeting'))
   <div class="page-header">
     {!! $poster !!}

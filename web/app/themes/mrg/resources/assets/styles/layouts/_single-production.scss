@@ -1,29 +1,29 @@
 .single-production {
-  .meta {
-    font-family: $ff-sans;
-    font-size: 0.9rem;
-    text-transform: uppercase;
+  // .meta {
+  //   font-family: $ff-sans;
+  //   font-size: 0.9rem;
+  //   text-transform: uppercase;
 
-    .epi {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
+  //   .epi {
+  //     margin-top: 0;
+  //     margin-bottom: 0;
+  //   }
 
-    ul {
-      margin-top: 0;
-      margin-bottom: 0;
-      padding-left: 0;
-      list-style-type: none;
-    }
+  //   ul {
+  //     margin-top: 0;
+  //     margin-bottom: 0;
+  //     padding-left: 0;
+  //     list-style-type: none;
+  //   }
 
-    @include tablet-portrait {
-      .grupo {
-        display: flex;
+  //   @include tablet-portrait {
+  //     .grupo {
+  //       display: flex;
 
-        ul {
-          margin-left: 5px;
-        }
-      }
-    }
-  }
+  //       ul {
+  //         margin-left: 5px;
+  //       }
+  //     }
+  //   }
+  // }
 }

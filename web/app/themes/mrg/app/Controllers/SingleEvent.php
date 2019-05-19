@@ -51,4 +51,6 @@ class SingleEvent extends Controller
 
   use Partials\Edicion;
 
+  use Partials\Areas;
+
 }

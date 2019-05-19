@@ -48,4 +48,6 @@ class SingleProduction extends Controller
     $edi = $terms[0]->name;
     return $edi;
   }
+
+  use Partials\Areas;
 }
