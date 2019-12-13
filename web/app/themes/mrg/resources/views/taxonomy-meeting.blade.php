@@ -5,15 +5,12 @@
 
   @include('partials.page-header')
 
-  @if (!have_posts())
-    <div class="alert alert-warning">
-      {{ __('Sorry, no results were found.', 'sage') }}
+
+  <div class="centrar-container">
+    <div class="centrar">
+        {!! $intro_jornadas !!}
     </div>
-    {!! get_search_form(false) !!}
-  @else
-
-
-  @endif
+  </div>
 
   @php
   global $posts;
@@ -22,14 +19,26 @@
   // var_dump($total);
   @endphp
 
+
+
   <div class="centrar-container">
     <div class="centrar">
       <h2>{{ __('Program', 'sage') }}</h2>
     </div>
   </div>
 
-<ul class="programa">
+  @if (!have_posts())
+  <div class="centrar-container">
+    <div class="centrar">
+      <div class="alert alert-warning">
+        {{ __('Sorry, no results were found.', 'sage') }}
+      </div>
+      {!! get_search_form(false) !!}
+    </div>
+  </div>
+  @else
 
+  <ul class="programa">
       @php static $day_check = ''; @endphp
 
       @while (have_posts()) @php the_post() @endphp
@@ -130,4 +139,8 @@
       @endwhile
 
 </ul> {{-- !programa --}}
+
+  @endif
+
+
 @endsection

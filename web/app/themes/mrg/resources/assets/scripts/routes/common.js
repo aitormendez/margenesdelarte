@@ -187,8 +187,8 @@ export default {
         let
           currY = el.scrollTop(),
           currDireccion = (currY > lastY) ? 'down' : 'up';
-          cambiar = (currDireccion === lastDireccion) ? false : true;
-          accion = currDireccion + cambiar;
+        cambiar = (currDireccion === lastDireccion) ? false : true;
+        accion = currDireccion + cambiar;
 
           if (home == true && currY == 0) {
             // bajar banner portada
@@ -219,10 +219,7 @@ export default {
         lastY = currY;
       });
 
-
-
     } // if (viewportWidth >= 600)
-
 
 
 

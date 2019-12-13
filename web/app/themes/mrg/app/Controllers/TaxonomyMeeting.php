@@ -6,6 +6,7 @@ use Sober\Controller\Controller;
 
 class TaxonomyMeeting extends Controller
 {
+    protected $acf = 'intro_jornadas';
 
   public static function fechasEventos()
   {

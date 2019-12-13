@@ -33,7 +33,7 @@
   @if (!$query->have_posts())
     <div class="no-posts">
       <p>{{ __('There is no scheduled activities at this time.', 'sage') }}</p>
-      <p><a href="{{ $home_url }}/anteriores">{{ __('You can see past activities.', 'sage') }}</a> </p>
+      <p><a href="{{ 'home_url' }}/anteriores">{{ __('You can see past activities.', 'sage') }}</a> </p>
     </div>
 
   @else
