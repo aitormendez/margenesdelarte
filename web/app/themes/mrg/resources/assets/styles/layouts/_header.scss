@@ -392,6 +392,11 @@
       .nav-container {
         ul {
           font-size: 1.8rem;
+
+          li.alerta {
+            font-size: 3rem;
+            line-height: 1.5em;
+          }
         }
       }
     }

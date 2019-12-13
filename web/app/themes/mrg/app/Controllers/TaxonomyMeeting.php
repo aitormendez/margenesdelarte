@@ -12,13 +12,13 @@ class TaxonomyMeeting extends Controller
   {
     $start_raw = get_field('start', false, false);
     $start_obj = new \DateTime($start_raw);
-    $start_time = $start_obj->format('H:i');
+    $start_time = $start_obj->format('G:i');
     $start_unixtimestamp = strtotime($start_raw);
     $comparador = $start_obj->format('Y-m-d');
 
     $end_raw = get_field('end', false, false);
     $end_obj = new \DateTime($end_raw);
-    $end_time = $end_obj->format('H:i');
+    $end_time = $end_obj->format('G:i');
 
     $start_day_i18n = date_i18n('d', $start_unixtimestamp);
     $start_month_i18n = date_i18n('F', $start_unixtimestamp);

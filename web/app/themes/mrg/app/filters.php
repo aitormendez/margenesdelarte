@@ -191,6 +191,7 @@ add_action('pre_get_posts', function($query){
 	}
 
 	if( $query->is_tax('meeting') && $query->is_main_query()) {
+        $query->set('nopaging', true );
 		$query->set('orderby', 'meta_value');
 		$query->set('meta_key', 'start');
 		$query->set('order', 'ASC');
@@ -198,6 +199,8 @@ add_action('pre_get_posts', function($query){
 
   return $query;
 });
+
+
 
 /**
  * Eliminar eventos del 2018 en página de calendario (post type event)
