@@ -6,14 +6,12 @@ web/app/upgrade
 web/app/uploads/*
 !web/app/uploads/.gitkeep
 
-!web/app/mu-plugins/mrg
-
-web/app/themes/mrg/resources/events.json
-web/app/themes/mrg/resources/location.json
-
 # WordPress
 web/wp
 web/.htaccess
+
+# Logs
+*.log
 
 # Dotenv
 .env
